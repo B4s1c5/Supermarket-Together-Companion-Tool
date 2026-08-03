@@ -13,11 +13,17 @@ class Translator:
     def __init__(self):
 
         if getattr(sys, "frozen", False):
-            base_path = Path(sys.executable).resolve().parent
+            self.path = (
+                Path(sys.executable).resolve().parent
+                / "data"
+                / "translations.json"
+            )
         else:
-            base_path = Path(__file__).resolve().parent.parent.parent
-
-        self.path = base_path / "data" / "translations.json"
+            self.path = (
+                Path(__file__).resolve().parent.parent
+                / "data"
+                / "translations.json"
+            )
 
         # Chargement du fichier .env
         load_dotenv()

@@ -10,6 +10,8 @@ from PySide6.QtCore import (
 import os
 import time
 
+from version import APP_VERSION 
+
 from core.pdf_reader import PDFReader
 
 from core.excel_writer import ExcelWriter
@@ -161,7 +163,7 @@ class MainWindow(QMainWindow):
 
     def setup_window(self):
 
-        self.setWindowTitle("Supermarket Together Translator")
+        self.setWindowTitle("Supermarket Together Companion Tool")
 
         self.resize(1000, 650)
 
@@ -184,7 +186,7 @@ class MainWindow(QMainWindow):
 
         self.lbl_details = QLabel("Journal détaillé")
 
-        self.lbl_title = QLabel("Supermarket Together Translator")
+        self.lbl_title = QLabel("Supermarket Together Companion Tool")
 
         self.header_frame = QFrame()
 
@@ -227,10 +229,14 @@ class MainWindow(QMainWindow):
 
 
     def setup_statusbar(self):
-
         self.status_bar = QStatusBar()
 
+        # État de l'application à gauche
         self.status_bar.showMessage("Prêt")
+
+        # Version de l'application à droite
+        self.version_label = QLabel(f"Version {APP_VERSION}")
+        self.status_bar.addPermanentWidget(self.version_label)
 
         self.setStatusBar(self.status_bar)
 
