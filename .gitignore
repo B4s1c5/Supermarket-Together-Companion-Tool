@@ -1,0 +1,25 @@
+# Environnement virtuel Python
+.venv/
+venv/
+
+# Clés API / variables secrètes
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers générés par le programme
+output/
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# VS Code
+.vscode/
+
+# Système
+.DS_Store
+Thumbs.db

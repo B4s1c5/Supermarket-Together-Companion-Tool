@@ -1,0 +1,68 @@
+/* ===== Fenêtre ===== */
+
+QMainWindow {
+    background-color: #202225;
+}
+
+/* ===== Zone centrale ===== */
+
+QWidget {
+    background-color: #202225;
+    color: white;
+    font-family: "Segoe UI";
+    font-size: 11pt;
+}
+
+/* ===== Boutons ===== */
+
+QPushButton {
+
+    background-color: #2E8B57;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    min-height: 40px;
+
+    font-size: 12pt;
+
+    font-weight: bold;
+}
+
+QPushButton:hover {
+
+    background-color: #38A169;
+}
+
+QPushButton:pressed {
+
+    background-color: #276749;
+}
+
+QPushButton:disabled {
+
+    background-color: #555555;
+
+    color: #BBBBBB;
+}
+
+/* ===== Barre de statut ===== */
+
+QStatusBar {
+
+    background-color: #18191C;
+
+    color: white;
+}
+
+/* ===== Labels ===== */
+
+QLabel {
+
+    color: white;
+}
