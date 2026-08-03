@@ -1,5 +1,7 @@
 import json
 import os
+import sys
+from pathlib import Path
 
 import deepl
 
@@ -10,7 +12,12 @@ class Translator:
 
     def __init__(self):
 
-        self.path = "src/data/translations.json"
+        if getattr(sys, "frozen", False):
+            base_path = Path(sys.executable).resolve().parent
+        else:
+            base_path = Path(__file__).resolve().parent.parent.parent
+
+        self.path = base_path / "data" / "translations.json"
 
         # Chargement du fichier .env
         load_dotenv()
