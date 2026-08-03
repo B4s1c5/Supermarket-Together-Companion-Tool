@@ -1,10 +1,11 @@
 import json
 import os
 import sys
-from pathlib import Path
-
+import shutil
 import deepl
 
+
+from pathlib import Path
 from dotenv import load_dotenv
 
 
@@ -13,12 +14,46 @@ class Translator:
     def __init__(self):
 
         if getattr(sys, "frozen", False):
-            self.path = (
-                Path(sys.executable).resolve().parent
+            # Fichier de traductions fourni avec l'application
+            bundled_path = (
+                Path(sys._MEIPASS)
                 / "data"
                 / "translations.json"
             )
+
+            # Cache utilisateur persistant
+            appdata = os.getenv("LOCALAPPDATA")
+
+            if not appdata:
+                raise RuntimeError(
+                    "Impossible de trouver le dossier LOCALAPPDATA."
+                )
+
+            user_data_dir = (
+                Path(appdata)
+                / "SupermarketTogetherCompanion"
+            )
+
+            user_data_dir.mkdir(
+                parents=True,
+                exist_ok=True
+            )
+
+            self.path = (
+                user_data_dir
+                / "translations.json"
+            )
+
+            # Premier lancement : création du cache utilisateur
+            if not self.path.exists():
+                shutil.copy2(
+                    bundled_path,
+                    self.path
+                )
+
         else:
+            # En développement, on continue d'utiliser
+            # directement le fichier du projet.
             self.path = (
                 Path(__file__).resolve().parent.parent
                 / "data"

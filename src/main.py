@@ -6,7 +6,7 @@ from PySide6.QtWidgets import QApplication, QMessageBox
 
 from ui.main_window import MainWindow
 from core.update_checker import UpdateWorker
-from core.updater import DownloadWorker
+from core.updater import DownloadWorker, launch_updater
 
 
 def resource_path(relative_path):
@@ -101,14 +101,21 @@ class UpdateHandler(QObject):
 
     @Slot(object)
     def download_finished(self, zip_path):
-        QMessageBox.information(
-            self.window,
-            "Mise à jour téléchargée",
-            (
-                "La mise à jour a été téléchargée "
-                f"avec succès.\n\n{zip_path}"
+        try:
+            launch_updater(zip_path)
+
+        except Exception as error:
+            QMessageBox.critical(
+                self.window,
+                "Erreur de mise à jour",
+                (
+                    "Impossible de lancer l'installation "
+                    f"de la mise à jour.\n\n{error}"
+                )
             )
-        )
+            return
+
+        QApplication.quit()
 
     @Slot(str)
     def download_error(self, error):

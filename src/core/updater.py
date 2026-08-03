@@ -1,8 +1,12 @@
 import tempfile
+import requests
+import subprocess
+import sys
+
+
 from pathlib import Path
 from PySide6.QtCore import QObject, Signal, Slot
 
-import requests
 
 
 def download_update(download_url):
@@ -41,3 +45,31 @@ class DownloadWorker(QObject):
 
         except Exception as error:
             self.error.emit(str(error))
+
+
+def launch_updater(zip_path):
+    if not getattr(sys, "frozen", False):
+        raise RuntimeError(
+            "L'installation automatique ne peut être lancée "
+            "que depuis la version EXE."
+        )
+
+    install_dir = Path(sys.executable).resolve().parent
+    exe_name = Path(sys.executable).name
+
+    updater_exe = install_dir / "Updater.exe"
+
+    if not updater_exe.exists():
+        raise FileNotFoundError(
+            f"Updater.exe introuvable : {updater_exe}"
+        )
+
+    subprocess.Popen(
+        [
+            str(updater_exe),
+            str(zip_path),
+            str(install_dir),
+            exe_name,
+        ],
+        cwd=str(install_dir),
+    )

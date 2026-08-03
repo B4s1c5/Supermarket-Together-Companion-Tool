@@ -3,6 +3,7 @@ import tempfile
 import zipfile
 import shutil
 import subprocess
+import time
 
 
 from pathlib import Path
@@ -34,6 +35,10 @@ def main():
         return
 
     print("Paramètres valides.")
+
+    # Laisser le temps au Companion de se fermer complètement
+    print("Attente de la fermeture de l'application...")
+    time.sleep(2)
 
         # Extraction de la nouvelle version dans un dossier temporaire
     temp_dir = Path(
