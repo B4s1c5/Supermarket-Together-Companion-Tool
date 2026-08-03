@@ -2,6 +2,7 @@ import sys
 import tempfile
 import zipfile
 import shutil
+import subprocess
 
 
 from pathlib import Path
@@ -93,6 +94,68 @@ def main():
         return
 
     print(f"Sauvegarde créée : {backup_dir}")
+
+    print("Installation de la nouvelle version...")
+
+    try:
+        # Supprimer l'ancienne installation
+        shutil.rmtree(install_dir)
+
+        # Copier la nouvelle version à sa place
+        shutil.copytree(
+            new_app_dir,
+            install_dir
+        )
+
+        # Vérification finale
+        installed_exe = install_dir / exe_name
+
+        if not installed_exe.exists():
+            raise FileNotFoundError(
+                f"{exe_name} est introuvable après l'installation."
+            )
+
+    except Exception as error:
+        print(f"ERREUR pendant l'installation : {error}")
+        print("Restauration de l'ancienne version...")
+
+        try:
+            if install_dir.exists():
+                shutil.rmtree(install_dir)
+
+            shutil.copytree(
+                backup_dir,
+                install_dir
+            )
+
+            print("Ancienne version restaurée.")
+
+        except Exception as restore_error:
+            print(
+                "ERREUR CRITIQUE pendant la restauration : "
+                f"{restore_error}"
+            )
+
+        return
+
+    print("Nouvelle version installée avec succès.")
+
+    # Relancer automatiquement l'application mise à jour
+    installed_exe = install_dir / exe_name
+
+    try:
+        subprocess.Popen(
+            [str(installed_exe)],
+            cwd=str(install_dir)
+        )
+
+        print("Application relancée avec succès.")
+
+    except Exception as error:
+        print(
+            "La mise à jour est installée, "
+            f"mais l'application n'a pas pu être relancée : {error}"
+        )
 
 
 if __name__ == "__main__":
