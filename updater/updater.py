@@ -1,6 +1,7 @@
 import sys
 import tempfile
 import zipfile
+import shutil
 
 
 from pathlib import Path
@@ -69,6 +70,29 @@ def main():
 
     print("Nouvelle version extraite et vérifiée.")
     print("Aucun fichier existant n'a encore été modifié.")
+
+        # Création d'une sauvegarde de l'installation actuelle
+    backup_dir = install_dir.parent / (
+        install_dir.name + "_backup"
+    )
+
+    try:
+        if backup_dir.exists():
+            shutil.rmtree(backup_dir)
+
+        shutil.copytree(
+            install_dir,
+            backup_dir
+        )
+
+    except Exception as error:
+        print(
+            "ERREUR : impossible de créer "
+            f"la sauvegarde.\n{error}"
+        )
+        return
+
+    print(f"Sauvegarde créée : {backup_dir}")
 
 
 if __name__ == "__main__":
