@@ -2,6 +2,7 @@ import tempfile
 import requests
 import subprocess
 import sys
+import shutil
 
 
 from pathlib import Path
@@ -64,12 +65,25 @@ def launch_updater(zip_path):
             f"Updater.exe introuvable : {updater_exe}"
         )
 
+    # Copier l'Updater hors du dossier qui va être remplacé.
+    temp_dir = Path(
+        tempfile.mkdtemp(prefix="supermarket_updater_")
+    )
+
+    temp_updater = temp_dir / "Updater.exe"
+
+    shutil.copy2(
+        updater_exe,
+        temp_updater
+    )
+
+    # Lancer la copie temporaire.
     subprocess.Popen(
         [
-            str(updater_exe),
+            str(temp_updater),
             str(zip_path),
             str(install_dir),
             exe_name,
         ],
-        cwd=str(install_dir),
+        cwd=str(temp_dir),
     )
