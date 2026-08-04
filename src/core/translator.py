@@ -61,17 +61,17 @@ class Translator:
             )
 
         # Chargement du fichier .env
-        load_dotenv()
+        # DeepL est disponible uniquement en développement.
+        # La version distribuée utilise uniquement le cache local.
+        self.deepl_translator = None
 
-        api_key = os.getenv("DEEPL_API_KEY")
+        if not getattr(sys, "frozen", False):
+            load_dotenv()
 
-        if not api_key:
-            raise ValueError(
-                "Clé API DeepL introuvable dans le fichier .env"
-            )
+            api_key = os.getenv("DEEPL_API_KEY")
 
-        # Connexion à DeepL
-        self.deepl_translator = deepl.Translator(api_key)
+            if api_key:
+                self.deepl_translator = deepl.Translator(api_key)
 
         # Chargement du cache local
         with open(self.path, "r", encoding="utf-8") as file:
@@ -115,6 +115,11 @@ class Translator:
         # -------------------------
         # Traduction DeepL par lots
         # -------------------------
+
+        # Dans la version distribuée, DeepL est désactivé.
+        # Les produits absents du cache resteront simplement inconnus.
+        if self.deepl_translator is None:
+            missing_products = []
 
         batch_size = 40
 
