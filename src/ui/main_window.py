@@ -14,6 +14,8 @@ from ui.home_page import HomePage
 
 from version import APP_VERSION 
 
+from .companion_table_page import CompanionTablePage
+
 from core.pdf_reader import PDFReader
 
 from core.excel_writer import ExcelWriter
@@ -34,6 +36,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QGraphicsBlurEffect,
+    QStackedWidget,
 )
 
 
@@ -901,19 +904,77 @@ class MainWindow(QMainWindow):
             0
         )
 
-        self.main_layout.setSpacing(0)
+        self.main_layout.setSpacing(
+            0
+        )
 
         # -------------------------
-        # Nouvelle page d'accueil
+        # Navigation principale
         # -------------------------
+
+        self.page_stack = QStackedWidget()
 
         self.home_page = HomePage(
             self
         )
 
-        self.main_layout.addWidget(
+        self.companion_table_page = CompanionTablePage(
+            self
+        )
+
+        self.page_stack.addWidget(
             self.home_page
         )
+
+        self.page_stack.addWidget(
+            self.companion_table_page
+        )
+
+        self.main_layout.addWidget(
+            self.page_stack
+        )
+
+        # Page affichée au démarrage
+        self.page_stack.setCurrentWidget(
+            self.home_page
+        )
+
+        # -------------------------
+        # Connexion de la navigation
+        # -------------------------
+
+        self.home_page.card_companion_table.clicked.connect(
+            self.show_companion_table
+        )
+
+        self.companion_table_page.btn_home.clicked.connect(
+            self.show_home
+        )
+
+        self.home_page.language_changed.connect(
+            self.on_language_changed
+        )
+
+    def show_companion_table(self):
+
+        self.page_stack.setCurrentWidget(
+            self.companion_table_page
+        )
+
+
+    def show_home(self):
+
+        self.page_stack.setCurrentWidget(
+            self.home_page
+        )
+
+
+    def on_language_changed(
+        self,
+        language
+    ):
+
+        self.companion_table_page.retranslate_ui()
 
 
     def set_progress(self, value):

@@ -1,7 +1,14 @@
 import json
+import os
 import sys
 
 from pathlib import Path
+
+import deepl
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class TranslationManager:
@@ -52,11 +59,31 @@ class TranslationManager:
 
             self.save()
 
+        self.deepl_translator = None
+
+        if not getattr(
+            sys,
+            "frozen",
+            False
+        ):
+
+            api_key = os.getenv(
+                "DEEPL_API_KEY"
+            )
+
+            if api_key:
+
+                self.deepl_translator = (
+                    deepl.Translator(
+                        api_key
+                    )
+                )
 
     def tr(
         self,
         key,
-        french_text
+        source_text,
+        source_language="fr"
     ):
 
         # -------------------------
@@ -66,31 +93,54 @@ class TranslationManager:
         if key not in self.translations:
 
             self.translations[key] = {
-                "fr": french_text
+                source_language: source_text
             }
 
-            # En développement uniquement,
-            # on enrichit automatiquement le JSON.
-            if not getattr(sys, "frozen", False):
+            if not getattr(
+                sys,
+                "frozen",
+                False
+            ):
 
                 self.save()
 
         # -------------------------
-        # Mise à jour du français
+        # Mise à jour du texte source
         # -------------------------
 
         elif (
-            self.translations[key].get("fr")
-            != french_text
+            self.translations[key].get(
+                source_language
+            )
+            != source_text
         ):
 
-            self.translations[key]["fr"] = (
-                french_text
-            )
+            self.translations[key][
+                source_language
+            ] = source_text
 
-            if not getattr(sys, "frozen", False):
+            if not getattr(
+                sys,
+                "frozen",
+                False
+            ):
 
                 self.save()
+
+        # -------------------------
+        # Traductions automatiques
+        # -------------------------
+
+        if not getattr(
+            sys,
+            "frozen",
+            False
+        ):
+
+            self.auto_translate_missing(
+                key,
+                source_language
+            )
 
         # -------------------------
         # Traduction demandée
@@ -102,15 +152,97 @@ class TranslationManager:
             )
         )
 
-        # Si la langue n'est pas encore traduite,
-        # fallback automatique vers le français.
+        # Fallback vers le texte source.
         if not translation:
 
-            translation = (
-                self.translations[key]["fr"]
-            )
+            translation = source_text
 
         return translation
+
+    
+    def auto_translate_missing(
+        self,
+        key,
+        source_language="fr"
+    ):
+
+        # DeepL ne doit fonctionner
+        # qu'en environnement de développement.
+        if getattr(sys, "frozen", False):
+            return
+
+        if self.deepl_translator is None:
+            return
+
+        values = self.translations.get(
+            key
+        )
+
+        if not isinstance(values, dict):
+            return
+
+        source_text = values.get(
+            source_language
+        )
+
+        if not source_text:
+            return
+
+        deepl_languages = {
+            "fr": "FR",
+            "en": "EN-US",
+            "de": "DE",
+            "es": "ES",
+        }
+
+        source_deepl_languages = {
+            "fr": "FR",
+            "en": "EN",
+            "de": "DE",
+            "es": "ES",
+        }
+
+        modified = False
+
+        for language, deepl_language in deepl_languages.items():
+
+            # Inutile de traduire la langue source
+            # vers elle-même.
+            if language == source_language:
+                continue
+
+            if values.get(language):
+                continue
+
+            try:
+
+                result = self.deepl_translator.translate_text(
+                    source_text,
+                    source_lang=source_deepl_languages[
+                        source_language
+                    ],
+                    target_lang=deepl_language
+                )
+
+                values[language] = result.text
+
+                modified = True
+
+                print(
+                    f"[i18n] {key} -> {language}"
+                )
+
+            except Exception as error:
+
+                # Une panne Internet / DeepL ne doit
+                # jamais empêcher l'application de démarrer.
+                print(
+                    f"[i18n] DeepL indisponible "
+                    f"pour {key}/{language}: {error}"
+                )
+
+        if modified:
+            self.save()
 
 
     def set_language(
@@ -147,10 +279,12 @@ translation_manager = TranslationManager()
 
 def tr(
     key,
-    french_text
+    source_text,
+    source_language="fr"
 ):
 
     return translation_manager.tr(
         key,
-        french_text
+        source_text,
+        source_language=source_language
     )

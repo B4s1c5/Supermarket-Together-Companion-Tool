@@ -28,5 +28,179 @@
         "en": "Quickly optimize the potential selling price relative to the market price",
         "de": "Den möglichen Verkaufspreis im Verhältnis zum Marktpreis schnell optimieren",
         "es": "Optimizar rápidamente el precio de venta posible en relación con el precio de mercado"
+    },
+    "button_home": {
+        "fr": "Accueil",
+        "en": "Home",
+        "de": "Startseite",
+        "es": "Inicio"
+    },
+    "companion_table_placeholder": {
+        "fr": "Le catalogue produits apparaîtra ici.",
+        "en": "The product catalog will appear here.",
+        "de": "Der Produktkatalog wird hier angezeigt.",
+        "es": "El catálogo de productos aparecerá aquí."
+    },
+    "categories_title": {
+        "fr": "Catégories",
+        "en": "Categories",
+        "de": "Kategorien",
+        "es": "Categorías"
+    },
+    "table_product": {
+        "fr": "Produit",
+        "en": "Product",
+        "de": "Produkt",
+        "es": "Producto"
+    },
+    "table_category": {
+        "fr": "Catégorie",
+        "en": "Category",
+        "de": "Kategorie",
+        "es": "Categoría"
+    },
+    "table_market_price": {
+        "fr": "Prix du marché",
+        "en": "Market price",
+        "de": "Marktpreis",
+        "es": "Precio de mercado"
+    },
+    "table_selling_price": {
+        "fr": "Prix conseillé",
+        "en": "Suggested retail price",
+        "de": "Unverbindliche Preisempfehlung",
+        "es": "Precio recomendado"
+    },
+    "table_actions": {
+        "fr": "Actions",
+        "en": "Actions",
+        "de": "Maßnahmen",
+        "es": "Acciones"
+    },
+    "companion_table_search_placeholder": {
+        "fr": "Rechercher un produit...",
+        "en": "Search for a product...",
+        "de": "Produkt suchen...",
+        "es": "Buscar un producto..."
+    },
+    "category_basic_products": {
+        "en": "Basic Products",
+        "fr": "Produits de base",
+        "de": "Grundprodukte",
+        "es": "Productos básicos"
+    },
+    "category_dairy_products": {
+        "en": "Dairy Products",
+        "fr": "Produits laitiers",
+        "de": "Milchprodukte",
+        "es": "Productos lácteos"
+    },
+    "category_soda_drinks": {
+        "en": "Soda Drinks",
+        "fr": "Boissons gazeuses",
+        "de": "Limonaden",
+        "es": "Refrescos"
+    },
+    "category_frozen_foods": {
+        "en": "Frozen Foods",
+        "fr": "Aliments surgelés",
+        "de": "Tiefkühlkost",
+        "es": "Alimentos congelados"
+    },
+    "category_hygiene": {
+        "en": "Hygiene",
+        "fr": "Hygiène",
+        "de": "Hygiene",
+        "es": "Higiene"
+    },
+    "category_cleaning_products": {
+        "en": "Cleaning Products",
+        "fr": "Produits d'entretien",
+        "de": "Reinigungsmittel",
+        "es": "Productos de limpieza"
+    },
+    "category_sweets_and_snacks": {
+        "en": "Sweets and Snacks",
+        "fr": "Confiseries et friandises",
+        "de": "Süßigkeiten und Snacks",
+        "es": "Dulces y aperitivos"
+    },
+    "category_meat": {
+        "en": "Meat",
+        "fr": "Viande",
+        "de": "Fleisch",
+        "es": "Carne"
+    },
+    "category_preserves": {
+        "en": "Preserves",
+        "fr": "Confitures",
+        "de": "Konserven",
+        "es": "Conservas"
+    },
+    "category_infusions": {
+        "en": "Infusions",
+        "fr": "Infusions",
+        "de": "Aufgüsse",
+        "es": "Infusiones"
+    },
+    "category_seafood": {
+        "en": "Seafood",
+        "fr": "Fruits de mer",
+        "de": "Meeresfrüchte",
+        "es": "Marisco"
+    },
+    "category_books_packs": {
+        "en": "Books Packs",
+        "fr": "Lot de livres",
+        "de": "Buchpakete",
+        "es": "Lotes de libros"
+    },
+    "category_alcoholic_drinks": {
+        "en": "Alcoholic Drinks",
+        "fr": "Boissons alcoolisées",
+        "de": "Alkoholische Getränke",
+        "es": "Bebidas alcohólicas"
+    },
+    "category_pharmacy": {
+        "en": "Pharmacy",
+        "fr": "Pharmacie",
+        "de": "Apotheke",
+        "es": "Farmacia"
+    },
+    "category_produce": {
+        "en": "Produce",
+        "fr": "Produits",
+        "de": "Erzeugnisse",
+        "es": "Productos"
+    },
+    "category_child_care": {
+        "en": "Child Care",
+        "fr": "Garde d'enfants",
+        "de": "Kinderbetreuung",
+        "es": "Cuidado infantil"
+    },
+    "category_gardening": {
+        "en": "Gardening",
+        "fr": "Jardinage",
+        "de": "Gartenarbeit",
+        "es": "Jardinería"
+    },
+    "category_small_electronics": {
+        "en": "Small Electronics",
+        "fr": "Petits appareils électroniques",
+        "de": "Kleine Elektronikgeräte",
+        "es": "Pequeños aparatos electrónicos"
+    },
+    "category_halloween": {
+        "en": "Halloween",
+        "fr": "Halloween",
+        "de": "Halloween",
+        "es": "Halloween"
+    },
+    "category_christmas": {
+        "en": "Christmas",
+        "fr": "Noël",
+        "de": "Weihnachten",
+        "es": "Navidad"
     }
 }

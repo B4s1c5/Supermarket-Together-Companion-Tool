@@ -1,0 +1,104 @@
+{
+    "categories": [
+        {
+            "id": "basic_products",
+            "name": "Basic Products",
+            "anchor": "#Basic_Products"
+        },
+        {
+            "id": "dairy_products",
+            "name": "Dairy Products",
+            "anchor": "#Dairy_Products"
+        },
+        {
+            "id": "soda_drinks",
+            "name": "Soda Drinks",
+            "anchor": "#Soda_Drinks"
+        },
+        {
+            "id": "frozen_foods",
+            "name": "Frozen Foods",
+            "anchor": "#Frozen_Foods"
+        },
+        {
+            "id": "hygiene",
+            "name": "Hygiene",
+            "anchor": "#Hygiene"
+        },
+        {
+            "id": "cleaning_products",
+            "name": "Cleaning Products",
+            "anchor": "#Cleaning_Products"
+        },
+        {
+            "id": "sweets_and_snacks",
+            "name": "Sweets and Snacks",
+            "anchor": "#Sweets_and_Snacks"
+        },
+        {
+            "id": "meat",
+            "name": "Meat",
+            "anchor": "#Meat"
+        },
+        {
+            "id": "preserves",
+            "name": "Preserves",
+            "anchor": "#Preserves"
+        },
+        {
+            "id": "infusions",
+            "name": "Infusions",
+            "anchor": "#Infusions"
+        },
+        {
+            "id": "seafood",
+            "name": "Seafood",
+            "anchor": "#Seafood"
+        },
+        {
+            "id": "books_packs",
+            "name": "Books Packs",
+            "anchor": "#Books_Packs"
+        },
+        {
+            "id": "alcoholic_drinks",
+            "name": "Alcoholic Drinks",
+            "anchor": "#Alcoholic_Drinks"
+        },
+        {
+            "id": "pharmacy",
+            "name": "Pharmacy",
+            "anchor": "#Pharmacy"
+        },
+        {
+            "id": "produce",
+            "name": "Produce",
+            "anchor": "#Produce"
+        },
+        {
+            "id": "child_care",
+            "name": "Child Care",
+            "anchor": "#Child_Care"
+        },
+        {
+            "id": "gardening",
+            "name": "Gardening",
+            "anchor": "#Gardening"
+        },
+        {
+            "id": "small_electronics",
+            "name": "Small Electronics",
+            "anchor": "#Small_Electronics"
+        },
+        {
+            "id": "halloween",
+            "name": "Halloween",
+            "anchor": "#Halloween"
+        },
+        {
+            "id": "christmas",
+            "name": "Christmas",
+            "anchor": "#Christmas"
+        }
+    ]
+}
