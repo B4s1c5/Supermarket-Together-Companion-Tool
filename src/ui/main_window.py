@@ -10,6 +10,8 @@ from PySide6.QtCore import (
 import os
 import time
 
+from ui.home_page import HomePage
+
 from version import APP_VERSION 
 
 from core.pdf_reader import PDFReader
@@ -281,7 +283,7 @@ class MainWindow(QMainWindow):
         self.btn_convert.clicked.connect(self.convert)
 
         self.btn_open_excel.clicked.connect(self.open_excel)
-        self.main_layout.addWidget(self.btn_open_excel)
+        # self.main_layout.addWidget(self.btn_open_excel)
 
 
     def convert(self):
@@ -882,50 +884,36 @@ class MainWindow(QMainWindow):
 
     def setup_layout(self):
 
-        header_layout = QVBoxLayout()
-
-        self.header_frame.setLayout(header_layout)
-
         central_widget = QWidget()
 
-        self.setCentralWidget(central_widget)
+        self.setCentralWidget(
+            central_widget
+        )
 
-        self.main_layout = QVBoxLayout()
+        self.main_layout = QVBoxLayout(
+            central_widget
+        )
 
-        self.main_layout.setContentsMargins(40, 40, 40, 40)
+        self.main_layout.setContentsMargins(
+            0,
+            0,
+            0,
+            0
+        )
 
-        self.main_layout.setSpacing(20)
+        self.main_layout.setSpacing(0)
 
-        central_widget.setLayout(self.main_layout)
+        # -------------------------
+        # Nouvelle page d'accueil
+        # -------------------------
 
-        header_layout.addWidget(self.lbl_title)
-        header_layout.addWidget(self.lbl_subtitle)
+        self.home_page = HomePage(
+            self
+        )
 
-        self.main_layout.addWidget(self.header_frame)
-
-        self.main_layout.addStretch()
-
-        self.main_layout.addWidget(self.btn_select_pdf)
-        self.main_layout.addWidget(self.lbl_selected_file)
-        self.main_layout.addWidget(self.btn_convert)
-
-        self.main_layout.addStretch()
-
-        details_layout = QHBoxLayout()
-
-        log_layout = QVBoxLayout()
-        details_box_layout = QVBoxLayout()
-
-        log_layout.addWidget(self.lbl_log)
-        log_layout.addWidget(self.log_box)
-
-        details_box_layout.addWidget(self.lbl_details)
-        details_box_layout.addWidget(self.details_box)
-
-        details_layout.addLayout(log_layout)
-        details_layout.addLayout(details_box_layout)
-
-        self.main_layout.addLayout(details_layout)
+        self.main_layout.addWidget(
+            self.home_page
+        )
 
 
     def set_progress(self, value):

@@ -1,0 +1,32 @@
+{
+    "home_subtitle": {
+        "fr": "Votre compagnon pour Supermarket Together",
+        "en": "Your companion for Supermarket Together",
+        "de": "Ihr Begleiter für „Supermarket Together“",
+        "es": "Tu compañero en Supermarket Together"
+    },
+    "companion_table_title": {
+        "fr": "SMT Companion Table",
+        "en": "SMT Companion Table",
+        "de": "SMT-Begleittabelle",
+        "es": "Tabla complementaria de SMT"
+    },
+    "companion_table_description": {
+        "fr": "Consulter et gérer le catalogue complet des produits",
+        "en": "View and manage the complete product catalog",
+        "de": "Den vollständigen Produktkatalog einsehen und verwalten",
+        "es": "Consultar y gestionar el catálogo completo de productos"
+    },
+    "price_checker_title": {
+        "fr": "Price Checker",
+        "en": "Price Checker",
+        "de": "Preisvergleich",
+        "es": "Comparador de precios"
+    },
+    "price_checker_description": {
+        "fr": "Optimiser rapidement le prix de vente possible par rapport au prix du marché",
+        "en": "Quickly optimize the potential selling price relative to the market price",
+        "de": "Den möglichen Verkaufspreis im Verhältnis zum Marktpreis schnell optimieren",
+        "es": "Optimizar rápidamente el precio de venta posible en relación con el precio de mercado"
+    }
+}
