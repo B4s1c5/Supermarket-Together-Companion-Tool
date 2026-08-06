@@ -202,5 +202,317 @@
         "fr": "Noël",
         "de": "Weihnachten",
         "es": "Navidad"
+    },
+    "subcategory_basic_products_i": {
+        "en": "Basic Products I",
+        "fr": "Produits de base I",
+        "de": "Grundlegende Produkte I",
+        "es": "Productos básicos I"
+    },
+    "subcategory_basic_products_ii": {
+        "en": "Basic Products II",
+        "fr": "Produits de base II",
+        "de": "Grundprodukte II",
+        "es": "Productos básicos II"
+    },
+    "subcategory_basic_products_iii": {
+        "en": "Basic Products III",
+        "fr": "Produits de base III",
+        "de": "Grundprodukte III",
+        "es": "Productos básicos III"
+    },
+    "subcategory_basic_products_iv": {
+        "en": "Basic Products IV",
+        "fr": "Produits de base IV",
+        "de": "Grundprodukte IV",
+        "es": "Productos básicos IV"
+    },
+    "subcategory_basic_products_v": {
+        "en": "Basic Products V",
+        "fr": "Produits de base V",
+        "de": "Grundprodukte V",
+        "es": "Productos básicos V"
+    },
+    "subcategory_basic_products_vi": {
+        "en": "Basic Products VI",
+        "fr": "Produits de base VI",
+        "de": "Grundprodukte VI",
+        "es": "Productos básicos VI"
+    },
+    "subcategory_basic_products_vii": {
+        "en": "Basic Products VII",
+        "fr": "Produits de base VII",
+        "de": "Grundprodukte VII",
+        "es": "Productos básicos VII"
+    },
+    "subcategory_dairy_products_i": {
+        "en": "Dairy Products I",
+        "fr": "Produits laitiers I",
+        "de": "Milchprodukte I",
+        "es": "Productos lácteos I"
+    },
+    "subcategory_dairy_products_ii": {
+        "en": "Dairy Products II",
+        "fr": "Produits laitiers II",
+        "de": "Milchprodukte II",
+        "es": "Productos lácteos II"
+    },
+    "subcategory_soda_drinks_i": {
+        "en": "Soda Drinks I",
+        "fr": "Boissons gazeuses I",
+        "de": "Erfrischungsgetränke I",
+        "es": "Refrescos I"
+    },
+    "subcategory_soda_drinks_ii": {
+        "en": "Soda Drinks II",
+        "fr": "Boissons gazeuses II",
+        "de": "Erfrischungsgetränke II",
+        "es": "Refrescos II"
+    },
+    "subcategory_soda_drinks_iii": {
+        "en": "Soda Drinks III",
+        "fr": "Boissons gazeuses III",
+        "de": "Erfrischungsgetränke III",
+        "es": "Refrescos III"
+    },
+    "subcategory_frozen_foods_i": {
+        "en": "Frozen Foods I",
+        "fr": "Aliments surgelés I",
+        "de": "Tiefkühlkost I",
+        "es": "Alimentos congelados I"
+    },
+    "subcategory_frozen_foods_ii": {
+        "en": "Frozen Foods II",
+        "fr": "Aliments surgelés II",
+        "de": "Tiefkühlkost II",
+        "es": "Alimentos congelados II"
+    },
+    "subcategory_hygiene_i": {
+        "en": "Hygiene I",
+        "fr": "Hygiène I",
+        "de": "Hygiene I",
+        "es": "Higiene I"
+    },
+    "subcategory_hygiene_ii": {
+        "en": "Hygiene II",
+        "fr": "Hygiène II",
+        "de": "Hygiene II",
+        "es": "Higiene II"
+    },
+    "subcategory_hygiene_iii": {
+        "en": "Hygiene III",
+        "fr": "Hygiène III",
+        "de": "Hygiene III",
+        "es": "Higiene III"
+    },
+    "subcategory_cleaning_products_i": {
+        "en": "Cleaning Products I",
+        "fr": "Produits d'entretien I",
+        "de": "Reinigungsmittel I",
+        "es": "Productos de limpieza I"
+    },
+    "subcategory_cleaning_products_ii": {
+        "en": "Cleaning Products II",
+        "fr": "Produits d'entretien II",
+        "de": "Reinigungsmittel II",
+        "es": "Productos de limpieza II"
+    },
+    "subcategory_sweets_and_snacks_i": {
+        "en": "Sweets and Snacks I",
+        "fr": "Confiseries et friandises I",
+        "de": "Süßigkeiten und Snacks I",
+        "es": "Dulces y aperitivos I"
+    },
+    "subcategory_sweets_and_snacks_ii": {
+        "en": "Sweets and Snacks II",
+        "fr": "Friandises et en-cas II",
+        "de": "Süßigkeiten und Snacks II",
+        "es": "Dulces y aperitivos II"
+    },
+    "subcategory_sweets_and_snacks_iii": {
+        "en": "Sweets and Snacks III",
+        "fr": "Confiseries et friandises III",
+        "de": "Süßigkeiten und Snacks III",
+        "es": "Dulces y aperitivos III"
+    },
+    "subcategory_sweets_and_snacks_iv": {
+        "en": "Sweets and Snacks IV",
+        "fr": "Confiseries et friandises IV",
+        "de": "Süßigkeiten und Snacks IV",
+        "es": "Dulces y aperitivos IV"
+    },
+    "subcategory_sweets_and_snacks_v": {
+        "en": "Sweets and Snacks V",
+        "fr": "Confiseries et friandises V",
+        "de": "Süßigkeiten und Snacks V",
+        "es": "Dulces y aperitivos V"
+    },
+    "subcategory_sweets_and_snacks_vi": {
+        "en": "Sweets and Snacks VI",
+        "fr": "Confiseries et friandises VI",
+        "de": "Süßigkeiten und Snacks VI",
+        "es": "Dulces y aperitivos VI"
+    },
+    "subcategory_sweets_and_snacks_vii": {
+        "en": "Sweets and Snacks VII",
+        "fr": "Confiseries et friandises VII",
+        "de": "Süßigkeiten und Snacks VII",
+        "es": "Dulces y aperitivos VII"
+    },
+    "subcategory_meat_i": {
+        "en": "Meat I",
+        "fr": "Viande I",
+        "de": "Fleisch I",
+        "es": "Carne I"
+    },
+    "subcategory_preserves_i": {
+        "en": "Preserves I",
+        "fr": "Confitures I",
+        "de": "Konserven I",
+        "es": "Conservas I"
+    },
+    "subcategory_preserves_ii": {
+        "en": "Preserves II",
+        "fr": "Confitures II",
+        "de": "Konserven II",
+        "es": "Conservas II"
+    },
+    "subcategory_infusions_i": {
+        "en": "Infusions I",
+        "fr": "Infusions I",
+        "de": "Infusionen I",
+        "es": "Infusiones I"
+    },
+    "subcategory_seafood_i": {
+        "en": "Seafood I",
+        "fr": "Fruits de mer I",
+        "de": "Meeresfrüchte I",
+        "es": "Marisco I"
+    },
+    "subcategory_alcoholic_drinks_i": {
+        "en": "Alcoholic Drinks I",
+        "fr": "Boissons alcoolisées I",
+        "de": "Alkoholische Getränke I",
+        "es": "Bebidas alcohólicas I"
+    },
+    "subcategory_alcoholic_drinks_ii": {
+        "en": "Alcoholic Drinks II",
+        "fr": "Boissons alcoolisées II",
+        "de": "Alkoholische Getränke II",
+        "es": "Bebidas alcohólicas II"
+    },
+    "subcategory_alcoholic_drinks_iii": {
+        "en": "Alcoholic Drinks III",
+        "fr": "Boissons alcoolisées III",
+        "de": "Alkoholische Getränke III",
+        "es": "Bebidas alcohólicas III"
+    },
+    "subcategory_pharmacy_i": {
+        "en": "Pharmacy I",
+        "fr": "Pharmacie I",
+        "de": "Pharmazie I",
+        "es": "Farmacia I"
+    },
+    "subcategory_pharmacy_ii": {
+        "en": "Pharmacy II",
+        "fr": "Pharmacie II",
+        "de": "Pharmazie II",
+        "es": "Farmacia II"
+    },
+    "subcategory_produce_i": {
+        "en": "Produce I",
+        "fr": "Produits I",
+        "de": "Erzeugnisse I",
+        "es": "Productos I"
+    },
+    "subcategory_produce_ii": {
+        "en": "Produce II",
+        "fr": "Produits II",
+        "de": "Erzeugnisse II",
+        "es": "Productos II"
+    },
+    "subcategory_produce_iii": {
+        "en": "Produce III",
+        "fr": "Produits III",
+        "de": "Produce III",
+        "es": "Productos III"
+    },
+    "subcategory_produce_iv": {
+        "en": "Produce IV",
+        "fr": "Produits IV",
+        "de": "Obst und Gemüse IV",
+        "es": "Productos IV"
+    },
+    "subcategory_produce_v": {
+        "en": "Produce V",
+        "fr": "Produits V",
+        "de": "Obst und Gemüse V",
+        "es": "Productos V"
+    },
+    "subcategory_child_care_i": {
+        "en": "Child Care I",
+        "fr": "Garde d'enfants I",
+        "de": "Kinderbetreuung I",
+        "es": "Cuidado infantil I"
+    },
+    "subcategory_child_care_ii": {
+        "en": "Child Care II",
+        "fr": "Garde d'enfants II",
+        "de": "Kinderbetreuung II",
+        "es": "Cuidado infantil II"
+    },
+    "subcategory_gardening_i": {
+        "en": "Gardening I",
+        "fr": "Jardinage I",
+        "de": "Gartenarbeit I",
+        "es": "Jardinería I"
+    },
+    "subcategory_gardening_ii": {
+        "en": "Gardening II",
+        "fr": "Jardinage II",
+        "de": "Gartenarbeit II",
+        "es": "Jardinería II"
+    },
+    "subcategory_gardening_iii": {
+        "en": "Gardening III",
+        "fr": "Jardinage III",
+        "de": "Gartenarbeit III",
+        "es": "Jardinería III"
+    },
+    "subcategory_gardening_iv": {
+        "en": "Gardening IV",
+        "fr": "Jardinage IV",
+        "de": "Gartenarbeit IV",
+        "es": "Jardinería IV"
+    },
+    "subcategory_small_electronics_i": {
+        "en": "Small Electronics I",
+        "fr": "Petits appareils électroniques I",
+        "de": "Kleine Elektronik I",
+        "es": "Electrónica básica I"
+    },
+    "subcategory_small_electronics_ii": {
+        "en": "Small Electronics II",
+        "fr": "Petits appareils électroniques II",
+        "de": "Kleine Elektronik II",
+        "es": "Pequeños aparatos electrónicos II"
+    },
+    "subcategory_small_electronics_iii": {
+        "en": "Small Electronics III",
+        "fr": "Petits appareils électroniques III",
+        "de": "Kleine Elektronik III",
+        "es": "Pequeños aparatos electrónicos III"
+    },
+    "subcategory_halloween_i": {
+        "en": "Halloween I",
+        "fr": "Halloween I",
+        "de": "Halloween I",
+        "es": "Halloween I"
+    },
+    "subcategory_christmas_i": {
+        "en": "Christmas I",
+        "fr": "Noël I",
+        "de": "Weihnachten I",
+        "es": "Navidad I"
     }
 }

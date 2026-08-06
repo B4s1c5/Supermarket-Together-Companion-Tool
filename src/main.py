@@ -1,12 +1,27 @@
 import sys
+import os
+import subprocess
+import ctypes
+
 from pathlib import Path
 
-from PySide6.QtCore import QObject, QThread, Slot
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtCore import(
+    QObject, 
+    QThread, 
+    Slot,
+    QTimer,
+)
+from PySide6.QtWidgets import(
+    QApplication, 
+    QMessageBox,
+)
 
 from ui.main_window import MainWindow
 from core.update_checker import UpdateWorker
-from core.updater import DownloadWorker, launch_updater
+from core.updater import(
+    DownloadWorker, 
+    launch_updater,
+)
 
 
 def resource_path(relative_path):
@@ -128,17 +143,345 @@ class UpdateHandler(QObject):
             )
         )
 
+
+class StartupProgress:
+
+    def __init__(self):
+
+        self.steps = [
+            "Initialisation Qt",
+            "Chargement du thème",
+            "Chargement des données",
+            "Traductions",
+            "Construction de l'interface",
+            "Finalisation",
+        ]
+
+        self.current_step = 0
+
+    def start(self):
+
+        if getattr(
+            sys,
+            "frozen",
+            False
+        ):
+            return
+
+        os.system(
+            "cls"
+        )
+
+        print(
+            "SMT Companion - Demarrage\n"
+        )
+
+        self.display(
+            self.steps[0]
+        )
+
+    def next(
+        self,
+        message
+    ):
+
+        if getattr(
+            sys,
+            "frozen",
+            False
+        ):
+            return
+
+        self.current_step = min(
+            self.current_step + 1,
+            len(self.steps)
+        )
+
+        print(
+            "\r"
+            + " " * 100
+            + "\r",
+            end="",
+            flush=True
+        )
+
+        print(
+            f"[OK] {message}"
+        )
+
+        next_message = (
+            self.steps[
+                self.current_step
+            ]
+            if self.current_step < len(
+                self.steps
+            )
+            else "Pret"
+        )
+
+        self.display(
+            next_message
+        )
+
+    def display(
+        self,
+        message
+    ):
+
+        total = len(
+            self.steps
+        )
+
+        percent = int(
+            self.current_step
+            / total
+            * 100
+        )
+
+        width = 30
+
+        filled = int(
+            width
+            * percent
+            / 100
+        )
+
+        bar = (
+            "#" * filled
+            + "-" * (
+                width - filled
+            )
+        )
+
+        print(
+            f"\r[GLOBAL] [{bar}] "
+            f"{percent:3d}%  "
+            f"{message}",
+            end="",
+            flush=True
+        )
+
+    def finish(self):
+
+        if getattr(
+            sys,
+            "frozen",
+            False
+        ):
+            return
+
+        self.current_step = len(
+            self.steps
+        )
+
+        print(
+            "\r"
+            + " " * 100
+            + "\r",
+            end="",
+            flush=True
+        )
+
+        self.display(
+            "Pret"
+        )
+
+        print()
+
+
+def open_dev_console():
+
+    if getattr(
+        sys,
+        "frozen",
+        False
+    ):
+        return
+
+    if os.getenv(
+        "SMT_DEV_CONSOLE"
+    ) == "1":
+        return
+
+    env = os.environ.copy()
+
+    env[
+        "SMT_DEV_CONSOLE"
+    ] = "1"
+
+    subprocess.Popen(
+        [
+            sys.executable,
+            str(
+                Path(__file__).resolve()
+            ),
+        ],
+        cwd=str(
+            Path(__file__)
+            .resolve()
+            .parent
+            .parent
+        ),
+        env=env,
+        creationflags=(
+            subprocess.CREATE_NEW_CONSOLE
+        ),
+    )
+
+    sys.exit(0)
+
+startup_progress = StartupProgress()
+
+
+def hide_dev_console():
+
+    if getattr(
+        sys,
+        "frozen",
+        False
+    ):
+        return
+
+    if os.getenv(
+        "SMT_DEV_CONSOLE"
+    ) != "1":
+        return
+
+    console_window = (
+        ctypes.windll.kernel32
+        .GetConsoleWindow()
+    )
+
+    if console_window:
+
+        ctypes.windll.user32.ShowWindow(
+            console_window,
+            0
+        )
+
+
+def focus_dev_console():
+
+    if getattr(
+        sys,
+        "frozen",
+        False
+    ):
+        return
+
+    if os.getenv(
+        "SMT_DEV_CONSOLE"
+    ) != "1":
+        return
+
+    console_window = (
+        ctypes.windll.kernel32
+        .GetConsoleWindow()
+    )
+
+    if not console_window:
+        return
+
+    user32 = ctypes.windll.user32
+
+    HWND_TOPMOST = -1
+    SWP_NOMOVE = 0x0002
+    SWP_NOSIZE = 0x0001
+
+    user32.SetWindowPos(
+        console_window,
+        HWND_TOPMOST,
+        0,
+        0,
+        0,
+        0,
+        SWP_NOMOVE
+        | SWP_NOSIZE
+    )
+
+
 def main():
-    app = QApplication(sys.argv)
 
-    style_path = resource_path("src/ui/style.qss")
+    open_dev_console()
 
-    with open(style_path, "r", encoding="utf-8") as file:
-        app.setStyleSheet(file.read())
+    startup_progress.start()
+
+    # -------------------------
+    # Qt
+    # -------------------------
+
+    app = QApplication(
+        sys.argv
+    )
+
+    startup_progress.next(
+        "Qt initialise"
+    )
+
+    # -------------------------
+    # Theme
+    # -------------------------
+
+    style_path = resource_path(
+        "src/ui/style.qss"
+    )
+
+    with open(
+        style_path,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        app.setStyleSheet(
+            file.read()
+        )
+
+    startup_progress.next(
+        "Theme charge"
+    )
+
+    # -------------------------
+    # Interface + donnees + i18n
+    # -------------------------
+
+    startup_progress.next(
+        "Chargement des donnees"
+    )
+
+    startup_progress.next(
+        "Traductions et interface"
+    )
 
     window = MainWindow()
-    window.show()
-    update_handler = UpdateHandler(window)
+
+    startup_progress.next(
+        "Interface construite"
+    )
+
+    # -------------------------
+    # Fin du démarrage
+    # -------------------------
+
+    startup_progress.finish()
+
+    startup_progress.finish()
+
+    def finish_startup():
+
+        hide_dev_console()
+
+        window.show()
+        window.raise_()
+        window.activateWindow()
+
+    QTimer.singleShot(
+        500,
+        finish_startup
+    )
+
+    update_handler = UpdateHandler(
+        window
+    )
 
     # Vérification des mises à jour en arrière-plan
     update_thread = QThread()

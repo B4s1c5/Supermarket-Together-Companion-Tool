@@ -3,102 +3,401 @@
         {
             "id": "basic_products",
             "name": "Basic Products",
-            "anchor": "#Basic_Products"
+            "anchor": "#Basic_Products",
+            "sections": [
+                {
+                    "id": "basic_products_i",
+                    "name": "Basic Products I",
+                    "wiki_path": "/wiki/Basic_Products_I"
+                },
+                {
+                    "id": "basic_products_ii",
+                    "name": "Basic Products II",
+                    "wiki_path": "/wiki/Basic_Products_II"
+                },
+                {
+                    "id": "basic_products_iii",
+                    "name": "Basic Products III",
+                    "wiki_path": "/wiki/Basic_Products_III"
+                },
+                {
+                    "id": "basic_products_iv",
+                    "name": "Basic Products IV",
+                    "wiki_path": "/wiki/Basic_Products_IV"
+                },
+                {
+                    "id": "basic_products_v",
+                    "name": "Basic Products V",
+                    "wiki_path": "/wiki/Basic_Products_V"
+                },
+                {
+                    "id": "basic_products_vi",
+                    "name": "Basic Products VI",
+                    "wiki_path": "/wiki/Basic_Products_VI"
+                },
+                {
+                    "id": "basic_products_vii",
+                    "name": "Basic Products VII",
+                    "wiki_path": "/wiki/Basic_Products_VII"
+                }
+            ]
         },
         {
             "id": "dairy_products",
             "name": "Dairy Products",
-            "anchor": "#Dairy_Products"
+            "anchor": "#Dairy_Products",
+            "sections": [
+                {
+                    "id": "dairy_products_i",
+                    "name": "Dairy Products I",
+                    "wiki_path": "/wiki/Dairy_Products_I"
+                },
+                {
+                    "id": "dairy_products_ii",
+                    "name": "Dairy Products II",
+                    "wiki_path": "/wiki/Dairy_Products_II"
+                }
+            ]
         },
         {
             "id": "soda_drinks",
             "name": "Soda Drinks",
-            "anchor": "#Soda_Drinks"
+            "anchor": "#Soda_Drinks",
+            "sections": [
+                {
+                    "id": "soda_drinks_i",
+                    "name": "Soda Drinks I",
+                    "wiki_path": "/wiki/Soda_Drinks_I"
+                },
+                {
+                    "id": "soda_drinks_ii",
+                    "name": "Soda Drinks II",
+                    "wiki_path": "/wiki/Soda_Drinks_II"
+                },
+                {
+                    "id": "soda_drinks_iii",
+                    "name": "Soda Drinks III",
+                    "wiki_path": "/wiki/Soda_Drinks_III"
+                }
+            ]
         },
         {
             "id": "frozen_foods",
             "name": "Frozen Foods",
-            "anchor": "#Frozen_Foods"
+            "anchor": "#Frozen_Foods",
+            "sections": [
+                {
+                    "id": "frozen_foods_i",
+                    "name": "Frozen Foods I",
+                    "wiki_path": "/wiki/Frozen_Foods_I"
+                },
+                {
+                    "id": "frozen_foods_ii",
+                    "name": "Frozen Foods II",
+                    "wiki_path": "/wiki/Frozen_Foods_II"
+                }
+            ]
         },
         {
             "id": "hygiene",
             "name": "Hygiene",
-            "anchor": "#Hygiene"
+            "anchor": "#Hygiene",
+            "sections": [
+                {
+                    "id": "hygiene_i",
+                    "name": "Hygiene I",
+                    "wiki_path": "/wiki/Hygiene_I"
+                },
+                {
+                    "id": "hygiene_ii",
+                    "name": "Hygiene II",
+                    "wiki_path": "/wiki/Hygiene_II"
+                },
+                {
+                    "id": "hygiene_iii",
+                    "name": "Hygiene III",
+                    "wiki_path": "/wiki/Hygiene_III"
+                }
+            ]
         },
         {
             "id": "cleaning_products",
             "name": "Cleaning Products",
-            "anchor": "#Cleaning_Products"
+            "anchor": "#Cleaning_Products",
+            "sections": [
+                {
+                    "id": "cleaning_products_i",
+                    "name": "Cleaning Products I",
+                    "wiki_path": "/wiki/Cleaning_Products_I"
+                },
+                {
+                    "id": "cleaning_products_ii",
+                    "name": "Cleaning Products II",
+                    "wiki_path": "/wiki/Cleaning_Products_II"
+                }
+            ]
         },
         {
             "id": "sweets_and_snacks",
             "name": "Sweets and Snacks",
-            "anchor": "#Sweets_and_Snacks"
+            "anchor": "#Sweets_and_Snacks",
+            "sections": [
+                {
+                    "id": "sweets_and_snacks_i",
+                    "name": "Sweets and Snacks I",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_I"
+                },
+                {
+                    "id": "sweets_and_snacks_ii",
+                    "name": "Sweets and Snacks II",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_II"
+                },
+                {
+                    "id": "sweets_and_snacks_iii",
+                    "name": "Sweets and Snacks III",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_III"
+                },
+                {
+                    "id": "sweets_and_snacks_iv",
+                    "name": "Sweets and Snacks IV",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_IV"
+                },
+                {
+                    "id": "sweets_and_snacks_v",
+                    "name": "Sweets and Snacks V",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_V"
+                },
+                {
+                    "id": "sweets_and_snacks_vi",
+                    "name": "Sweets and Snacks VI",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_VI"
+                },
+                {
+                    "id": "sweets_and_snacks_vii",
+                    "name": "Sweets and Snacks VII",
+                    "wiki_path": "/wiki/Sweets_and_Snacks_VII"
+                }
+            ]
         },
         {
             "id": "meat",
             "name": "Meat",
-            "anchor": "#Meat"
+            "anchor": "#Meat",
+            "sections": [
+                {
+                    "id": "meat_i",
+                    "name": "Meat I",
+                    "wiki_path": "/wiki/Meat_I"
+                }
+            ]
         },
         {
             "id": "preserves",
             "name": "Preserves",
-            "anchor": "#Preserves"
+            "anchor": "#Preserves",
+            "sections": [
+                {
+                    "id": "preserves_i",
+                    "name": "Preserves I",
+                    "wiki_path": "/wiki/Preserves_I"
+                },
+                {
+                    "id": "preserves_ii",
+                    "name": "Preserves II",
+                    "wiki_path": "/wiki/Preserves_II"
+                }
+            ]
         },
         {
             "id": "infusions",
             "name": "Infusions",
-            "anchor": "#Infusions"
+            "anchor": "#Infusions",
+            "sections": [
+                {
+                    "id": "infusions_i",
+                    "name": "Infusions I",
+                    "wiki_path": "/wiki/Infusions_I"
+                }
+            ]
         },
         {
             "id": "seafood",
             "name": "Seafood",
-            "anchor": "#Seafood"
+            "anchor": "#Seafood",
+            "sections": [
+                {
+                    "id": "seafood_i",
+                    "name": "Seafood I",
+                    "wiki_path": "/wiki/Seafood_I"
+                }
+            ]
         },
         {
             "id": "books_packs",
             "name": "Books Packs",
-            "anchor": "#Books_Packs"
+            "anchor": "#Books_Packs",
+            "sections": []
         },
         {
             "id": "alcoholic_drinks",
             "name": "Alcoholic Drinks",
-            "anchor": "#Alcoholic_Drinks"
+            "anchor": "#Alcoholic_Drinks",
+            "sections": [
+                {
+                    "id": "alcoholic_drinks_i",
+                    "name": "Alcoholic Drinks I",
+                    "wiki_path": "/wiki/Alcoholic_Drinks_I"
+                },
+                {
+                    "id": "alcoholic_drinks_ii",
+                    "name": "Alcoholic Drinks II",
+                    "wiki_path": "/wiki/Alcoholic_Drinks_II"
+                },
+                {
+                    "id": "alcoholic_drinks_iii",
+                    "name": "Alcoholic Drinks III",
+                    "wiki_path": "/wiki/Alcoholic_Drinks_III"
+                }
+            ]
         },
         {
             "id": "pharmacy",
             "name": "Pharmacy",
-            "anchor": "#Pharmacy"
+            "anchor": "#Pharmacy",
+            "sections": [
+                {
+                    "id": "pharmacy_i",
+                    "name": "Pharmacy I",
+                    "wiki_path": "/wiki/Pharmacy_I"
+                },
+                {
+                    "id": "pharmacy_ii",
+                    "name": "Pharmacy II",
+                    "wiki_path": "/wiki/Pharmacy_II"
+                }
+            ]
         },
         {
             "id": "produce",
             "name": "Produce",
-            "anchor": "#Produce"
+            "anchor": "#Produce",
+            "sections": [
+                {
+                    "id": "produce_i",
+                    "name": "Produce I",
+                    "wiki_path": "/wiki/Produce_I"
+                },
+                {
+                    "id": "produce_ii",
+                    "name": "Produce II",
+                    "wiki_path": "/wiki/Produce_II"
+                },
+                {
+                    "id": "produce_iii",
+                    "name": "Produce III",
+                    "wiki_path": "/wiki/Produce_III"
+                },
+                {
+                    "id": "produce_iv",
+                    "name": "Produce IV",
+                    "wiki_path": "/wiki/Produce_IV"
+                },
+                {
+                    "id": "produce_v",
+                    "name": "Produce V",
+                    "wiki_path": "/wiki/Produce_V"
+                }
+            ]
         },
         {
             "id": "child_care",
             "name": "Child Care",
-            "anchor": "#Child_Care"
+            "anchor": "#Child_Care",
+            "sections": [
+                {
+                    "id": "child_care_i",
+                    "name": "Child Care I",
+                    "wiki_path": "/wiki/Child_Care_I"
+                },
+                {
+                    "id": "child_care_ii",
+                    "name": "Child Care II",
+                    "wiki_path": "/wiki/Child_Care_II"
+                }
+            ]
         },
         {
             "id": "gardening",
             "name": "Gardening",
-            "anchor": "#Gardening"
+            "anchor": "#Gardening",
+            "sections": [
+                {
+                    "id": "gardening_i",
+                    "name": "Gardening I",
+                    "wiki_path": "/wiki/Gardening_I"
+                },
+                {
+                    "id": "gardening_ii",
+                    "name": "Gardening II",
+                    "wiki_path": "/wiki/Gardening_II"
+                },
+                {
+                    "id": "gardening_iii",
+                    "name": "Gardening III",
+                    "wiki_path": "/wiki/Gardening_III"
+                },
+                {
+                    "id": "gardening_iv",
+                    "name": "Gardening IV",
+                    "wiki_path": "/wiki/Gardening_IV"
+                }
+            ]
         },
         {
             "id": "small_electronics",
             "name": "Small Electronics",
-            "anchor": "#Small_Electronics"
+            "anchor": "#Small_Electronics",
+            "sections": [
+                {
+                    "id": "small_electronics_i",
+                    "name": "Small Electronics I",
+                    "wiki_path": "/wiki/Small_Electronics_I"
+                },
+                {
+                    "id": "small_electronics_ii",
+                    "name": "Small Electronics II",
+                    "wiki_path": "/wiki/Small_Electronics_II"
+                },
+                {
+                    "id": "small_electronics_iii",
+                    "name": "Small Electronics III",
+                    "wiki_path": "/wiki/Small_Electronics_III"
+                }
+            ]
         },
         {
             "id": "halloween",
             "name": "Halloween",
-            "anchor": "#Halloween"
+            "anchor": "#Halloween",
+            "sections": [
+                {
+                    "id": "halloween_i",
+                    "name": "Halloween I",
+                    "wiki_path": "/wiki/Halloween_I"
+                }
+            ]
         },
         {
             "id": "christmas",
             "name": "Christmas",
-            "anchor": "#Christmas"
+            "anchor": "#Christmas",
+            "sections": [
+                {
+                    "id": "christmas_i",
+                    "name": "Christmas I",
+                    "wiki_path": "/wiki/Christmas_I"
+                }
+            ]
         }
     ]
 }

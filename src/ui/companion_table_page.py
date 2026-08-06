@@ -3,7 +3,12 @@ import sys
 
 from pathlib import Path
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import (
+    Qt,
+    QSize,
+)
+
+from PySide6.QtGui import QIcon
 
 from core.translation_manager import tr
 
@@ -16,7 +21,8 @@ from PySide6.QtWidgets import (
     QLineEdit,
     QTableWidget,
     QAbstractItemView,
-    QScrollArea
+    QScrollArea,
+    QFrame
 )
 
 
@@ -24,6 +30,8 @@ class CompanionTablePage(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+
+        self.subcategory_buttons = []
 
         self.setup_ui()
 
@@ -186,6 +194,8 @@ class CompanionTablePage(QWidget):
         # -------------------------
 
         self.category_buttons = {}
+        self.category_section_buttons = {}
+        self.category_section_containers = {}
 
         # -------------------------
         # Chargement des catégories wiki
@@ -232,51 +242,236 @@ class CompanionTablePage(QWidget):
                 "name"
             ]
 
+            sections = category.get(
+                "sections",
+                []
+            )
+
+            # -------------------------
+            # Groupe de catégorie
+            # -------------------------
+
+            group_widget = QFrame()
+
+            group_layout = QVBoxLayout(
+                group_widget
+            )
+
+            group_layout.setContentsMargins(
+                0,
+                0,
+                0,
+                0
+            )
+
+            group_layout.setSpacing(
+                2
+            )
+
+            # -------------------------
+            # Bouton catégorie principale
+            # -------------------------
+
             button = QPushButton(
-                tr(
+                "›  " + tr(
                     f"category_{category_key}",
                     category_name,
                     source_language="en"
                 )
             )
 
+            # -------------------------
+            # Icône de la catégorie
+            # -------------------------
+
+            if getattr(
+                sys,
+                "frozen",
+                False
+            ):
+
+                icon_path = (
+                    Path(sys._MEIPASS)
+                    / "resources"
+                    / "images"
+                    / "categories"
+                    / f"{category_key}.png"
+                )
+
+            else:
+
+                icon_path = (
+                    Path(__file__).resolve()
+                    .parent.parent.parent
+                    / "resources"
+                    / "images"
+                    / "categories"
+                    / f"{category_key}.png"
+                )
+
+            if icon_path.exists():
+
+                button.setIcon(
+                    QIcon(
+                        str(icon_path)
+                    )
+                )
+
+                button.setIconSize(
+                    QSize(
+                        26,
+                        26
+                    )
+                )
+
             button.setCursor(
                 Qt.CursorShape.PointingHandCursor
             )
 
             button.setMinimumHeight(
-                36
+                40
             )
 
             button.setStyleSheet("""
-                QPushButton {
-                    background-color: transparent;
-                    color: #d1d5db;
-                    border: none;
-                    border-radius: 7px;
-                    padding: 7px 10px;
-                    text-align: left;
-                    font-size: 13px;
-                }
+            QPushButton {
+                background-color: transparent;
+                color: #d1d5db;
+                border: none;
+                border-radius: 7px;
+                padding: 5px 8px;
+                text-align: left;
+                font-size: 13px;
+             font-weight: 600;
+            }
 
-                QPushButton:hover {
-                    background-color: #30353a;
-                    color: #ffffff;
-                }
+            QPushButton:hover {
+                background-color: #30353a;
+                color: #ffffff;
+            }
 
-                QPushButton:pressed {
-                    background-color: #3a2528;
-                    color: #ff5a61;
-                }
-            """)
+            QPushButton:pressed {
+                background-color: #383e44;
+            }
+        """)
 
-            self.categories_buttons_layout.addWidget(
+            group_layout.addWidget(
                 button
             )
 
             self.category_buttons[
                 category_key
             ] = button
+
+            # -------------------------
+            # Conteneur sous-catégories
+            # -------------------------
+
+            sections_widget = QWidget()
+
+            sections_layout = QVBoxLayout(
+                sections_widget
+            )
+
+            sections_layout.setContentsMargins(
+                18,
+                0,
+                0,
+                4
+            )
+
+            sections_layout.setSpacing(
+                1
+            )
+
+            for section in sections:
+
+                section_key = section[
+                    "id"
+                ]
+
+                section_name = section[
+                    "name"
+                ]
+
+                section_button = QPushButton(
+                    tr(
+                        f"subcategory_{section_key}",
+                        section_name,
+                        source_language="en"
+                    )
+                )
+
+                section_button.setProperty(
+                    "translation_key",
+                    f"subcategory_{section_key}"
+                )
+
+                section_button.setProperty(
+                    "source_text",
+                    section_name
+                )
+
+                self.subcategory_buttons.append(
+                    section_button
+                )
+
+                section_button.setCursor(
+                    Qt.CursorShape.PointingHandCursor
+                )
+
+                section_button.setMinimumHeight(
+                    32
+                )
+
+                section_button.setStyleSheet("""
+                    QPushButton {
+                        background-color: transparent;
+                        color: #9ca3af;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 5px 8px;
+                        text-align: left;
+                        font-size: 12px;
+                    }
+
+                    QPushButton:hover {
+                        background-color: #30353a;
+                        color: #ffffff;
+                    }
+                """)
+
+                sections_layout.addWidget(
+                    section_button
+                )
+
+                self.category_section_buttons[
+                    section_key
+                ] = section_button
+
+            # Fermé par défaut.
+            sections_widget.setVisible(
+                False
+            )
+
+            group_layout.addWidget(
+                sections_widget
+            )
+
+            self.category_section_containers[
+                category_key
+            ] = sections_widget
+
+            button.clicked.connect(
+                lambda checked=False,
+                key=category_key:
+                self.toggle_category(
+                    key
+                )
+            )
+
+            self.categories_buttons_layout.addWidget(
+                group_widget
+            )
 
         self.categories_buttons_layout.addStretch()
 
@@ -523,6 +718,56 @@ class CompanionTablePage(QWidget):
         )
 
 
+    def toggle_category(
+        self,
+        category_key
+    ):
+
+        sections_widget = (
+            self.category_section_containers[
+                category_key
+            ]
+        )
+
+        is_open = (
+            sections_widget.isVisible()
+        )
+
+        sections_widget.setVisible(
+            not is_open
+        )
+
+        category = next(
+            (
+                item
+                for item in self.categories
+                if item["id"] == category_key
+            ),
+            None
+        )
+
+        if category is None:
+            return
+
+        category_name = tr(
+            f"category_{category_key}",
+            category["name"],
+            source_language="en"
+        )
+
+        arrow = (
+            "⌄"
+            if not is_open
+            else "›"
+        )
+
+        self.category_buttons[
+            category_key
+        ].setText(
+            f"{arrow}  {category_name}"
+        )
+
+
     def retranslate_ui(self):
 
         self.btn_home.setText(
@@ -573,6 +818,34 @@ class CompanionTablePage(QWidget):
                 tr(
                     f"category_{category_key}",
                     category_name,
+                    source_language="en"
+                )
+            )
+
+        # -------------------------
+        # Traduction des sous-catégories wiki
+        # -------------------------
+
+        for button in self.subcategory_buttons:
+
+            translation_key = button.property(
+                "translation_key"
+            )
+
+            source_text = button.property(
+                "source_text"
+            )
+
+            if (
+                not translation_key
+                or not source_text
+            ):
+                continue
+
+            button.setText(
+                tr(
+                    translation_key,
+                    source_text,
                     source_language="en"
                 )
             )

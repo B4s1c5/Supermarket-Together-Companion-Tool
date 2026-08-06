@@ -61,6 +61,10 @@ class TranslationManager:
 
         self.deepl_translator = None
 
+        self.translation_total = 0
+        self.translation_done = 0
+        self.translation_failed = 0
+
         if not getattr(
             sys,
             "frozen",
@@ -78,6 +82,7 @@ class TranslationManager:
                         api_key
                     )
                 )
+
 
     def tr(
         self,
@@ -159,6 +164,107 @@ class TranslationManager:
 
         return translation
 
+
+    def prepare_translation_progress(
+        self
+    ):
+
+        languages = (
+            "fr",
+            "en",
+            "de",
+            "es",
+        )
+
+        total = 0
+        done = 0
+
+        for values in self.translations.values():
+
+            if not isinstance(
+                values,
+                dict
+            ):
+                continue
+
+            for language in languages:
+
+                total += 1
+
+                if values.get(
+                    language
+                ):
+                    done += 1
+
+        self.translation_total = total
+        self.translation_done = done
+        self.translation_failed = 0
+
+
+    def display_translation_progress(
+        self,
+        key=None,
+        language=None
+    ):
+
+        if getattr(
+            sys,
+            "frozen",
+            False
+        ):
+            return
+
+        if self.translation_total <= 0:
+            return
+
+        percent = int(
+            self.translation_done
+            / self.translation_total
+            * 100
+        )
+
+        width = 30
+
+        filled = int(
+            width
+            * percent
+            / 100
+        )
+
+        bar = (
+            "#" * filled
+            + "-" * (
+                width - filled
+            )
+        )
+
+        message = ""
+
+        if key and language:
+
+            message = (
+                f"{key} -> "
+                f"{language.upper()}"
+            )
+
+        print(
+            "\r"
+            + " " * 120
+            + "\r",
+            end="",
+            flush=True
+        )
+
+        print(
+            f"[I18N]   [{bar}] "
+            f"{percent:3d}%  "
+            f"{self.translation_done} / "
+            f"{self.translation_total}  "
+            f"{message}",
+            end="",
+            flush=True
+        )
+
     
     def auto_translate_missing(
         self,
@@ -187,6 +293,12 @@ class TranslationManager:
 
         if not source_text:
             return
+
+        # Initialise le suivi avant
+        # les traductions DeepL.
+        if self.translation_total == 0:
+
+            self.prepare_translation_progress()
 
         deepl_languages = {
             "fr": "FR",
@@ -226,19 +338,32 @@ class TranslationManager:
 
                 values[language] = result.text
 
-                modified = True
+                self.translation_done += 1
 
-                print(
-                    f"[i18n] {key} -> {language}"
+                self.display_translation_progress(
+                    key,
+                    language
                 )
+
+                modified = True
 
             except Exception as error:
 
-                # Une panne Internet / DeepL ne doit
-                # jamais empêcher l'application de démarrer.
+                self.translation_failed += 1
+
                 print(
-                    f"[i18n] DeepL indisponible "
-                    f"pour {key}/{language}: {error}"
+                    "\r"
+                    + " " * 120
+                    + "\r",
+                    end="",
+                    flush=True
+                )
+
+                print(
+                    f"[WARN] DeepL : "
+                    f"{key} -> "
+                    f"{language.upper()} "
+                    f"non traduit"
                 )
 
         if modified:
