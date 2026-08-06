@@ -5,6 +5,8 @@ import ctypes
 
 from pathlib import Path
 
+from core.dev_console import dev_console
+
 from PySide6.QtCore import(
     QObject, 
     QThread, 
@@ -288,48 +290,6 @@ class StartupProgress:
 
         print()
 
-
-def open_dev_console():
-
-    if getattr(
-        sys,
-        "frozen",
-        False
-    ):
-        return
-
-    if os.getenv(
-        "SMT_DEV_CONSOLE"
-    ) == "1":
-        return
-
-    env = os.environ.copy()
-
-    env[
-        "SMT_DEV_CONSOLE"
-    ] = "1"
-
-    subprocess.Popen(
-        [
-            sys.executable,
-            str(
-                Path(__file__).resolve()
-            ),
-        ],
-        cwd=str(
-            Path(__file__)
-            .resolve()
-            .parent
-            .parent
-        ),
-        env=env,
-        creationflags=(
-            subprocess.CREATE_NEW_CONSOLE
-        ),
-    )
-
-    sys.exit(0)
-
 startup_progress = StartupProgress()
 
 
@@ -402,7 +362,9 @@ def focus_dev_console():
 
 def main():
 
-    open_dev_console()
+    dev_console.open(
+        __file__
+    )
 
     startup_progress.start()
 

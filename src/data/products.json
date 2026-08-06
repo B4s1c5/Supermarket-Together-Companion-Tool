@@ -1,0 +1,3274 @@
+{
+    "products": [
+        {
+            "name": "Pasta Penne",
+            "brand": "Panzati",
+            "amount_per_box": "30",
+            "price_per_box": "$40.5",
+            "price_per_unit": "$1.35",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Water Bottle",
+            "brand": "Montcuq",
+            "amount_per_box": "30",
+            "price_per_box": "$26.7",
+            "price_per_unit": "$0.89",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Honey Cereals",
+            "brand": "Honey Bees",
+            "amount_per_box": "20",
+            "price_per_box": "$50",
+            "price_per_unit": "$2.5",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Rice",
+            "brand": "Elo",
+            "amount_per_box": "30",
+            "price_per_box": "$43.5",
+            "price_per_unit": "$1.45",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Salt",
+            "brand": "Labalaine",
+            "amount_per_box": "50",
+            "price_per_box": "$22.5",
+            "price_per_unit": "$0.45",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Sugar",
+            "brand": "Daron",
+            "amount_per_box": "40",
+            "price_per_box": "$59.6",
+            "price_per_unit": "$1.49",
+            "wiki_path": "/wiki/Basic_Products_I",
+            "category_id": "basic_products",
+            "section_id": "basic_products_i"
+        },
+        {
+            "name": "Margarine",
+            "brand": "Etron",
+            "amount_per_box": "25",
+            "price_per_box": "$52.5",
+            "price_per_unit": "$2.1",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Flour",
+            "brand": "Kraftung",
+            "amount_per_box": "25",
+            "price_per_box": "$22.5",
+            "price_per_unit": "$0.9",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Apple Juice",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$74",
+            "price_per_unit": "$1.85",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Olive Oil",
+            "brand": "Tupiges",
+            "amount_per_box": "40",
+            "price_per_box": "$304.8",
+            "price_per_unit": "$7.62",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Ketchup",
+            "brand": "Kekette",
+            "amount_per_box": "40",
+            "price_per_box": "$94",
+            "price_per_unit": "$2.35",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Sliced Bread",
+            "brand": "Ron's",
+            "amount_per_box": "30",
+            "price_per_box": "$51",
+            "price_per_unit": "$1.7",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Pepper",
+            "brand": "Alei",
+            "amount_per_box": "40",
+            "price_per_box": "$46.8",
+            "price_per_unit": "$1.17",
+            "wiki_path": "/wiki/Basic_Products_II",
+            "category_id": "basic_products",
+            "section_id": "basic_products_ii"
+        },
+        {
+            "name": "Orange Juice",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$80",
+            "price_per_unit": "$2",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Barbaque Sauce",
+            "brand": "Hothot",
+            "amount_per_box": "40",
+            "price_per_box": "$79.6",
+            "price_per_unit": "$1.99",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Mustard Sauce",
+            "brand": "Maptite",
+            "amount_per_box": "40",
+            "price_per_box": "$98",
+            "price_per_unit": "$2.45",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Spaguetti Box",
+            "brand": "Elo",
+            "amount_per_box": "20",
+            "price_per_box": "$31",
+            "price_per_unit": "$1.55",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Tuna Pate",
+            "brand": "Stark",
+            "amount_per_box": "30",
+            "price_per_box": "$113.7",
+            "price_per_unit": "$3.79",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Fiber Cereals",
+            "brand": "Racoon",
+            "amount_per_box": "30",
+            "price_per_box": "$85.5",
+            "price_per_unit": "$2.85",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Supreme Flour",
+            "brand": "Aio",
+            "amount_per_box": "30",
+            "price_per_box": "$48.9",
+            "price_per_unit": "$1.63",
+            "wiki_path": "/wiki/Basic_Products_III",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iii"
+        },
+        {
+            "name": "Black Coffee",
+            "brand": "NarValo",
+            "amount_per_box": "25",
+            "price_per_box": "$83.75",
+            "price_per_unit": "$3.35",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "Egg Box",
+            "brand": "Bio",
+            "amount_per_box": "30",
+            "price_per_box": "$67.80",
+            "price_per_unit": "$2.26",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "Houmous",
+            "brand": "Bibi",
+            "amount_per_box": "30",
+            "price_per_box": "$50.70",
+            "price_per_unit": "$1.69",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "White Flour",
+            "brand": "Sublett",
+            "amount_per_box": "30",
+            "price_per_box": "$53.70",
+            "price_per_unit": "$1.79",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "Cane Sugar Box",
+            "brand": "Daron",
+            "amount_per_box": "25",
+            "price_per_box": "$46.25",
+            "price_per_unit": "$1.85",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "Sugar",
+            "brand": "Pablo",
+            "amount_per_box": "40",
+            "price_per_box": "$71.20",
+            "price_per_unit": "$1.78",
+            "wiki_path": "/wiki/Basic_Products_IV",
+            "category_id": "basic_products",
+            "section_id": "basic_products_iv"
+        },
+        {
+            "name": "Macarroni",
+            "brand": "Barillo",
+            "amount_per_box": "30",
+            "price_per_box": "$   81.30",
+            "price_per_unit": "$    2.71",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Ecologic Sugar",
+            "brand": "Daron",
+            "amount_per_box": "40",
+            "price_per_box": "$   118.40",
+            "price_per_unit": "$    2.96",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Brown Sugar",
+            "brand": "Daron",
+            "amount_per_box": "40",
+            "price_per_box": "$   183.60",
+            "price_per_unit": "$    4.59",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Sunflower Oil",
+            "brand": "Lespieds",
+            "amount_per_box": "25",
+            "price_per_box": "$   471.75",
+            "price_per_unit": "$    18.87",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Mash Potatoes",
+            "brand": "Puray",
+            "amount_per_box": "30",
+            "price_per_box": "$   122.40",
+            "price_per_unit": "$    4.08",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Potato Bag",
+            "brand": "Miamm",
+            "amount_per_box": "10",
+            "price_per_box": "$   122.20",
+            "price_per_unit": "$    12.22",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Espresso Coffee",
+            "brand": "NarValo",
+            "amount_per_box": "20",
+            "price_per_box": "$   116.20",
+            "price_per_unit": "$    8.81",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Basmati Rice",
+            "brand": "Lustupacru",
+            "amount_per_box": "30",
+            "price_per_box": "$   143.70",
+            "price_per_unit": "$    4.79",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Long Grain Rice",
+            "brand": "Uncle Tony's",
+            "amount_per_box": "30",
+            "price_per_box": "$   174.30",
+            "price_per_unit": "$    5.81",
+            "wiki_path": "/wiki/Basic_Products_V",
+            "category_id": "basic_products",
+            "section_id": "basic_products_v"
+        },
+        {
+            "name": "Coffee",
+            "brand": "NarValo",
+            "amount_per_box": "40",
+            "price_per_box": "$ 362.00",
+            "price_per_unit": "$ 9.05",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Supreme Pasta",
+            "brand": "Lustupacru",
+            "amount_per_box": "30",
+            "price_per_box": "$ 175.20",
+            "price_per_unit": "$ 5.84",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Chocolate Cereals",
+            "brand": "Racoon",
+            "amount_per_box": "25",
+            "price_per_box": "$ 228.50",
+            "price_per_unit": "$ 9.14",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Premium Water",
+            "brand": "Fort-Lacs",
+            "amount_per_box": "30",
+            "price_per_box": "$ 65.40",
+            "price_per_unit": "$ 2.19",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Spring Water",
+            "brand": "Flotte",
+            "amount_per_box": "30",
+            "price_per_box": "$ 82.50",
+            "price_per_unit": "$ 2.75",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Powdered Sugar",
+            "brand": "Boully",
+            "amount_per_box": "30",
+            "price_per_box": "$ 171.60",
+            "price_per_unit": "$ 5.72",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Sugar - Big Box",
+            "brand": "Susu",
+            "amount_per_box": "25",
+            "price_per_box": "$ 200.25",
+            "price_per_unit": "$ 8.01",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Brown Sugar - Big Box",
+            "brand": "Susu",
+            "amount_per_box": "25",
+            "price_per_box": "$ 206.00",
+            "price_per_unit": "$ 8.24",
+            "wiki_path": "/wiki/Basic_Products_VI",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vi"
+        },
+        {
+            "name": "Baking Powder",
+            "brand": "MasterCooker",
+            "amount_per_box": "30",
+            "price_per_box": "$ 269.70",
+            "price_per_unit": "$ 8.99",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Baking Soda",
+            "brand": "MasterCooker",
+            "amount_per_box": "40",
+            "price_per_box": "$ 299.60",
+            "price_per_unit": "$ 7.49",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Cake Mix",
+            "brand": "MasterCooker",
+            "amount_per_box": "40",
+            "price_per_box": "$ 275.60",
+            "price_per_unit": "$ 6.89",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Cocoa Powder",
+            "brand": "MasterCooker",
+            "amount_per_box": "40",
+            "price_per_box": "$ 139.60",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Cornstarch",
+            "brand": "MasterCooker",
+            "amount_per_box": "50",
+            "price_per_box": "$ 174.50",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Icing Tube",
+            "brand": "MasterCooker",
+            "amount_per_box": "70",
+            "price_per_box": "$ 349.30",
+            "price_per_unit": "$ 4.99",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Candy Sprinkles",
+            "brand": "MasterCooker",
+            "amount_per_box": "50",
+            "price_per_box": "$ 149.50",
+            "price_per_unit": "$ 2.99",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Vanilla Extract",
+            "brand": "MasterCooker",
+            "amount_per_box": "40",
+            "price_per_box": "$ 399.60",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Basic_Products_VII",
+            "category_id": "basic_products",
+            "section_id": "basic_products_vii"
+        },
+        {
+            "name": "Emmental Cheese",
+            "brand": "Mimolette",
+            "amount_per_box": "80",
+            "price_per_box": "$ 146.40",
+            "price_per_unit": "$ 183",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Gruyere Cheese",
+            "brand": "Mimolette",
+            "amount_per_box": "80",
+            "price_per_box": "$ 180.00",
+            "price_per_unit": "$ 2.25",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Skimmed Cheese",
+            "brand": "Comte",
+            "amount_per_box": "80",
+            "price_per_box": "$ 188.00",
+            "price_per_unit": "$ 2.35",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Fruit Yoghurt",
+            "brand": "Frugen!",
+            "amount_per_box": "25",
+            "price_per_box": "$ 65.00",
+            "price_per_unit": "$ 2.60",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Vanilla Yoghurt",
+            "brand": "Yowp",
+            "amount_per_box": "25",
+            "price_per_box": "$ 98.75",
+            "price_per_unit": "$ 3.95",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Milk Brick",
+            "brand": "Bourlait",
+            "amount_per_box": "30",
+            "price_per_box": "$ 27.30",
+            "price_per_unit": "$ 0.91",
+            "wiki_path": "/wiki/Dairy_Products_I",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_i"
+        },
+        {
+            "name": "Butter",
+            "brand": "Paysans",
+            "amount_per_box": "40",
+            "price_per_box": "$ 146.00",
+            "price_per_unit": "$ 3.65",
+            "wiki_path": "/wiki/Dairy_Products_II",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_ii"
+        },
+        {
+            "name": "Parmigiano Cheese",
+            "brand": "Don Bernardo",
+            "amount_per_box": "40",
+            "price_per_box": "$ 84.00",
+            "price_per_unit": "$ 2.10",
+            "wiki_path": "/wiki/Dairy_Products_II",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_ii"
+        },
+        {
+            "name": "Reggiano Cheese",
+            "brand": "Stereoprice",
+            "amount_per_box": "40",
+            "price_per_box": "$ 108.00",
+            "price_per_unit": "$ 2.70",
+            "wiki_path": "/wiki/Dairy_Products_II",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_ii"
+        },
+        {
+            "name": "Mozzarella Cheese",
+            "brand": "Don Bernardo",
+            "amount_per_box": "40",
+            "price_per_box": "$ 116.00",
+            "price_per_unit": "$ 2.90",
+            "wiki_path": "/wiki/Dairy_Products_II",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_ii"
+        },
+        {
+            "name": "Skimmed Yoghurt",
+            "brand": "Madone",
+            "amount_per_box": "25",
+            "price_per_box": "$ 87.50",
+            "price_per_unit": "$ 3.50",
+            "wiki_path": "/wiki/Dairy_Products_II",
+            "category_id": "dairy_products",
+            "section_id": "dairy_products_ii"
+        },
+        {
+            "name": "Cola Pack",
+            "brand": "PokaBola",
+            "amount_per_box": "30",
+            "price_per_box": "$  54,00",
+            "price_per_unit": "$    1,80",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Soda Pack",
+            "brand": "Zap-Soda",
+            "amount_per_box": "30",
+            "price_per_box": "$   63,00",
+            "price_per_unit": "$    2,10",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Decaf Soda Pack",
+            "brand": "Soda-Pop",
+            "amount_per_box": "30",
+            "price_per_box": "$   120,00",
+            "price_per_unit": "$    4,00",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Soda Bottle",
+            "brand": "Zap-Soda",
+            "amount_per_box": "20",
+            "price_per_box": "$   30,00",
+            "price_per_unit": "$    1,50",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Cola Bottle",
+            "brand": "Koujeima",
+            "amount_per_box": "20",
+            "price_per_box": "$   36,00",
+            "price_per_unit": "$    1,80",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Sugar Free Soda Bottle",
+            "brand": "Soda-Pop",
+            "amount_per_box": "20",
+            "price_per_box": "$   45,00",
+            "price_per_unit": "$    2,25",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Premium Soda",
+            "brand": "BokaBola",
+            "amount_per_box": "20",
+            "price_per_box": "$   60,00",
+            "price_per_unit": "$    3,00",
+            "wiki_path": "/wiki/Soda_Drinks_I",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_i"
+        },
+        {
+            "name": "Orange Soda",
+            "brand": "Pulp",
+            "amount_per_box": "20",
+            "price_per_box": "$45.00",
+            "price_per_unit": "$2.25",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Pineapple Soda",
+            "brand": "Jus Tsistu",
+            "amount_per_box": "20",
+            "price_per_box": "$49.00",
+            "price_per_unit": "$2.45",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Tropical Soda",
+            "brand": "Ropico",
+            "amount_per_box": "20",
+            "price_per_box": "$65.00",
+            "price_per_unit": "$3.25",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Green Tea",
+            "brand": "EastZensations",
+            "amount_per_box": "40",
+            "price_per_box": "$118.00",
+            "price_per_unit": "$2.95",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Red Tea",
+            "brand": "EastZensations",
+            "amount_per_box": "50",
+            "price_per_box": "$122.50",
+            "price_per_unit": "$2.45",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Lemon Tea",
+            "brand": "EastZensations",
+            "amount_per_box": "60",
+            "price_per_box": "$111.00",
+            "price_per_unit": "$1.85",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Cold Brew Coffee",
+            "brand": "EastZensations",
+            "amount_per_box": "60",
+            "price_per_box": "$177.00",
+            "price_per_unit": "$2.95",
+            "wiki_path": "/wiki/Soda_Drinks_II",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_ii"
+        },
+        {
+            "name": "Blueberry Energy Drink",
+            "brand": "Alien",
+            "amount_per_box": "",
+            "price_per_box": "$78.00",
+            "price_per_unit": "$1.95",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Guava Energy Drink",
+            "brand": "Alien",
+            "amount_per_box": "",
+            "price_per_box": "$78.00",
+            "price_per_unit": "$1.95",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Lima Energy Drink",
+            "brand": "Alive",
+            "amount_per_box": "",
+            "price_per_box": "$106.00",
+            "price_per_unit": "$2.65",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Fruit Punch Energy Drink",
+            "brand": "ApeX",
+            "amount_per_box": "",
+            "price_per_box": "$106.00",
+            "price_per_unit": "$2.65",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Mango Energy Drink",
+            "brand": "Lagoon Thunder",
+            "amount_per_box": "",
+            "price_per_box": "$106.00",
+            "price_per_unit": "$2.65",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Cola Energy Drink",
+            "brand": "Wonder Cola",
+            "amount_per_box": "",
+            "price_per_box": "$94.00",
+            "price_per_unit": "$2.35",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Sugar Free Energy Drink",
+            "brand": "X-Treme",
+            "amount_per_box": "",
+            "price_per_box": "$118.00",
+            "price_per_unit": "$2.95",
+            "wiki_path": "/wiki/Soda_Drinks_III",
+            "category_id": "soda_drinks",
+            "section_id": "soda_drinks_iii"
+        },
+        {
+            "name": "Pizza Barbaque",
+            "brand": "ChezzyPizz",
+            "amount_per_box": "30",
+            "price_per_box": "$ 72,30",
+            "price_per_unit": "$ 2,41",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Fondue",
+            "brand": "Prypiat",
+            "amount_per_box": "20",
+            "price_per_box": "$ 49,80",
+            "price_per_unit": "$ 2,49",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Crocanti Ham",
+            "brand": "Ronpoint",
+            "amount_per_box": "20",
+            "price_per_box": "$ 57,40",
+            "price_per_unit": "$ 2,87",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Ham Cheese Crepe",
+            "brand": "Prypiat",
+            "amount_per_box": "20",
+            "price_per_box": "$ 67,00",
+            "price_per_unit": "$ 3,35",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "French Fries",
+            "brand": "Vandame",
+            "amount_per_box": "30",
+            "price_per_box": "$ 121,50",
+            "price_per_unit": "$ 4,05",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Crispy Potatoe Pos",
+            "brand": "Spok",
+            "amount_per_box": "30",
+            "price_per_box": "$ 119,70",
+            "price_per_unit": "$ 3,99",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Green Beans",
+            "brand": "MrBean",
+            "amount_per_box": "30",
+            "price_per_box": "$ 135,00",
+            "price_per_unit": "$ 4,50",
+            "wiki_path": "/wiki/Frozen_Foods_I",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_i"
+        },
+        {
+            "name": "Four Cheese Pizza",
+            "brand": "BigTony",
+            "amount_per_box": "30",
+            "price_per_box": "$  74,70",
+            "price_per_unit": "$ 2,49",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Four Seasons Pizza",
+            "brand": "Mafia",
+            "amount_per_box": "30",
+            "price_per_box": "$  95,70",
+            "price_per_unit": "$ 3,19",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Vegetable Mix",
+            "brand": "Brrr",
+            "amount_per_box": "30",
+            "price_per_box": "$  119,70",
+            "price_per_unit": "$ 3,99",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Chicken Mix",
+            "brand": "Brrr",
+            "amount_per_box": "30",
+            "price_per_box": "$  113,70",
+            "price_per_unit": "$ 3,79",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Bolognaise Lasagna",
+            "brand": "Moussaka",
+            "amount_per_box": "20",
+            "price_per_box": "$  73,40",
+            "price_per_unit": "$ 3,67",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Vegetable Lasagna",
+            "brand": "Moussaka",
+            "amount_per_box": "20",
+            "price_per_box": "$  69,00",
+            "price_per_unit": "$ 3,45",
+            "wiki_path": "/wiki/Frozen_Foods_II",
+            "category_id": "frozen_foods",
+            "section_id": "frozen_foods_ii"
+        },
+        {
+            "name": "Toothpaste",
+            "brand": "Signoulos",
+            "amount_per_box": "100",
+            "price_per_box": "$ 199.00",
+            "price_per_unit": "$ 1.99",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Toilet Paper",
+            "brand": "Petus",
+            "amount_per_box": "8",
+            "price_per_box": "$ 36.80",
+            "price_per_unit": "$ 4.60",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Hand Soap",
+            "brand": "Pur",
+            "amount_per_box": "30",
+            "price_per_box": "$ 29.70",
+            "price_per_unit": "$ 0.99",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Avocado Shampoo",
+            "brand": "MaPei",
+            "amount_per_box": "50",
+            "price_per_box": "$ 149.50",
+            "price_per_unit": "$ 2.99",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Egg Shampoo",
+            "brand": "Dope",
+            "amount_per_box": "50",
+            "price_per_box": "$ 174.50",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Premium Bath Gel",
+            "brand": "MaPei",
+            "amount_per_box": "50",
+            "price_per_box": "$ 139.50",
+            "price_per_unit": "$ 2.79",
+            "wiki_path": "/wiki/Hygiene_I",
+            "category_id": "hygiene",
+            "section_id": "hygiene_i"
+        },
+        {
+            "name": "Toilet Paper",
+            "brand": "Bidet",
+            "amount_per_box": "8",
+            "price_per_box": "$ 36.80",
+            "price_per_unit": "$   4.60",
+            "wiki_path": "/wiki/Hygiene_II",
+            "category_id": "hygiene",
+            "section_id": "hygiene_ii"
+        },
+        {
+            "name": "Mango Soap",
+            "brand": "Sapu",
+            "amount_per_box": "40",
+            "price_per_box": "$ 67.60",
+            "price_per_unit": "$  1.69",
+            "wiki_path": "/wiki/Hygiene_II",
+            "category_id": "hygiene",
+            "section_id": "hygiene_ii"
+        },
+        {
+            "name": "Extra Soft Shampoo",
+            "brand": "MaPei",
+            "amount_per_box": "40",
+            "price_per_box": "$ 90.00",
+            "price_per_unit": "$  2.25",
+            "wiki_path": "/wiki/Hygiene_II",
+            "category_id": "hygiene",
+            "section_id": "hygiene_ii"
+        },
+        {
+            "name": "Jojoba Honey Shampoo",
+            "brand": "ImotepBio",
+            "amount_per_box": "40",
+            "price_per_box": "$ 103.60",
+            "price_per_unit": "$  2.59",
+            "wiki_path": "/wiki/Hygiene_II",
+            "category_id": "hygiene",
+            "section_id": "hygiene_ii"
+        },
+        {
+            "name": "Argan Oil Shampoo",
+            "brand": "Koyo",
+            "amount_per_box": "40",
+            "price_per_box": "$ 159.60",
+            "price_per_unit": "$  3.99",
+            "wiki_path": "/wiki/Hygiene_II",
+            "category_id": "hygiene",
+            "section_id": "hygiene_ii"
+        },
+        {
+            "name": "Paper Towel",
+            "brand": "Compact",
+            "amount_per_box": "8",
+            "price_per_box": "$ 41.60",
+            "price_per_unit": "$  5.20",
+            "wiki_path": "/wiki/Hygiene_III",
+            "category_id": "hygiene",
+            "section_id": "hygiene_iii"
+        },
+        {
+            "name": "Double Side Toilet Paper",
+            "brand": "Doudou",
+            "amount_per_box": "8",
+            "price_per_box": "$ 20.00",
+            "price_per_unit": "$  2.50",
+            "wiki_path": "/wiki/Hygiene_III",
+            "category_id": "hygiene",
+            "section_id": "hygiene_iii"
+        },
+        {
+            "name": "Lemon Soap",
+            "brand": "Mouss",
+            "amount_per_box": "40",
+            "price_per_box": "$ 50.00",
+            "price_per_unit": "$  1.25",
+            "wiki_path": "/wiki/Hygiene_III",
+            "category_id": "hygiene",
+            "section_id": "hygiene_iii"
+        },
+        {
+            "name": "Premium Bath Gel",
+            "brand": "MaPei",
+            "amount_per_box": "40",
+            "price_per_box": "$ 106.00",
+            "price_per_unit": "$  2.65",
+            "wiki_path": "/wiki/Hygiene_III",
+            "category_id": "hygiene",
+            "section_id": "hygiene_iii"
+        },
+        {
+            "name": "Shampoo For Babies",
+            "brand": "MaPei",
+            "amount_per_box": "40",
+            "price_per_box": "$ 158.00",
+            "price_per_unit": "$  3.95",
+            "wiki_path": "/wiki/Hygiene_III",
+            "category_id": "hygiene",
+            "section_id": "hygiene_iii"
+        },
+        {
+            "name": "Detergent",
+            "brand": "MaPei",
+            "amount_per_box": "30",
+            "price_per_box": "$ 219.90",
+            "price_per_unit": "$ 7.33",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Stain Remover",
+            "brand": "Wesh",
+            "amount_per_box": "40",
+            "price_per_box": "$ 168.80",
+            "price_per_unit": "$ 4.22",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Glass Cleaner",
+            "brand": "Touproup",
+            "amount_per_box": "40",
+            "price_per_box": "$ 319.0",
+            "price_per_unit": "$ 7.99",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Detergent Tables",
+            "brand": "Cemagik",
+            "amount_per_box": "20",
+            "price_per_box": "$ 297.40",
+            "price_per_unit": "$ 14.87",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Dishwasher",
+            "brand": "Cleandish",
+            "amount_per_box": "20",
+            "price_per_box": "$ 204.20",
+            "price_per_unit": "$ 10.21",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Bleach",
+            "brand": "JajaVevel",
+            "amount_per_box": "20",
+            "price_per_box": "$ 53.20",
+            "price_per_unit": "$ 2.66",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Bleach - Big Bottle",
+            "brand": "WCBoeff",
+            "amount_per_box": "18",
+            "price_per_box": "$ 75.96",
+            "price_per_unit": "$ 4.22",
+            "wiki_path": "/wiki/Cleaning_Products_I",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_i"
+        },
+        {
+            "name": "Softener",
+            "brand": "Souplesse",
+            "amount_per_box": "30",
+            "price_per_box": "$ 279.00",
+            "price_per_unit": "$ 9.30",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Premium Detergent",
+            "brand": "Toudou",
+            "amount_per_box": "20",
+            "price_per_box": "$ 209.60",
+            "price_per_unit": "$ 10.48",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Insecticide",
+            "brand": "Kilemol",
+            "amount_per_box": "20",
+            "price_per_box": "$ 191.00",
+            "price_per_unit": "$ 9.55",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Cleaning Cloths",
+            "brand": "LeTriangle",
+            "amount_per_box": "50",
+            "price_per_box": "$ 105.00",
+            "price_per_unit": "$ 2.10",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Premium Capsules",
+            "brand": "Boum",
+            "amount_per_box": "20",
+            "price_per_box": "$ 363.40",
+            "price_per_unit": "$ 18.17",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Premium Bleach",
+            "brand": "JajaVevel",
+            "amount_per_box": "20",
+            "price_per_box": "$ 116.40",
+            "price_per_unit": "$ 5.82",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Ammonia",
+            "brand": "JajaVevel",
+            "amount_per_box": "20",
+            "price_per_box": "$ 144.40",
+            "price_per_unit": "$ 7.22",
+            "wiki_path": "/wiki/Cleaning_Products_II",
+            "category_id": "cleaning_products",
+            "section_id": "cleaning_products_ii"
+        },
+        {
+            "name": "Cookie Jar",
+            "brand": "Delitout",
+            "amount_per_box": "50",
+            "price_per_box": "$ 180.00",
+            "price_per_unit": "$ 3.60",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Maxi Cone",
+            "brand": "Delitout",
+            "amount_per_box": "20",
+            "price_per_box": "$ 78.00",
+            "price_per_unit": "$ 3.90",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Chocolate Spread",
+            "brand": "Patatartine",
+            "amount_per_box": "50",
+            "price_per_box": "$ 99.50",
+            "price_per_unit": "$ 1.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Chocolate Powder",
+            "brand": "Boudain",
+            "amount_per_box": "20",
+            "price_per_box": "$ 57.80",
+            "price_per_unit": "$ 2.89",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Chips",
+            "brand": "Vin's",
+            "amount_per_box": "40",
+            "price_per_box": "$ 40.00",
+            "price_per_unit": "$ 1.00",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Sweet Bonbek",
+            "brand": "Bonbek",
+            "amount_per_box": "50",
+            "price_per_box": "$ 95.00",
+            "price_per_unit": "$ 1.90",
+            "wiki_path": "/wiki/Sweets_and_Snacks_I",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_i"
+        },
+        {
+            "name": "Peach Jam",
+            "brand": "Delitout",
+            "amount_per_box": "50",
+            "price_per_box": "$ 145.00",
+            "price_per_unit": "$ 2.90",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Ice Cream Box",
+            "brand": "Delitout",
+            "amount_per_box": "20",
+            "price_per_box": "$ 90.00",
+            "price_per_unit": "$ 4.50",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Chocolate Box",
+            "brand": "Chocotte",
+            "amount_per_box": "20",
+            "price_per_box": "$ 218.00",
+            "price_per_unit": "$ 10.90",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Chocolate Biscuit",
+            "brand": "Marbre",
+            "amount_per_box": "40",
+            "price_per_box": "$ 192.00",
+            "price_per_unit": "$ 4.80",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Vanilate Biscuit",
+            "brand": "Prairie",
+            "amount_per_box": "40",
+            "price_per_box": "$ 220.00",
+            "price_per_unit": "$ 5.50",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Madeleine",
+            "brand": "StMichmich",
+            "amount_per_box": "40",
+            "price_per_box": "$ 108.00",
+            "price_per_unit": "$ 2.70",
+            "wiki_path": "/wiki/Sweets_and_Snacks_II",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_ii"
+        },
+        {
+            "name": "Strawberry Jam",
+            "brand": "Delitout",
+            "amount_per_box": "50",
+            "price_per_box": "$ 195.00",
+            "price_per_unit": "$   3.90",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Peanut Butter",
+            "brand": "Delitout",
+            "amount_per_box": "50",
+            "price_per_box": "$ 180.00",
+            "price_per_unit": "$  3.60",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Chipos",
+            "brand": "MacChipos",
+            "amount_per_box": "40",
+            "price_per_box": "$  79.60",
+            "price_per_unit": "$  1.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Marshmallow",
+            "brand": "Bonbek",
+            "amount_per_box": "50",
+            "price_per_box": "$ 149.50",
+            "price_per_unit": "$  2.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Lemon Biscuit",
+            "brand": "Gerbe",
+            "amount_per_box": "50",
+            "price_per_box": "$ 122.50",
+            "price_per_unit": "$  2.45",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Hazelnut Biscuit",
+            "brand": "BonPapa",
+            "amount_per_box": "50",
+            "price_per_box": "$ 127.50",
+            "price_per_unit": "$  2.55",
+            "wiki_path": "/wiki/Sweets_and_Snacks_III",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iii"
+        },
+        {
+            "name": "Premium Ice Cream",
+            "brand": "Extra",
+            "amount_per_box": "20",
+            "price_per_box": "$ 119.80",
+            "price_per_unit": "$  5.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_IV",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iv"
+        },
+        {
+            "name": "Honey",
+            "brand": "Delitout",
+            "amount_per_box": "40",
+            "price_per_box": "$ 159.60",
+            "price_per_unit": "$  3.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_IV",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iv"
+        },
+        {
+            "name": "Premium Chocolate Box",
+            "brand": "Delitout",
+            "amount_per_box": "20",
+            "price_per_box": "$ 370.00",
+            "price_per_unit": "$ 18.50",
+            "wiki_path": "/wiki/Sweets_and_Snacks_IV",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iv"
+        },
+        {
+            "name": "Foditos",
+            "brand": "Covidos",
+            "amount_per_box": "45",
+            "price_per_box": "$ 180.00",
+            "price_per_unit": "$ 4.00",
+            "wiki_path": "/wiki/Sweets_and_Snacks_IV",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iv"
+        },
+        {
+            "name": "Premium Cake",
+            "brand": "Pepites",
+            "amount_per_box": "40",
+            "price_per_box": "$ 152.00",
+            "price_per_unit": "$ 3.80",
+            "wiki_path": "/wiki/Sweets_and_Snacks_IV",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_iv"
+        },
+        {
+            "name": "Basic Strawberry Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 138.25",
+            "price_per_unit": "$   3.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Lemon Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 138.25",
+            "price_per_unit": "$  3.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Coffee Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 138.25",
+            "price_per_unit": "$  3.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Stracciatella Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 173.25",
+            "price_per_unit": "$  4.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Strawberry Meringue Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 173.25",
+            "price_per_unit": "$  4.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Caramel Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "35",
+            "price_per_box": "$ 173.25",
+            "price_per_unit": "$  4.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_V",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_v"
+        },
+        {
+            "name": "Premium Strawberry Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "30",
+            "price_per_box": "$ 223.50",
+            "price_per_unit": "$ 7.45",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VI",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vi"
+        },
+        {
+            "name": "Strawberry Cheesecake Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "30",
+            "price_per_box": "$ 223.50",
+            "price_per_unit": "$ 7.45",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VI",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vi"
+        },
+        {
+            "name": "Premium Caramel Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "30",
+            "price_per_box": "$ 298.50",
+            "price_per_unit": "$ 9.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VI",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vi"
+        },
+        {
+            "name": "Pink Strawberry Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "30",
+            "price_per_box": "$ 298.50",
+            "price_per_unit": "$ 9.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VI",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vi"
+        },
+        {
+            "name": "Alcoholic Ice Cream",
+            "brand": "DelicaCold",
+            "amount_per_box": "30",
+            "price_per_box": "$ 448.50",
+            "price_per_unit": "$ 14.95",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VI",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vi"
+        },
+        {
+            "name": "Peanuts",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$  99.50",
+            "price_per_unit": "$    1.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Almonds",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   149.50",
+            "price_per_unit": "$    2.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Hazelnuts",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   149.50",
+            "price_per_unit": "$    2.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Pistachios",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   177.50",
+            "price_per_unit": "$    3.55",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Raisins",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$  99.50",
+            "price_per_unit": "$    1.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Cashew Nuts",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   139.50",
+            "price_per_unit": "$    2.79",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Shelled Walnuts",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   149.50",
+            "price_per_unit": "$    2.99",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Coconut Chips",
+            "brand": "Flexnuts",
+            "amount_per_box": "50",
+            "price_per_box": "$   124.50",
+            "price_per_unit": "$    2.49",
+            "wiki_path": "/wiki/Sweets_and_Snacks_VII",
+            "category_id": "sweets_and_snacks",
+            "section_id": "sweets_and_snacks_vii"
+        },
+        {
+            "name": "Chopped Beef",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    87.40",
+            "price_per_unit": "$    4.37",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Pure Beef",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    126.20",
+            "price_per_unit": "$    6.31",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Veal",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    152.20",
+            "price_per_unit": "$    7.61",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Chicken Wings",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    103.00",
+            "price_per_unit": "$    5.15",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Chicken",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "12",
+            "price_per_box": "$    139.20",
+            "price_per_unit": "$    11.60",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Parma Ham",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    90.40",
+            "price_per_unit": "$    4.52",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Sliced Ham",
+            "brand": "HaveSomeBeef",
+            "amount_per_box": "20",
+            "price_per_box": "$    64.40",
+            "price_per_unit": "$    3.22",
+            "wiki_path": "/wiki/Meat_I",
+            "category_id": "meat",
+            "section_id": "meat_i"
+        },
+        {
+            "name": "Peas - Big",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$   119,60",
+            "price_per_unit": "$ 2,99",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Tuna - Big",
+            "brand": "Captain Quintus",
+            "amount_per_box": "40",
+            "price_per_box": "$   158,00",
+            "price_per_unit": "$ 3,95",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Red Beans",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$   76,80",
+            "price_per_unit": "$ 1,92",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Cat Food",
+            "brand": "Purr Purr",
+            "amount_per_box": "20",
+            "price_per_box": "$   109,80",
+            "price_per_unit": "$ 5,49",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Cat Food",
+            "brand": "PatPat",
+            "amount_per_box": "20",
+            "price_per_box": "$   162,00",
+            "price_per_unit": "$ 8,10",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Dog Food",
+            "brand": "PatPat",
+            "amount_per_box": "20",
+            "price_per_box": "$   152,00",
+            "price_per_unit": "$ 7,60",
+            "wiki_path": "/wiki/Preserves_I",
+            "category_id": "preserves",
+            "section_id": "preserves_i"
+        },
+        {
+            "name": "Chickpeas",
+            "brand": "BrandiWhite",
+            "amount_per_box": "50",
+            "price_per_box": "$95.00",
+            "price_per_unit": "$1.90",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Meatballs",
+            "brand": "BrandiWhite",
+            "amount_per_box": "50",
+            "price_per_box": "$110.00",
+            "price_per_unit": "$2.20",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Lentils",
+            "brand": "BrandiWhite",
+            "amount_per_box": "50",
+            "price_per_box": "$97.50",
+            "price_per_unit": "$1.95",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Tomato Soup",
+            "brand": "BrandiWhite",
+            "amount_per_box": "50",
+            "price_per_box": "$117.50",
+            "price_per_unit": "$2.35",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Canned Corn",
+            "brand": "BrandiWhite",
+            "amount_per_box": "60",
+            "price_per_box": "$108.00",
+            "price_per_unit": "$1.80",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Canned Peas",
+            "brand": "BrandiWhite",
+            "amount_per_box": "80",
+            "price_per_box": "$140.00",
+            "price_per_unit": "$1.75",
+            "wiki_path": "/wiki/Preserves_II",
+            "category_id": "preserves",
+            "section_id": "preserves_ii"
+        },
+        {
+            "name": "Green Tea",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$119.60",
+            "price_per_unit": "$2.99",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Lemon Tea",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$139.60",
+            "price_per_unit": "$3.49",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Black Tea",
+            "brand": "Bio",
+            "amount_per_box": "40",
+            "price_per_box": "$155.60",
+            "price_per_unit": "$3.89",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Peppermint",
+            "brand": "Bio",
+            "amount_per_box": "30",
+            "price_per_box": "$59.70",
+            "price_per_unit": "$1.99",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Mint",
+            "brand": "Bio",
+            "amount_per_box": "30",
+            "price_per_box": "$65.70",
+            "price_per_unit": "$2.19",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Valerian",
+            "brand": "Bio",
+            "amount_per_box": "30",
+            "price_per_box": "$56.70",
+            "price_per_unit": "$1.89",
+            "wiki_path": "/wiki/Infusions_I",
+            "category_id": "infusions",
+            "section_id": "infusions_i"
+        },
+        {
+            "name": "Big Sushi",
+            "brand": "Sushinet",
+            "amount_per_box": "20",
+            "price_per_box": "$ 399.80",
+            "price_per_unit": "$ 19.99",
+            "wiki_path": "/wiki/Seafood_I",
+            "category_id": "seafood",
+            "section_id": "seafood_i"
+        },
+        {
+            "name": "Small Sushi",
+            "brand": "Sushinet",
+            "amount_per_box": "30",
+            "price_per_box": "$ 419.70",
+            "price_per_unit": "$ 13.99",
+            "wiki_path": "/wiki/Seafood_I",
+            "category_id": "seafood",
+            "section_id": "seafood_i"
+        },
+        {
+            "name": "Smoked Salmon",
+            "brand": "Norway",
+            "amount_per_box": "40",
+            "price_per_box": "$ 399.60",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Seafood_I",
+            "category_id": "seafood",
+            "section_id": "seafood_i"
+        },
+        {
+            "name": "Crab Sticks",
+            "brand": "Sushinet",
+            "amount_per_box": "40",
+            "price_per_box": "$ 191.60",
+            "price_per_unit": "$ 4.79",
+            "wiki_path": "/wiki/Seafood_I",
+            "category_id": "seafood",
+            "section_id": "seafood_i"
+        },
+        {
+            "name": "Book - Electromagnetic",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 644.40",
+            "price_per_unit": "$ 21.48",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - Surprise",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 450.90",
+            "price_per_unit": "$ 15.03",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - ABC",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 515.40",
+            "price_per_unit": "$ 17.18",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - Mother And Child",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 644.40",
+            "price_per_unit": "$ 21.48",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - Colors",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 644.40",
+            "price_per_unit": "$ 21.48",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - Piticha",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 515.40",
+            "price_per_unit": "$ 17.18",
+            "wiki_path": "/wiki/Books_Pack_I",
+            "category_id": "books_packs",
+            "section_id": "books_pack_i"
+        },
+        {
+            "name": "Book - OnceUpon",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 465.00",
+            "price_per_unit": "$ 15.50",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Book - Krok",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 581.40",
+            "price_per_unit": "$ 19.38",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Book - Adventures",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 581.40",
+            "price_per_unit": "$ 19.38",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Book - Donnine",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 581.40",
+            "price_per_unit": "$ 19.38",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Book - Vintage",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 465.00",
+            "price_per_unit": "$ 15.50",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Book - I Wont Share",
+            "brand": "Bookapop",
+            "amount_per_box": "",
+            "price_per_box": "$ 581.40",
+            "price_per_unit": "$ 19.38",
+            "wiki_path": "/wiki/Books_Pack_II",
+            "category_id": "books_packs",
+            "section_id": "books_pack_ii"
+        },
+        {
+            "name": "Beer Pack",
+            "brand": "BK",
+            "amount_per_box": "40",
+            "price_per_box": "$ 231.20",
+            "price_per_unit": "$ 11.56",
+            "wiki_path": "/wiki/Alcoholic_Drinks_I",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_i"
+        },
+        {
+            "name": "Beer Pack",
+            "brand": "Teachew",
+            "amount_per_box": "40",
+            "price_per_box": "$ 289.20",
+            "price_per_unit": "$ 14.46",
+            "wiki_path": "/wiki/Alcoholic_Drinks_I",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_i"
+        },
+        {
+            "name": "Beer Pack",
+            "brand": "Fess",
+            "amount_per_box": "40",
+            "price_per_box": "$ 371.00",
+            "price_per_unit": "$ 18.55",
+            "wiki_path": "/wiki/Alcoholic_Drinks_I",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_i"
+        },
+        {
+            "name": "Beer Barrel",
+            "brand": "DEGL",
+            "amount_per_box": "20",
+            "price_per_box": "$ 449.60",
+            "price_per_unit": "$ 22.48",
+            "wiki_path": "/wiki/Alcoholic_Drinks_I",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_i"
+        },
+        {
+            "name": "Beer Barrel",
+            "brand": "Fess",
+            "amount_per_box": "20",
+            "price_per_box": "$ 533.60",
+            "price_per_unit": "$ 26.68",
+            "wiki_path": "/wiki/Alcoholic_Drinks_I",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_i"
+        },
+        {
+            "name": "Vodka",
+            "brand": "Magnat",
+            "amount_per_box": "20",
+            "price_per_box": "$                                  14.50",
+            "price_per_unit": "$                              290.00",
+            "wiki_path": "/wiki/Alcoholic_Drinks_II",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_ii"
+        },
+        {
+            "name": "Red Wine",
+            "brand": "Heng Heng",
+            "amount_per_box": "20",
+            "price_per_box": "$                                  13.50",
+            "price_per_unit": "$                              270.00",
+            "wiki_path": "/wiki/Alcoholic_Drinks_II",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_ii"
+        },
+        {
+            "name": "Rose Wine",
+            "brand": "Chebon",
+            "amount_per_box": "20",
+            "price_per_box": "$                                  19.80",
+            "price_per_unit": "$                              396.00",
+            "wiki_path": "/wiki/Alcoholic_Drinks_II",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_ii"
+        },
+        {
+            "name": "White Wine",
+            "brand": "Chebon",
+            "amount_per_box": "20",
+            "price_per_box": "$                                  25.20",
+            "price_per_unit": "$                              504.00",
+            "wiki_path": "/wiki/Alcoholic_Drinks_II",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_ii"
+        },
+        {
+            "name": "Beer Barrel",
+            "brand": "Teochew",
+            "amount_per_box": "20",
+            "price_per_box": "$                                  22.10",
+            "price_per_unit": "$                              442.00",
+            "wiki_path": "/wiki/Alcoholic_Drinks_II",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_ii"
+        },
+        {
+            "name": "Premium Vodka",
+            "brand": "Eay",
+            "amount_per_box": "20",
+            "price_per_box": "$                           547.60",
+            "price_per_unit": "$                           27.38",
+            "wiki_path": "/wiki/Alcoholic_Drinks_III",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_iii"
+        },
+        {
+            "name": "Japanese Whisky",
+            "brand": "TeiaoChen",
+            "amount_per_box": "20",
+            "price_per_box": "$                              599.00",
+            "price_per_unit": "$                              29.95",
+            "wiki_path": "/wiki/Alcoholic_Drinks_III",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_iii"
+        },
+        {
+            "name": "Premium Whisky",
+            "brand": "Grand Marnier",
+            "amount_per_box": "20",
+            "price_per_box": "$                              503.20",
+            "price_per_unit": "$                              25.16",
+            "wiki_path": "/wiki/Alcoholic_Drinks_III",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_iii"
+        },
+        {
+            "name": "Premium Whisky",
+            "brand": "Jack Sublett",
+            "amount_per_box": "20",
+            "price_per_box": "$                             701.80",
+            "price_per_unit": "$                             35.09",
+            "wiki_path": "/wiki/Alcoholic_Drinks_III",
+            "category_id": "alcoholic_drinks",
+            "section_id": "alcoholic_drinks_iii"
+        },
+        {
+            "name": "Hydrogen Peroxide",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 108.00",
+            "price_per_unit": "$ 2.70",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Disinfectant",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 175.00",
+            "price_per_unit": "$ 3.50",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Ibuprofen",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 456.00",
+            "price_per_unit": "$ 7.60",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Paracetamol",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 336.00",
+            "price_per_unit": "$ 5.60",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Adhesive Bandages",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 252.00",
+            "price_per_unit": "$ 4.20",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Laxative",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$  400.00",
+            "price_per_unit": "$  8.00",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Antihistamine",
+            "brand": "Farmanautics",
+            "amount_per_box": "",
+            "price_per_box": "$ 760.00",
+            "price_per_unit": "$ 9.50",
+            "wiki_path": "/wiki/Pharmacy_I",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_i"
+        },
+        {
+            "name": "Zinc Supplement",
+            "brand": "Naturreach",
+            "amount_per_box": "40",
+            "price_per_box": "$                                359.60",
+            "price_per_unit": "$                                    8.99",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Antioxidant",
+            "brand": "Naturreach",
+            "amount_per_box": "60",
+            "price_per_box": "$                                689.40",
+            "price_per_unit": "$                                    11.49",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Fish Oil",
+            "brand": "Naturreach",
+            "amount_per_box": "40",
+            "price_per_box": "$                              519.60",
+            "price_per_unit": "$                                    12.99",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Algae Pills",
+            "brand": "Naturreach",
+            "amount_per_box": "40",
+            "price_per_box": "$                                759.60",
+            "price_per_unit": "$                                    18.99",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Vitamins",
+            "brand": "Naturreach",
+            "amount_per_box": "50",
+            "price_per_box": "$                              674.50",
+            "price_per_unit": "$                                    13.49",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Melatonin",
+            "brand": "Naturreach",
+            "amount_per_box": "60",
+            "price_per_box": "$                              539.40",
+            "price_per_unit": "$                                    8.99",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Sunscreen",
+            "brand": "Farmanautics",
+            "amount_per_box": "40",
+            "price_per_box": "$                                358.00",
+            "price_per_unit": "$                                    8.95",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Stretch Cream",
+            "brand": "Farmanautics",
+            "amount_per_box": "40",
+            "price_per_box": "$                                559.60",
+            "price_per_unit": "$                                    13.99",
+            "wiki_path": "/wiki/Pharmacy_II",
+            "category_id": "pharmacy",
+            "section_id": "pharmacy_ii"
+        },
+        {
+            "name": "Red Apple Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$97.20",
+            "price_per_unit": "$4.05",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Green Apple Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$68.40",
+            "price_per_unit": "$2.85",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Clementine Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$66.96",
+            "price_per_unit": "$2.79",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Orange Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$76.56",
+            "price_per_unit": "$3.19",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Pear Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$71.76",
+            "price_per_unit": "$2.99",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Lemon Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$51.12",
+            "price_per_unit": "$2.13",
+            "wiki_path": "/wiki/Produce_I",
+            "category_id": "produce",
+            "section_id": "produce_i"
+        },
+        {
+            "name": "Mango Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$162.96",
+            "price_per_unit": "$6.79",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Avocado Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$131.76",
+            "price_per_unit": "$5.49",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Kiwi Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$117.36",
+            "price_per_unit": "$4.89",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Papaya Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$213.60",
+            "price_per_unit": "$8.90",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Strawberry Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$135.60",
+            "price_per_unit": "$5.65",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Cherry Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$150",
+            "price_per_unit": "$6.25",
+            "wiki_path": "/wiki/Produce_II",
+            "category_id": "produce",
+            "section_id": "produce_ii"
+        },
+        {
+            "name": "Artichoke Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$167.76",
+            "price_per_unit": "$6.99",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Zucchini Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$164.40",
+            "price_per_unit": "$6.85",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Carrot Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$58.80",
+            "price_per_unit": "$2.45",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Tomato Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$69.36",
+            "price_per_unit": "$2.89",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Potato Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$167.20",
+            "price_per_unit": "$2.65",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Onion Tray",
+            "brand": "VegeBiz",
+            "amount_per_box": "24",
+            "price_per_box": "$45.36",
+            "price_per_unit": "$1.89",
+            "wiki_path": "/wiki/Produce_III",
+            "category_id": "produce",
+            "section_id": "produce_iii"
+        },
+        {
+            "name": "Banana Pack",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 53.82",
+            "price_per_unit": "$ 2.99",
+            "wiki_path": "/wiki/Produce_IV",
+            "category_id": "produce",
+            "section_id": "produce_iv"
+        },
+        {
+            "name": "Melon",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 62.82",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Produce_IV",
+            "category_id": "produce",
+            "section_id": "produce_iv"
+        },
+        {
+            "name": "Pineapple",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 71.64",
+            "price_per_unit": "$ 3.98",
+            "wiki_path": "/wiki/Produce_IV",
+            "category_id": "produce",
+            "section_id": "produce_iv"
+        },
+        {
+            "name": "Pumpkin",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 63.00",
+            "price_per_unit": "$ 3.50",
+            "wiki_path": "/wiki/Produce_IV",
+            "category_id": "produce",
+            "section_id": "produce_iv"
+        },
+        {
+            "name": "Watermelon",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 84.60",
+            "price_per_unit": "$ 4.70",
+            "wiki_path": "/wiki/Produce_IV",
+            "category_id": "produce",
+            "section_id": "produce_iv"
+        },
+        {
+            "name": "Garlic Tray",
+            "brand": "",
+            "amount_per_box": "24",
+            "price_per_box": "$ 66.00",
+            "price_per_unit": "$ 2.75",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Mushroom Tray",
+            "brand": "",
+            "amount_per_box": "24",
+            "price_per_box": "$ 90.00",
+            "price_per_unit": "$ 3.75",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Bell Pepper Tray",
+            "brand": "",
+            "amount_per_box": "24",
+            "price_per_box": "$ 108.00",
+            "price_per_unit": "$ 4.50",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Lettuce Tray",
+            "brand": "",
+            "amount_per_box": "24",
+            "price_per_box": "$ 78.00",
+            "price_per_unit": "$ 3.25",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Coconut",
+            "brand": "",
+            "amount_per_box": "21",
+            "price_per_box": "$ 84.00",
+            "price_per_unit": "$ 4.00",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Cauliflower",
+            "brand": "",
+            "amount_per_box": "18",
+            "price_per_box": "$ 54.00",
+            "price_per_unit": "$ 3.00",
+            "wiki_path": "/wiki/Produce_V",
+            "category_id": "produce",
+            "section_id": "produce_v"
+        },
+        {
+            "name": "Baby Food: Vegetables",
+            "brand": "CaringTender",
+            "amount_per_box": "40",
+            "price_per_box": "$ 147.60",
+            "price_per_unit": "$ 3.69",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Baby Food: Fish",
+            "brand": "CaringTender",
+            "amount_per_box": "40",
+            "price_per_box": "$ 147.60",
+            "price_per_unit": "$ 3.69",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Baby Food: Fruits",
+            "brand": "CaringTender",
+            "amount_per_box": "40",
+            "price_per_box": "$ 115.60",
+            "price_per_unit": "$ 2.89",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Baby Food: Meat",
+            "brand": "CaringTender",
+            "amount_per_box": "50",
+            "price_per_box": "$ 224.50",
+            "price_per_unit": "$  4.49",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Nutritive Milk Mix",
+            "brand": "CaringTender",
+            "amount_per_box": "80",
+            "price_per_box": "$ 356",
+            "price_per_unit": "$ 4.45",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Nutritive Milk Powder",
+            "brand": "CaringTender",
+            "amount_per_box": "25",
+            "price_per_box": "$ 399.75",
+            "price_per_unit": "$ 15.99",
+            "wiki_path": "/wiki/Child_Care_I",
+            "category_id": "child_care",
+            "section_id": "child_care_i"
+        },
+        {
+            "name": "Ecological Diapers",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 181.64",
+            "price_per_unit": "$ 22.63",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Basic Diapers",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 205.20",
+            "price_per_unit": "$ 25.65",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Toddler Diapers",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 229.36",
+            "price_per_unit": "$ 28.67",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Premium Diapers",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 289.76",
+            "price_per_unit": "$ 36.22",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Aloe Baby Wipes",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 481.60",
+            "price_per_unit": "$ 6.02",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Basic Baby Wipes",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 385.60",
+            "price_per_unit": "$ 4.82",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Baby Powder",
+            "brand": "CaringTender",
+            "amount_per_box": "",
+            "price_per_box": "$ 180.60",
+            "price_per_unit": "$ 6.02",
+            "wiki_path": "/wiki/Child_Care_II",
+            "category_id": "child_care",
+            "section_id": "child_care_ii"
+        },
+        {
+            "name": "Strawberry Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$119.6",
+            "price_per_unit": "$2.99",
+            "wiki_path": "/wiki/Gardening_I",
+            "category_id": "gardening",
+            "section_id": "gardening_i"
+        },
+        {
+            "name": "Raspberry Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$99.6",
+            "price_per_unit": "$2.49",
+            "wiki_path": "/wiki/Gardening_I",
+            "category_id": "gardening",
+            "section_id": "gardening_i"
+        },
+        {
+            "name": "Blueberry Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$99.6",
+            "price_per_unit": "$2.49",
+            "wiki_path": "/wiki/Gardening_I",
+            "category_id": "gardening",
+            "section_id": "gardening_i"
+        },
+        {
+            "name": "Pineapple Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$119.6",
+            "price_per_unit": "$2.99",
+            "wiki_path": "/wiki/Gardening_I",
+            "category_id": "gardening",
+            "section_id": "gardening_i"
+        },
+        {
+            "name": "Meyer Lemon Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$99.6",
+            "price_per_unit": "$2.49",
+            "wiki_path": "/wiki/Gardening_I",
+            "category_id": "gardening",
+            "section_id": "gardening_i"
+        },
+        {
+            "name": "Tomato Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 119.60",
+            "price_per_unit": "$ 2.99",
+            "wiki_path": "/wiki/Gardening_II",
+            "category_id": "gardening",
+            "section_id": "gardening_ii"
+        },
+        {
+            "name": "Pepper Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 99.60",
+            "price_per_unit": "$ 2.49",
+            "wiki_path": "/wiki/Gardening_II",
+            "category_id": "gardening",
+            "section_id": "gardening_ii"
+        },
+        {
+            "name": "Cucumber Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 119.60",
+            "price_per_unit": "$ 2.99",
+            "wiki_path": "/wiki/Gardening_II",
+            "category_id": "gardening",
+            "section_id": "gardening_ii"
+        },
+        {
+            "name": "Radish Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 99.60",
+            "price_per_unit": "$ 2.49",
+            "wiki_path": "/wiki/Gardening_II",
+            "category_id": "gardening",
+            "section_id": "gardening_ii"
+        },
+        {
+            "name": "Carrots Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "99.60",
+            "price_per_unit": "2.49",
+            "wiki_path": "/wiki/Gardening_II",
+            "category_id": "gardening",
+            "section_id": "gardening_ii"
+        },
+        {
+            "name": "Lawn Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$  79.60",
+            "price_per_unit": "$ 1.99",
+            "wiki_path": "/wiki/Gardening_III",
+            "category_id": "gardening",
+            "section_id": "gardening_iii"
+        },
+        {
+            "name": "Poppy Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 139.60",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Gardening_III",
+            "category_id": "gardening",
+            "section_id": "gardening_iii"
+        },
+        {
+            "name": "Tulip Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 139.60",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Gardening_III",
+            "category_id": "gardening",
+            "section_id": "gardening_iii"
+        },
+        {
+            "name": "Sunflower Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 139.60",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Gardening_III",
+            "category_id": "gardening",
+            "section_id": "gardening_iii"
+        },
+        {
+            "name": "Petunia Seeds",
+            "brand": "",
+            "amount_per_box": "40",
+            "price_per_box": "$ 139.60",
+            "price_per_unit": "$ 3.49",
+            "wiki_path": "/wiki/Gardening_III",
+            "category_id": "gardening",
+            "section_id": "gardening_iii"
+        },
+        {
+            "name": "Hand Rake (A)",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "99.80",
+            "price_per_unit": "4.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Hand Rake (B)",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "109.80",
+            "price_per_unit": "5.49",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Hand Shovel",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "99.80",
+            "price_per_unit": "4.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Hand Cultivator",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "99.80",
+            "price_per_unit": "4.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Potting Soil",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "159.84",
+            "price_per_unit": "9.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Fertilizer",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "269.70",
+            "price_per_unit": "8.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Plant Pot Dish",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "89.70",
+            "price_per_unit": "2.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "Plant Pot",
+            "brand": "",
+            "amount_per_box": "",
+            "price_per_box": "55.92",
+            "price_per_unit": "6.99",
+            "wiki_path": "/wiki/Gardening_IV",
+            "category_id": "gardening",
+            "section_id": "gardening_iv"
+        },
+        {
+            "name": "AA Batteries",
+            "brand": "GreenLeaf",
+            "amount_per_box": "50",
+            "price_per_box": "249.50",
+            "price_per_unit": "4.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "AAA Batteries",
+            "brand": "Permanent",
+            "amount_per_box": "50",
+            "price_per_box": "249.50",
+            "price_per_unit": "4.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "C Batteries",
+            "brand": "Robustor",
+            "amount_per_box": "50",
+            "price_per_box": "299.50",
+            "price_per_unit": "5.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "9V Batteries",
+            "brand": "EnergestiX",
+            "amount_per_box": "50",
+            "price_per_box": "299.50",
+            "price_per_unit": "5.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "Universal TV Remote",
+            "brand": "UniverWare",
+            "amount_per_box": "30",
+            "price_per_box": "269.70",
+            "price_per_unit": "8.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "Universal Phone Charger",
+            "brand": "UniverWare",
+            "amount_per_box": "25",
+            "price_per_box": "249.75",
+            "price_per_unit": "9.99",
+            "wiki_path": "/wiki/Small_Electronics_I",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_i"
+        },
+        {
+            "name": "Basic Prepaid Phone",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$998.00",
+            "price_per_unit": "$49.90",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "Basic Mouse",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$199.80",
+            "price_per_unit": "$9.99",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "WiFi Dongle",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$179.80",
+            "price_per_unit": "$8.99",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "Basic Earbuds",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$259.80",
+            "price_per_unit": "$12.99",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "Basic Keybaord",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$179.88",
+            "price_per_unit": "$14.99",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "Basic Gamepad",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$339.80",
+            "price_per_unit": "$16.99",
+            "wiki_path": "/wiki/Small_Electronics_II",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_ii"
+        },
+        {
+            "name": "USB Flash Drive (128GB)",
+            "brand": "WK",
+            "amount_per_box": "",
+            "price_per_box": "$419.70",
+            "price_per_unit": "$13.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "USB Flash Drive (256GB)",
+            "brand": "WK",
+            "amount_per_box": "",
+            "price_per_box": "$539.70",
+            "price_per_unit": "$17.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "USB Flash Drive (512GB)",
+            "brand": "WK",
+            "amount_per_box": "",
+            "price_per_box": "$1079.70",
+            "price_per_unit": "$35.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "USB Flash Drive (1TB)",
+            "brand": "WK",
+            "amount_per_box": "",
+            "price_per_box": "$2219.70",
+            "price_per_unit": "$73.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "Basic Speakers",
+            "brand": "BlueNoise",
+            "amount_per_box": "",
+            "price_per_box": "$674.85",
+            "price_per_unit": "$44.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "Basic Headphones",
+            "brand": "BlueNoise",
+            "amount_per_box": "",
+            "price_per_box": "$539.85",
+            "price_per_unit": "$35.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "Basic Gaming Console",
+            "brand": "UniverWare",
+            "amount_per_box": "",
+            "price_per_box": "$1799.88",
+            "price_per_unit": "$149.99",
+            "wiki_path": "/wiki/Small_Electronics_III",
+            "category_id": "small_electronics",
+            "section_id": "small_electronics_iii"
+        },
+        {
+            "name": "Candy Buckter: Pumpkin",
+            "brand": "SpookyCraft",
+            "amount_per_box": "30",
+            "price_per_box": "$ 299.70",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Halloween_I",
+            "category_id": "halloween",
+            "section_id": "halloween_i"
+        },
+        {
+            "name": "Candy Buckter: Ghost",
+            "brand": "SpookyCraft",
+            "amount_per_box": "30",
+            "price_per_box": "$ 299.70",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Halloween_I",
+            "category_id": "halloween",
+            "section_id": "halloween_i"
+        },
+        {
+            "name": "Candy Buckter: Mummy",
+            "brand": "SpookyCraft",
+            "amount_per_box": "30",
+            "price_per_box": "$ 299.70",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Halloween_I",
+            "category_id": "halloween",
+            "section_id": "halloween_i"
+        },
+        {
+            "name": "Candy Buckter: Skull",
+            "brand": "SpookyCraft",
+            "amount_per_box": "30",
+            "price_per_box": "$ 299.70",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Halloween_I",
+            "category_id": "halloween",
+            "section_id": "halloween_i"
+        },
+        {
+            "name": "Candy Buckter: Zombie",
+            "brand": "SpookyCraft",
+            "amount_per_box": "30",
+            "price_per_box": "$ 299.70",
+            "price_per_unit": "$ 9.99",
+            "wiki_path": "/wiki/Halloween_I",
+            "category_id": "halloween",
+            "section_id": "halloween_i"
+        }
+    ]
+}

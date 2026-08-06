@@ -236,7 +236,18 @@
             "id": "books_packs",
             "name": "Books Packs",
             "anchor": "#Books_Packs",
-            "sections": []
+            "sections": [
+                {
+                    "id": "books_pack_i",
+                    "name": "Books Pack I",
+                    "wiki_path": "/wiki/Books_Pack_I"
+                },
+                {
+                    "id": "books_pack_ii",
+                    "name": "Books Pack II",
+                    "wiki_path": "/wiki/Books_Pack_II"
+                }
+            ]
         },
         {
             "id": "alcoholic_drinks",
