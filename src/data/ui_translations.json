@@ -514,5 +514,17 @@
         "fr": "Noël I",
         "de": "Weihnachten I",
         "es": "Navidad I"
+    },
+    "subcategory_books_pack_i": {
+        "en": "Books Pack I",
+        "fr": "Lot de livres I",
+        "de": "Bücher-Paket I",
+        "es": "Paquete de libros I"
+    },
+    "subcategory_books_pack_ii": {
+        "en": "Books Pack II",
+        "fr": "Lot de livres II",
+        "de": "Bücher-Paket II",
+        "es": "Paquete de libros II"
     }
 }
