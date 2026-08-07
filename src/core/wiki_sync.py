@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 import sys
 import time
 
@@ -57,10 +58,59 @@ class WikiSync:
             )
         })
 
+    def _save_json_atomic(
+        self,
+        path,
+        data
+    ):
+
+        temp_path = path.with_suffix(
+            path.suffix + ".tmp"
+        )
+
+        try:
+
+            with open(
+                temp_path,
+                "w",
+                encoding="utf-8"
+            ) as file:
+
+                json.dump(
+                    data,
+                    file,
+                    ensure_ascii=False,
+                    indent=4
+                )
+
+                file.flush()
+
+                os.fsync(
+                    file.fileno()
+                )
+
+            os.replace(
+                temp_path,
+                path
+            )
+
+        except Exception:
+
+            if temp_path.exists():
+
+                try:
+                    temp_path.unlink()
+
+                except OSError:
+                    pass
+
+            raise
+
     def sync_categories(
             self,
             progress_callback=None,
-            verbose=True
+            verbose=True,
+            save=True
             ):
 
         url = (
@@ -276,6 +326,16 @@ class WikiSync:
                     current.next_sibling
                 )
 
+            processed_categories += 1
+
+            if progress_callback:
+
+                progress_callback(
+                    processed_categories,
+                    total_categories,
+                    category["name"]
+                )
+
         # -------------------------
         # Résumé / affichage debug
         # -------------------------
@@ -305,52 +365,34 @@ class WikiSync:
                     f"{category['name']}"
                 )
 
-                processed_categories += 1
-
-                if progress_callback:
-
-                    progress_callback(
-                        processed_categories,
-                        total_categories,
-                        category["name"]
-                    )
-
         # -------------------------
         # Sauvegarde du cache
         # -------------------------
 
-        categories_path = (
-            self.data_path
-            / "categories.json"
-        )
+        if save:
 
-        categories_data = {
-            "categories": categories
-        }
-
-        with open(
-            categories_path,
-            "w",
-            encoding="utf-8"
-        ) as file:
-
-            json.dump(
-                categories_data,
-                file,
-                ensure_ascii=False,
-                indent=4
+            categories_path = (
+                self.data_path
+                / "categories.json"
             )
+
+            categories_data = {
+                "categories": categories
+            }
+
+            self._save_json_atomic(
+                categories_path,
+                categories_data
+            )
+
+            if verbose:
+
+                print(
+                    "[wiki] Cache catégories "
+                    f"sauvegardé : {categories_path}"
+                )
 
         if verbose:
-
-            print(
-                f"[wiki] Cache catégories sauvegardé : "
-                f"{categories_path}"
-            )
-
-            # -------------------------
-            # Détail des sections
-            # -------------------------
 
             for category in categories:
 
@@ -430,39 +472,19 @@ class WikiSync:
                 )
 
         # -------------------------
-        # Sauvegarde temporaire
-        # du cache existant
-        # -------------------------
-
-        old_cache = (
-            json.dumps(
-                cached_categories,
-                ensure_ascii=False,
-                sort_keys=True
-            )
-        )
-
-        # -------------------------
         # Scan du wiki
         # -------------------------
 
         remote_categories = (
             self.sync_categories(
                 progress_callback=progress_callback,
-                verbose=False
-            )
-        )
-
-        new_cache = (
-            json.dumps(
-                remote_categories,
-                ensure_ascii=False,
-                sort_keys=True
+                verbose=False,
+                save=False
             )
         )
 
         # -------------------------
-        # Analyse des différences
+        # Index des categories
         # -------------------------
 
         cached_by_id = {
@@ -485,26 +507,87 @@ class WikiSync:
             - remote_by_id.keys()
         )
 
+        # IMPORTANT :
+        # Ces ensembles sont globaux a toute
+        # la comparaison, pas a une categorie.
+        added_sections = set()
+        removed_sections = set()
+
+        # -------------------------
+        # Categories ajoutees
+        # -------------------------
+
         for category_id in sorted(
             added_categories
         ):
 
+            category = (
+                remote_by_id[
+                    category_id
+                ]
+            )
+
             print(
                 "[wiki] Nouvelle categorie : "
-                f"{remote_by_id[category_id]['name']}"
+                f"{category['name']}"
             )
+
+            # Toutes les sections d'une nouvelle
+            # categorie sont elles aussi nouvelles.
+            for section in category.get(
+                "sections",
+                []
+            ):
+
+                section_id = section.get(
+                    "id"
+                )
+
+                if section_id:
+
+                    added_sections.add(
+                        section_id
+                    )
+
+        # -------------------------
+        # Categories supprimees
+        # -------------------------
 
         for category_id in sorted(
             removed_categories
         ):
 
-            print(
-                "[wiki] Categorie supprimee : "
-                f"{cached_by_id[category_id]['name']}"
+            category = (
+                cached_by_id[
+                    category_id
+                ]
             )
 
+            print(
+                "[wiki] Categorie supprimee : "
+                f"{category['name']}"
+            )
+
+            # Toutes les sections de cette categorie
+            # deviennent elles aussi supprimees.
+            for section in category.get(
+                "sections",
+                []
+            ):
+
+                section_id = section.get(
+                    "id"
+                )
+
+                if section_id:
+
+                    removed_sections.add(
+                        section_id
+                    )
+
         # -------------------------
-        # Comparaison des sections
+        # Sections des categories
+        # existant des deux cotes
         # -------------------------
 
         common_categories = (
@@ -534,6 +617,9 @@ class WikiSync:
                     "sections",
                     []
                 )
+                if section.get(
+                    "id"
+                )
             }
 
             remote_sections = {
@@ -542,20 +628,31 @@ class WikiSync:
                     "sections",
                     []
                 )
+                if section.get(
+                    "id"
+                )
             }
 
-            added_sections = (
+            category_added_sections = (
                 remote_sections.keys()
                 - cached_sections.keys()
             )
 
-            removed_sections = (
+            category_removed_sections = (
                 cached_sections.keys()
                 - remote_sections.keys()
             )
 
+            added_sections.update(
+                category_added_sections
+            )
+
+            removed_sections.update(
+                category_removed_sections
+            )
+
             for section_id in sorted(
-                added_sections
+                category_added_sections
             ):
 
                 print(
@@ -565,7 +662,7 @@ class WikiSync:
                 )
 
             for section_id in sorted(
-                removed_sections
+                category_removed_sections
             ):
 
                 print(
@@ -575,24 +672,53 @@ class WikiSync:
                 )
 
         # -------------------------
-        # Comparaison
+        # Resultat
         # -------------------------
 
-        if old_cache == new_cache:
+        changed = (
+            cached_categories
+            != remote_categories
+        )
+
+        if not changed:
 
             print(
                 "[wiki] Categories "
                 "a jour."
             )
 
-            return False
+        else:
 
-        print(
-            "[wiki] Categories "
-            "mises a jour."
-        )
+            categories_data = {
+                "categories": remote_categories
+            }
 
-        return True
+            self._save_json_atomic(
+                categories_path,
+                categories_data
+            )
+
+            print(
+                "[wiki] Categories "
+                "mises a jour."
+            )
+
+        return {
+            "changed": changed,
+            "added_categories": sorted(
+                added_categories
+            ),
+            "removed_categories": sorted(
+                removed_categories
+            ),
+            "added_sections": sorted(
+                added_sections
+            ),
+            "removed_sections": sorted(
+                removed_sections
+            ),
+            "categories": remote_categories,
+        }
 
     def inspect_all_table_counts(
         self
@@ -784,6 +910,471 @@ class WikiSync:
                     print(
                         values
                     )
+
+    def load_products_cache(
+        self
+    ):
+
+        products_path = (
+            self.data_path
+            / "products.json"
+        )
+
+        if not products_path.exists():
+
+            return []
+
+        try:
+
+            with open(
+                products_path,
+                "r",
+                encoding="utf-8"
+            ) as file:
+
+                data = json.load(
+                    file
+                )
+
+        except (
+            json.JSONDecodeError,
+            OSError
+        ):
+
+            print(
+                "[wiki] Cache produits "
+                "absent ou invalide."
+            )
+
+            return []
+
+        products = data.get(
+            "products",
+            []
+        )
+
+        if not isinstance(
+            products,
+            list
+        ):
+
+            print(
+                "[wiki] Format du cache "
+                "produits invalide."
+            )
+
+            return []
+
+        return products
+
+    def save_products_cache(
+        self,
+        products
+    ):
+
+        products_path = (
+            self.data_path
+            / "products.json"
+        )
+
+        products_data = {
+            "products": products
+        }
+
+        self._save_json_atomic(
+            products_path,
+            products_data
+        )
+
+        print(
+            f"[wiki] Cache produits sauvegarde : "
+            f"{products_path}"
+        )
+
+    def merge_products_cache(
+        self,
+        new_products,
+        section_ids
+    ):
+
+        cached_products = (
+            self.load_products_cache()
+        )
+
+        section_ids = set(
+            section_ids
+        )
+
+        # -------------------------
+        # Produits fraîchement
+        # synchronisés par section
+        # -------------------------
+
+        new_by_section = {}
+
+        for product in new_products:
+
+            section_id = product.get(
+                "section_id"
+            )
+
+            if not section_id:
+                continue
+
+            new_by_section.setdefault(
+                section_id,
+                []
+            ).append(
+                product
+            )
+
+        # -------------------------
+        # Produits conservés
+        # -------------------------
+
+        preserved_products = [
+            product
+            for product in cached_products
+            if product.get(
+                "section_id"
+            ) not in section_ids
+        ]
+
+        # -------------------------
+        # Ordre canonique des
+        # sections
+        # -------------------------
+
+        categories_path = (
+            self.data_path
+            / "categories.json"
+        )
+
+        section_order = {}
+
+        try:
+
+            with open(
+                categories_path,
+                "r",
+                encoding="utf-8"
+            ) as file:
+
+                categories = (
+                    json.load(
+                        file
+                    ).get(
+                        "categories",
+                        []
+                    )
+                )
+
+            order = 0
+
+            for category in categories:
+
+                for section in category.get(
+                    "sections",
+                    []
+                ):
+
+                    section_id = section.get(
+                        "id"
+                    )
+
+                    if not section_id:
+                        continue
+
+                    section_order[
+                        section_id
+                    ] = order
+
+                    order += 1
+
+        except (
+            OSError,
+            json.JSONDecodeError,
+        ):
+
+            print(
+                "[wiki] Impossible de lire "
+                "l'ordre des sections."
+            )
+
+        # -------------------------
+        # Regroupement final
+        # -------------------------
+
+        products_by_section = {}
+
+        unknown_products = []
+
+        for product in preserved_products:
+
+            section_id = product.get(
+                "section_id"
+            )
+
+            if not section_id:
+
+                unknown_products.append(
+                    product
+                )
+
+                continue
+
+            products_by_section.setdefault(
+                section_id,
+                []
+            ).append(
+                product
+            )
+
+        # Les nouvelles données remplacent
+        # complètement les anciennes données
+        # des sections synchronisées.
+
+        for section_id, products in (
+            new_by_section.items()
+        ):
+
+            products_by_section[
+                section_id
+            ] = products
+
+        # -------------------------
+        # Reconstruction dans
+        # l'ordre du wiki
+        # -------------------------
+
+        merged_products = []
+
+        known_section_ids = sorted(
+            (
+                section_id
+                for section_id
+                in products_by_section
+                if section_id
+                in section_order
+            ),
+            key=lambda section_id: (
+                section_order[
+                    section_id
+                ]
+            )
+        )
+
+        for section_id in known_section_ids:
+
+            merged_products.extend(
+                products_by_section[
+                    section_id
+                ]
+            )
+
+        # -------------------------
+        # Sections inconnues
+        # -------------------------
+        # On ne jette jamais une donnée
+        # simplement parce que la structure
+        # locale ne la connaît pas encore.
+        # Elles restent à la fin du cache.
+        # -------------------------
+
+        unknown_section_ids = [
+            section_id
+            for section_id
+            in products_by_section
+            if section_id
+            not in section_order
+        ]
+
+        for section_id in unknown_section_ids:
+
+            merged_products.extend(
+                products_by_section[
+                    section_id
+                ]
+            )
+
+        merged_products.extend(
+            unknown_products
+        )
+
+        # -------------------------
+        # Sauvegarde atomique
+        # -------------------------
+
+        self.save_products_cache(
+            merged_products
+        )
+
+        print(
+            "[wiki] Cache produits fusionne : "
+            f"{len(cached_products)} -> "
+            f"{len(merged_products)} produit(s)."
+        )
+
+        return merged_products
+
+    def sync_product_sections(
+        self,
+        sections
+    ):
+
+        if not sections:
+
+            print(
+                "[wiki] Aucune section produit "
+                "a synchroniser."
+            )
+
+            return self.load_products_cache()
+
+        synced_products = []
+        synced_section_ids = []
+
+        total_sections = len(
+            sections
+        )
+
+        print(
+            f"[wiki] Synchronisation de "
+            f"{total_sections} section(s)..."
+        )
+
+        for index, section in enumerate(
+            sections,
+            start=1
+        ):
+
+            section_id = section.get(
+                "id"
+            )
+
+            wiki_path = section.get(
+                "wiki_path"
+            )
+
+            section_name = section.get(
+                "name",
+                section_id or "Section inconnue"
+            )
+
+            if not section_id:
+
+                print(
+                    "[wiki] Section ignoree : "
+                    "identifiant manquant."
+                )
+
+                continue
+
+            if not wiki_path:
+
+                print(
+                    f"[wiki] {section_name} ignoree : "
+                    "wiki_path manquant."
+                )
+
+                continue
+
+            print()
+            print(
+                f"[wiki] [{index}/{total_sections}] "
+                f"{section_name}"
+            )
+
+            try:
+
+                products = (
+                    self.sync_section_products(
+                        wiki_path
+                    )
+                )
+
+            except Exception as error:
+
+                print(
+                    f"[wiki] Erreur pour "
+                    f"{section_name} : {error}"
+                )
+
+                continue
+
+            # IMPORTANT :
+            # une section en erreur / 404 renvoie []
+            # actuellement. On ne la marque donc pas
+            # comme synchronisee, sinon on risquerait
+            # d'effacer son ancien cache.
+            if not products:
+
+                print(
+                    f"[wiki] Aucun produit valide pour "
+                    f"{section_name}. Cache conserve."
+                )
+
+                continue
+
+            category_id = section.get(
+                "category_id"
+            )
+
+            normalized_products = []
+
+            for product in products:
+
+                normalized_product = {
+                    key: value
+                    for key, value
+                    in product.items()
+                    if key not in (
+                        "category_id",
+                        "section_id",
+                    )
+                }
+
+                normalized_product[
+                    "category_id"
+                ] = category_id
+
+                normalized_product[
+                    "section_id"
+                ] = section_id
+
+                normalized_products.append(
+                    normalized_product
+                )
+
+            products = normalized_products
+
+            synced_products.extend(
+                products
+            )
+
+            synced_section_ids.append(
+                section_id
+            )
+
+            if index < total_sections:
+
+                time.sleep(
+                    self.request_delay
+                )
+
+        if not synced_section_ids:
+
+            print(
+                "[wiki] Aucune section synchronisee. "
+                "Cache produits inchange."
+            )
+
+            return self.load_products_cache()
+
+        return self.merge_products_cache(
+            synced_products,
+            synced_section_ids
+        )
 
     def sync_section_products(
         self,
@@ -1069,7 +1660,7 @@ class WikiSync:
 
         products = []
 
-                # -------------------------
+        # -------------------------
         # Progression globale
         # -------------------------
 
@@ -1167,15 +1758,13 @@ class WikiSync:
                     )
                 )
 
-                time.sleep(
-                    self.request_delay
-                )
-
                 for product in section_products:
 
-                    product[
-                        "category_id"
-                    ] = category_id
+                    if category_id:
+
+                        product[
+                            "category_id"
+                        ] = category_id
 
                     product[
                         "section_id"
@@ -1191,41 +1780,17 @@ class WikiSync:
                     f"produit(s) au total"
                 )
 
+                time.sleep(
+                    self.request_delay
+                )
+
+
         # -------------------------
         # Sauvegarde
         # -------------------------
 
-        products_path = (
-            self.data_path
-            / "products.json"
-        )
-
-        products_data = {
-            "products": products
-        }
-
-        with open(
-            products_path,
-            "w",
-            encoding="utf-8"
-        ) as file:
-
-            json.dump(
-                products_data,
-                file,
-                ensure_ascii=False,
-                indent=4
-            )
-
-        print(
-            f"\n[wiki] "
-            f"{len(products)} produit(s) "
-            f"récupéré(s) au total."
-        )
-
-        print(
-            f"[wiki] Cache produits sauvegardé : "
-            f"{products_path}"
+        self.save_products_cache(
+            products
         )
 
         return products

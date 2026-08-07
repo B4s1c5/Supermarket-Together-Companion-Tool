@@ -263,6 +263,7 @@ class StartupProgress:
             end="",
             flush=True
         )
+
     def finish(self):
 
         if getattr(
@@ -410,11 +411,59 @@ def main():
 
     try:
 
-        categories_changed = (
+        category_sync = (
             wiki_sync.ensure_categories_cache()
         )
 
-        if categories_changed:
+        if category_sync["changed"]:
+
+            added_section_ids = set(
+                category_sync[
+                    "added_sections"
+                ]
+            )
+
+            sections_to_sync = []
+
+            for category in category_sync[
+                "categories"
+            ]:
+
+                for section in category.get(
+                    "sections",
+                    []
+                ):
+
+                    if section.get(
+                        "id"
+                    ) in added_section_ids:
+
+                        section_to_sync = dict(
+                            section
+                        )
+
+                        section_to_sync[
+                            "category_id"
+                        ] = category[
+                            "id"
+                        ]
+
+                        sections_to_sync.append(
+                            section_to_sync
+                        )
+
+            if sections_to_sync:
+
+                print(
+                    f"[wiki] "
+                    f"{len(sections_to_sync)} "
+                    "nouvelle(s) section(s) "
+                    "produit(s) a synchroniser."
+                )
+
+                wiki_sync.sync_product_sections(
+                    sections_to_sync
+                )
 
             print(
                 "[wiki] Structure des categories "
