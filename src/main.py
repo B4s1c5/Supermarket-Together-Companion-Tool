@@ -6,6 +6,7 @@ import ctypes
 from pathlib import Path
 
 from core.dev_console import dev_console
+from core.wiki_sync import wiki_sync
 
 from PySide6.QtCore import(
     QObject, 
@@ -262,7 +263,6 @@ class StartupProgress:
             end="",
             flush=True
         )
-
     def finish(self):
 
         if getattr(
@@ -403,12 +403,42 @@ def main():
     )
 
     # -------------------------
-    # Interface + donnees + i18n
+    # Chargement des données
     # -------------------------
+
+    print()
+
+    try:
+
+        categories_changed = (
+            wiki_sync.ensure_categories_cache()
+        )
+
+        if categories_changed:
+
+            print(
+                "[wiki] Structure des categories "
+                "modifiee."
+            )
+
+    except Exception as error:
+
+        print(
+            "[wiki] Verification impossible : "
+            f"{error}"
+        )
+
+        print(
+            "[wiki] Utilisation du cache local."
+        )
 
     startup_progress.next(
         "Chargement des donnees"
     )
+
+    # -------------------------
+    # Traductions + interface
+    # -------------------------
 
     startup_progress.next(
         "Traductions et interface"
@@ -425,8 +455,7 @@ def main():
     # -------------------------
 
     startup_progress.finish()
-
-    startup_progress.finish()
+    
 
     def finish_startup():
 

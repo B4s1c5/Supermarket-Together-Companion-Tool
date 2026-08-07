@@ -57,7 +57,11 @@ class WikiSync:
             )
         })
 
-    def sync_categories(self):
+    def sync_categories(
+            self,
+            progress_callback=None,
+            verbose=True
+            ):
 
         url = (
             f"{self.base_url}"
@@ -140,103 +144,176 @@ class WikiSync:
         # Détection des sous-catégories
         # -------------------------
 
+        total_categories = len(
+            categories
+        )
+
+        processed_categories = 0
+
+        # -------------------------
+        # Détection structurelle
+        # des sous-catégories
+        # -------------------------
+
         for category in categories:
 
             category[
                 "sections"
             ] = []
 
-            category_prefix = (
-                category["name"]
-                .replace(" ", "_")
+            anchor_id = (
+                category["anchor"]
+                .removeprefix("#")
             )
 
-            if (
-                category["id"]
-                == "books_packs"
-            ):
+            anchor = content.find(
+                id=anchor_id
+            )
 
-                category_prefix = (
-                    "Books_Pack"
+            if anchor is None:
+
+                print(
+                    f"[wiki] Ancre introuvable : "
+                    f"{category['name']}"
                 )
 
-            for link in links:
+                continue
 
-                section_name = link.get_text(
-                    " ",
-                    strip=True
+            heading = anchor.find_parent(
+                [
+                    "h2",
+                    "h3",
+                    "h4",
+                ]
+            )
+
+            if heading is None:
+
+                print(
+                    f"[wiki] Titre introuvable : "
+                    f"{category['name']}"
                 )
 
-                href = link.get(
-                    "href",
-                    ""
-                )
+                continue
 
-                if not href.startswith(
-                    "/wiki/"
-                ):
-                    continue
+            current = (
+                heading.next_sibling
+            )
 
-                wiki_page = href.split(
-                    "?",
-                    1
-                )[0]
+            seen_paths = set()
 
-                expected_prefix = (
-                    f"/wiki/{category_prefix}_"
-                )
-
-                if not wiki_page.startswith(
-                    expected_prefix
-                ):
-                    continue
-
-                # Évite d'ajouter une page quelconque
-                # portant simplement un nom ressemblant.
-                expected_section_name = (
-                    category["name"]
-                )
+            while current is not None:
 
                 if (
-                    category["id"]
-                    == "books_packs"
+                    getattr(
+                        current,
+                        "name",
+                        None
+                    )
+                    == "h2"
+                ):
+                    break
+
+                if hasattr(
+                    current,
+                    "select"
                 ):
 
-                    expected_section_name = (
-                        "Books Pack"
+                    section_links = (
+                        current.select(
+                            "a[href^='/wiki/']"
+                        )
                     )
 
-                if not section_name.startswith(
-                    expected_section_name
-                ):
-                    continue
+                    for link in section_links:
 
-                section_id = (
-                    wiki_page
-                    .removeprefix("/wiki/")
-                    .lower()
+                        section_name = (
+                            link.get_text(
+                                " ",
+                                strip=True
+                            )
+                        )
+
+                        href = link.get(
+                            "href",
+                            ""
+                        )
+
+                        wiki_page = (
+                            href.split(
+                                "?",
+                                1
+                            )[0]
+                        )
+
+                        if not section_name:
+                            continue
+
+                        if wiki_page in seen_paths:
+                            continue
+
+                        seen_paths.add(
+                            wiki_page
+                        )
+
+                        section_id = (
+                            wiki_page
+                            .removeprefix(
+                                "/wiki/"
+                            )
+                            .lower()
+                        )
+
+                        category[
+                            "sections"
+                        ].append({
+                            "id": section_id,
+                            "name": section_name,
+                            "wiki_path": wiki_page,
+                        })
+
+                current = (
+                    current.next_sibling
                 )
 
-                category[
-                    "sections"
-                ].append({
-                    "id": section_id,
-                    "name": section_name,
-                    "wiki_path": wiki_page,
-                })
+        # -------------------------
+        # Résumé / affichage debug
+        # -------------------------
 
-        print(
-            f"[wiki] {len(categories)} "
-            f"catégorie(s) détectée(s)."
+        total_sections = sum(
+            len(
+                category.get(
+                    "sections",
+                    []
+                )
+            )
+            for category in categories
         )
 
-        for category in categories:
+        if verbose:
 
             print(
-                f"[wiki] "
-                f"{category['id']} -> "
-                f"{category['name']}"
+                f"[wiki] {len(categories)} "
+                f"catégorie(s) détectée(s)."
             )
+
+            for category in categories:
+
+                print(
+                    f"[wiki] "
+                    f"{category['id']} -> "
+                    f"{category['name']}"
+                )
+
+                processed_categories += 1
+
+                if progress_callback:
+
+                    progress_callback(
+                        processed_categories,
+                        total_categories,
+                        category["name"]
+                    )
 
         # -------------------------
         # Sauvegarde du cache
@@ -264,32 +341,258 @@ class WikiSync:
                 indent=4
             )
 
+        if verbose:
+
+            print(
+                f"[wiki] Cache catégories sauvegardé : "
+                f"{categories_path}"
+            )
+
+            # -------------------------
+            # Détail des sections
+            # -------------------------
+
+            for category in categories:
+
+                print(
+                    f"\n[wiki] {category['name']}"
+                )
+
+                for section in category.get(
+                    "sections",
+                    []
+                ):
+
+                    print(
+                        f"    -> "
+                        f"{section['name']} "
+                        f"({section['wiki_path']})"
+                    )
+
+        else:
+
+            print(
+                f"[wiki] "
+                f"{len(categories)} categories / "
+                f"{total_sections} sections detectees."
+            )
+
+        return categories
+    
+    def ensure_categories_cache(
+        self,
+        progress_callback=None
+    ):
+
+        categories_path = (
+            self.data_path
+            / "categories.json"
+        )
+
         print(
-            f"[wiki] Cache catégories sauvegardé : "
-            f"{categories_path}"
+            "[wiki] Verification "
+            "des categories..."
         )
 
         # -------------------------
-        # Vérification des sections
+        # Lecture du cache actuel
         # -------------------------
 
-        for category in categories:
+        cached_categories = []
 
-            print(
-                f"\n[wiki] {category['name']}"
-            )
+        if categories_path.exists():
 
-            for section in category[
-                "sections"
-            ]:
+            try:
+
+                with open(
+                    categories_path,
+                    "r",
+                    encoding="utf-8"
+                ) as file:
+
+                    cached_categories = (
+                        json.load(
+                            file
+                        ).get(
+                            "categories",
+                            []
+                        )
+                    )
+
+            except (
+                OSError,
+                json.JSONDecodeError,
+            ):
 
                 print(
-                    f"    -> "
-                    f"{section['name']} "
-                    f"({section['wiki_path']})"
+                    "[wiki] Cache categories "
+                    "invalide."
                 )
 
-        return categories
+        # -------------------------
+        # Sauvegarde temporaire
+        # du cache existant
+        # -------------------------
+
+        old_cache = (
+            json.dumps(
+                cached_categories,
+                ensure_ascii=False,
+                sort_keys=True
+            )
+        )
+
+        # -------------------------
+        # Scan du wiki
+        # -------------------------
+
+        remote_categories = (
+            self.sync_categories(
+                progress_callback=progress_callback,
+                verbose=False
+            )
+        )
+
+        new_cache = (
+            json.dumps(
+                remote_categories,
+                ensure_ascii=False,
+                sort_keys=True
+            )
+        )
+
+        # -------------------------
+        # Analyse des différences
+        # -------------------------
+
+        cached_by_id = {
+            category["id"]: category
+            for category in cached_categories
+        }
+
+        remote_by_id = {
+            category["id"]: category
+            for category in remote_categories
+        }
+
+        added_categories = (
+            remote_by_id.keys()
+            - cached_by_id.keys()
+        )
+
+        removed_categories = (
+            cached_by_id.keys()
+            - remote_by_id.keys()
+        )
+
+        for category_id in sorted(
+            added_categories
+        ):
+
+            print(
+                "[wiki] Nouvelle categorie : "
+                f"{remote_by_id[category_id]['name']}"
+            )
+
+        for category_id in sorted(
+            removed_categories
+        ):
+
+            print(
+                "[wiki] Categorie supprimee : "
+                f"{cached_by_id[category_id]['name']}"
+            )
+
+        # -------------------------
+        # Comparaison des sections
+        # -------------------------
+
+        common_categories = (
+            remote_by_id.keys()
+            & cached_by_id.keys()
+        )
+
+        for category_id in sorted(
+            common_categories
+        ):
+
+            cached_category = (
+                cached_by_id[
+                    category_id
+                ]
+            )
+
+            remote_category = (
+                remote_by_id[
+                    category_id
+                ]
+            )
+
+            cached_sections = {
+                section["id"]: section
+                for section in cached_category.get(
+                    "sections",
+                    []
+                )
+            }
+
+            remote_sections = {
+                section["id"]: section
+                for section in remote_category.get(
+                    "sections",
+                    []
+                )
+            }
+
+            added_sections = (
+                remote_sections.keys()
+                - cached_sections.keys()
+            )
+
+            removed_sections = (
+                cached_sections.keys()
+                - remote_sections.keys()
+            )
+
+            for section_id in sorted(
+                added_sections
+            ):
+
+                print(
+                    "[wiki] Nouvelle section : "
+                    f"{remote_category['name']} > "
+                    f"{remote_sections[section_id]['name']}"
+                )
+
+            for section_id in sorted(
+                removed_sections
+            ):
+
+                print(
+                    "[wiki] Section supprimee : "
+                    f"{cached_category['name']} > "
+                    f"{cached_sections[section_id]['name']}"
+                )
+
+        # -------------------------
+        # Comparaison
+        # -------------------------
+
+        if old_cache == new_cache:
+
+            print(
+                "[wiki] Categories "
+                "a jour."
+            )
+
+            return False
+
+        print(
+            "[wiki] Categories "
+            "mises a jour."
+        )
+
+        return True
 
     def inspect_all_table_counts(
         self
