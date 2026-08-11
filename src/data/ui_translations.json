@@ -133,7 +133,7 @@
     },
     "category_preserves": {
         "en": "Preserves",
-        "fr": "Confitures",
+        "fr": "Conserves",
         "de": "Konserven",
         "es": "Conservas"
     },
@@ -169,15 +169,15 @@
     },
     "category_produce": {
         "en": "Produce",
-        "fr": "Produits",
-        "de": "Erzeugnisse",
-        "es": "Productos"
+        "fr": "Fruits et Légumes",
+        "de": "Obst und Gemüse",
+        "es": "Frutas y verduras"
     },
     "category_child_care": {
         "en": "Child Care",
-        "fr": "Garde d'enfants",
+        "fr": "Soins des Enfants",
         "de": "Kinderbetreuung",
-        "es": "Cuidado infantil"
+        "es": "Cuidado de los niños"
     },
     "category_gardening": {
         "en": "Gardening",
@@ -325,7 +325,7 @@
     },
     "subcategory_sweets_and_snacks_ii": {
         "en": "Sweets and Snacks II",
-        "fr": "Friandises et en-cas II",
+        "fr": "Confiseries et friandises II",
         "de": "Süßigkeiten und Snacks II",
         "es": "Dulces y aperitivos II"
     },
@@ -367,13 +367,13 @@
     },
     "subcategory_preserves_i": {
         "en": "Preserves I",
-        "fr": "Confitures I",
+        "fr": "Conserves I",
         "de": "Konserven I",
         "es": "Conservas I"
     },
     "subcategory_preserves_ii": {
         "en": "Preserves II",
-        "fr": "Confitures II",
+        "fr": "Conserves II",
         "de": "Konserven II",
         "es": "Conservas II"
     },
@@ -421,45 +421,45 @@
     },
     "subcategory_produce_i": {
         "en": "Produce I",
-        "fr": "Produits I",
-        "de": "Erzeugnisse I",
-        "es": "Productos I"
+        "fr": "Fruits et Légumes I",
+        "de": "Obst und Gemüse I",
+        "es": "Frutas y verduras I"
     },
     "subcategory_produce_ii": {
         "en": "Produce II",
-        "fr": "Produits II",
-        "de": "Erzeugnisse II",
-        "es": "Productos II"
+        "fr": "Fruits et Légumes II",
+        "de": "Obst und Gemüse II",
+        "es": "Frutas y verduras II"
     },
     "subcategory_produce_iii": {
         "en": "Produce III",
-        "fr": "Produits III",
-        "de": "Produce III",
-        "es": "Productos III"
+        "fr": "Fruits et Légumes III",
+        "de": "Obst und Gemüse III",
+        "es": "Frutas y verduras III"
     },
     "subcategory_produce_iv": {
         "en": "Produce IV",
-        "fr": "Produits IV",
+        "fr": "Fruits et Légumes IV",
         "de": "Obst und Gemüse IV",
-        "es": "Productos IV"
+        "es": "Frutas y verduras IV"
     },
     "subcategory_produce_v": {
         "en": "Produce V",
-        "fr": "Produits V",
+        "fr": "Fruits et Légumes V",
         "de": "Obst und Gemüse V",
-        "es": "Productos V"
+        "es": "Frutas y verduras V"
     },
     "subcategory_child_care_i": {
         "en": "Child Care I",
-        "fr": "Garde d'enfants I",
+        "fr": "Soins des Enfants I",
         "de": "Kinderbetreuung I",
-        "es": "Cuidado infantil I"
+        "es": "Cuidado de los niños I"
     },
     "subcategory_child_care_ii": {
         "en": "Child Care II",
-        "fr": "Garde d'enfants II",
+        "fr": "Soins des Enfants II",
         "de": "Kinderbetreuung II",
-        "es": "Cuidado infantil II"
+        "es": "Cuidado de los niños II"
     },
     "subcategory_gardening_i": {
         "en": "Gardening I",
@@ -526,5 +526,323 @@
         "fr": "Lot de livres II",
         "de": "Bücher-Paket II",
         "es": "Paquete de libros II"
+    },
+    "table_image": {
+        "fr": "Image",
+        "en": "Image",
+        "de": "Bild",
+        "es": "Imagen"
+    },
+    "table_brand": {
+        "fr": "Marque",
+        "en": "Brand",
+        "de": "Marke",
+        "es": "Marca"
+    },
+    "table_price_per_box": {
+        "fr": "Prix / carton",
+        "en": "Price per cardboard",
+        "de": "Preis pro Karton",
+        "es": "Precio por caja"
+    },
+    "table_price_per_unit": {
+        "fr": "Prix unitaire",
+        "en": "Unit Price",
+        "de": "Stückpreis",
+        "es": "Precio unitario"
+    },
+    "table_market_price_x195": {
+        "fr": "Prix du marché ×1,95",
+        "en": "Market price × 1.95",
+        "de": "Marktpreis × 1,95",
+        "es": "Precio de mercado × 1,95"
+    },
+    "table_margin": {
+        "fr": "Marge",
+        "en": "Margin",
+        "de": "Marge",
+        "es": "Margen"
+    },
+    "table_amount_per_box": {
+        "fr": "Qté / carton",
+        "en": "Qty / cardboard",
+        "de": "Stückzahl pro Karton",
+        "es": "Cantidad por caja"
+    },
+    "table_small_shelf_quantity": {
+        "fr": "Qté / petite étagère",
+        "en": "Qty / small shelf",
+        "de": "Anzahl / kleines Regal",
+        "es": "Cantidad / estantería pequeña"
+    },
+    "table_small_shelf_ratio": {
+        "fr": "Ratio carton / petite étagère",
+        "en": "Cardboard-to-Small Shelf Ratio",
+        "de": "Verhältnis Karton : kleines Regal",
+        "es": "Proporción entre caja y estantería pequeña"
+    },
+    "table_large_shelf_quantity": {
+        "fr": "Qté / grande étagère",
+        "en": "Qty / large shelf",
+        "de": "Anzahl / großes Regal",
+        "es": "Cantidad / estantería grande"
+    },
+    "table_large_shelf_ratio": {
+        "fr": "Ratio carton / grande étagère",
+        "en": "Cardboard-to-Large Shelf Ratio",
+        "de": "Verhältnis Karton / großes Regal",
+        "es": "Proporción entre cajas y estantería grande"
+    },
+    "companion_table_select_subcategory": {
+        "fr": "Veuillez sélectionner une sous-catégorie de produit pour commencer",
+        "en": "Please select a product subcategory to get started",
+        "de": "Bitte wählen Sie eine Produktunterkategorie aus, um zu beginnen",
+        "es": "Selecciona una subcategoría de productos para empezar"
+    },
+    "product_Pasta Penne": {
+        "en": "Pasta Penne",
+        "fr": "Pâtes Penne",
+        "de": "Pasta Penne",
+        "es": "Pasta penne"
+    },
+    "product_Water Bottle": {
+        "en": "Water Bottle",
+        "fr": "Bouteille d'eau",
+        "de": "Trinkflasche",
+        "es": "Botella de agua"
+    },
+    "product_Honey Cereals": {
+        "en": "Honey Cereals",
+        "fr": "Céréales au miel",
+        "de": "Honig-Müsli",
+        "es": "Cereales con miel"
+    },
+    "product_Rice": {
+        "en": "Rice",
+        "fr": "Riz",
+        "de": "Reis",
+        "es": "Arroz"
+    },
+    "product_Salt": {
+        "en": "Salt",
+        "fr": "Sel",
+        "de": "Salz",
+        "es": "Sal"
+    },
+    "product_Sugar": {
+        "en": "Sugar",
+        "fr": "Sucre",
+        "de": "Zucker",
+        "es": "Azúcar"
+    },
+    "product_Margarine": {
+        "en": "Margarine",
+        "fr": "Margarine",
+        "de": "Margarine",
+        "es": "Margarina"
+    },
+    "product_Flour": {
+        "en": "Flour",
+        "fr": "Farine",
+        "de": "Mehl",
+        "es": "Harina"
+    },
+    "product_Apple Juice": {
+        "en": "Apple Juice",
+        "fr": "Jus de pomme",
+        "de": "Apfelsaft",
+        "es": "Zumo de manzana"
+    },
+    "product_Olive Oil": {
+        "en": "Olive Oil",
+        "fr": "Huile d'olive",
+        "de": "Olivenöl",
+        "es": "Aceite de oliva"
+    },
+    "product_Ketchup": {
+        "en": "Ketchup",
+        "fr": "Ketchup",
+        "de": "Ketchup",
+        "es": "Kétchup"
+    },
+    "product_Sliced Bread": {
+        "en": "Sliced Bread",
+        "fr": "Du pain tranché",
+        "de": "Geschnittenes Brot",
+        "es": "Pan de molde"
+    },
+    "product_Pepper": {
+        "en": "Pepper",
+        "fr": "Poivre",
+        "de": "Pfeffer",
+        "es": "Pimienta"
+    },
+    "product_Baking Powder": {
+        "en": "Baking Powder",
+        "fr": "Poudre à lever",
+        "de": "Backpulver",
+        "es": "Levadura en polvo"
+    },
+    "product_Baking Soda": {
+        "en": "Baking Soda",
+        "fr": "Bicarbonate de soude",
+        "de": "Backpulver",
+        "es": "Bicarbonato sódico"
+    },
+    "product_Cake Mix": {
+        "en": "Cake Mix",
+        "fr": "Préparation pour gâteau",
+        "de": "Kuchenbackmischung",
+        "es": "Mezcla para pasteles"
+    },
+    "product_Cocoa Powder": {
+        "en": "Cocoa Powder",
+        "fr": "Poudre de cacao",
+        "de": "Kakaopulver",
+        "es": "Cacao en polvo"
+    },
+    "product_Cornstarch": {
+        "en": "Cornstarch",
+        "fr": "Fécule de maïs",
+        "de": "Maisstärke",
+        "es": "Maicena"
+    },
+    "product_Icing Tube": {
+        "en": "Icing Tube",
+        "fr": "Poche à douille",
+        "de": "Spritzbeutel",
+        "es": "Manguera para glaseado"
+    },
+    "product_Candy Sprinkles": {
+        "en": "Candy Sprinkles",
+        "fr": "Paillettes de bonbons",
+        "de": "Zuckerstreusel",
+        "es": "Fideos de caramelo"
+    },
+    "product_Vanilla Extract": {
+        "en": "Vanilla Extract",
+        "fr": "Extrait de vanille",
+        "de": "Vanilleextrakt",
+        "es": "Extracto de vainilla"
+    },
+    "product_Cola Pack": {
+        "en": "Cola Pack",
+        "fr": "Pack Cola",
+        "de": "Cola-Packung",
+        "es": "Paquete de refrescos de cola"
+    },
+    "product_Soda Pack": {
+        "en": "Soda Pack",
+        "fr": "Pack de sodas",
+        "de": "Soda-Packung",
+        "es": "Paquete de refrescos"
+    },
+    "product_Decaf Soda Pack": {
+        "en": "Decaf Soda Pack",
+        "fr": "Pack de sodas décaféinés",
+        "de": "Packung mit koffeinfreien Limonaden",
+        "es": "Pack de refrescos descafeinados"
+    },
+    "product_Soda Bottle": {
+        "en": "Soda Bottle",
+        "fr": "Bouteille de soda",
+        "de": "Limonadenflasche",
+        "es": "Botella de refresco"
+    },
+    "product_Cola Bottle": {
+        "en": "Cola Bottle",
+        "fr": "Bouteille de cola",
+        "de": "Cola-Flasche",
+        "es": "Botella de refresco de cola"
+    },
+    "product_Sugar Free Soda Bottle": {
+        "en": "Sugar Free Soda Bottle",
+        "fr": "Bouteille de soda sans sucre",
+        "de": "Flasche mit zuckerfreier Limonade",
+        "es": "Botella de refresco sin azúcar"
+    },
+    "product_Premium Soda": {
+        "en": "Premium Soda",
+        "fr": "Soda haut de gamme",
+        "de": "Premium-Limonade",
+        "es": "Refresco Premium"
+    },
+    "product_Orange Soda": {
+        "en": "Orange Soda",
+        "fr": "Soda à l'orange",
+        "de": "Orangenlimonade",
+        "es": "Refresco de naranja"
+    },
+    "product_Pineapple Soda": {
+        "en": "Pineapple Soda",
+        "fr": "Soda à l'ananas",
+        "de": "Ananas-Limonade",
+        "es": "Refresco de piña"
+    },
+    "product_Tropical Soda": {
+        "en": "Tropical Soda",
+        "fr": "Soda tropical",
+        "de": "Tropische Limo",
+        "es": "Refresco tropical"
+    },
+    "product_Green Tea": {
+        "en": "Green Tea",
+        "fr": "Thé vert",
+        "de": "Grüner Tee",
+        "es": "Té verde"
+    },
+    "product_Red Tea": {
+        "en": "Red Tea",
+        "fr": "Thé rouge",
+        "de": "Roter Tee",
+        "es": "Té rojo"
+    },
+    "product_Lemon Tea": {
+        "en": "Lemon Tea",
+        "fr": "Thé au citron",
+        "de": "Zitronentee",
+        "es": "Té de limón"
+    },
+    "product_Cold Brew Coffee": {
+        "en": "Cold Brew Coffee",
+        "fr": "Café infusé à froid",
+        "de": "Cold-Brew-Kaffee",
+        "es": "Café cold brew"
+    },
+    "product_Emmental Cheese": {
+        "en": "Emmental Cheese",
+        "fr": "Fromage d'Emmental",
+        "de": "Emmentaler Käse",
+        "es": "Queso Emmental"
+    },
+    "product_Gruyere Cheese": {
+        "en": "Gruyere Cheese",
+        "fr": "Fromage de Gruyère",
+        "de": "Gruyère-Käse",
+        "es": "Queso Gruyère"
+    },
+    "product_Skimmed Cheese": {
+        "en": "Skimmed Cheese",
+        "fr": "Fromage écrémé",
+        "de": "Magermilchkäse",
+        "es": "Queso desnatado"
+    },
+    "product_Fruit Yoghurt": {
+        "en": "Fruit Yoghurt",
+        "fr": "Yaourt aux fruits",
+        "de": "Fruchtjoghurt",
+        "es": "Yogur de frutas"
+    },
+    "product_Vanilla Yoghurt": {
+        "en": "Vanilla Yoghurt",
+        "fr": "Yaourt à la vanille",
+        "de": "Vanillejoghurt",
+        "es": "Yogur de vainilla"
+    },
+    "product_Milk Brick": {
+        "en": "Milk Brick",
+        "fr": "Brique de lait",
+        "de": "Milchziegel",
+        "es": "Ladrillo de leche"
     }
 }

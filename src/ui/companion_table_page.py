@@ -3,16 +3,22 @@ import sys
 
 from pathlib import Path
 
+from core import translation_manager
+from core.translation_manager import tr
+from core.translation_manager import translation_manager
+
+from PySide6.QtGui import (
+    QFontMetrics, 
+    QIcon,
+    QPixmap,
+)
 from PySide6.QtCore import (
     Qt,
     QSize,
 )
-
-from PySide6.QtGui import QIcon
-
-from core.translation_manager import tr
-
 from PySide6.QtWidgets import (
+    QHeaderView,
+    QTableWidgetItem,
     QWidget,
     QVBoxLayout,
     QHBoxLayout,
@@ -341,7 +347,7 @@ class CompanionTablePage(QWidget):
                 padding: 5px 8px;
                 text-align: left;
                 font-size: 13px;
-             font-weight: 600;
+                font-weight: 600;
             }
 
             QPushButton:hover {
@@ -438,6 +444,13 @@ class CompanionTablePage(QWidget):
                         background-color: #30353a;
                         color: #ffffff;
                     }
+
+                    QPushButton[active="true"] {
+                        background-color: #30353a;
+                        color: #ffffff;
+                        border-left: 3px solid #e3262e;
+                        font-weight: 600;
+                    }
                 """)
 
                 sections_layout.addWidget(
@@ -447,6 +460,14 @@ class CompanionTablePage(QWidget):
                 self.category_section_buttons[
                     section_key
                 ] = section_button
+
+                section_button.clicked.connect(
+                    lambda checked=False,
+                    key=section_key:
+                    self.show_section_products(
+                        key
+                    )
+                )
 
             # Fermé par défaut.
             sections_widget.setVisible(
@@ -477,6 +498,41 @@ class CompanionTablePage(QWidget):
 
         main_layout.addWidget(
             self.categories_panel
+        )
+
+        # -------------------------
+        # Chargement des produits wiki
+        # -------------------------
+
+        if getattr(sys, "frozen", False):
+
+            products_path = (
+                Path(sys._MEIPASS)
+                / "data"
+                / "products.json"
+            )
+
+        else:
+
+            products_path = (
+                Path(__file__).resolve().parent.parent
+                / "data"
+                / "products.json"
+            )
+
+        with open(
+            products_path,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            products_data = json.load(
+                file
+            )
+
+        self.products = products_data.get(
+            "products",
+            []
         )
 
         # -------------------------
@@ -628,62 +684,221 @@ class CompanionTablePage(QWidget):
 
         content_layout.addLayout(
             search_layout
-        )        
-
-        # -------------------------
-        # Tableau produits
-        # -------------------------
-
-        self.product_table = QTableWidget()
-
-        self.product_table.setColumnCount(
-            5
         )
 
-        self.product_table.setHorizontalHeaderLabels([
+        # -------------------------
+        # Message d'attente
+        # -------------------------
+
+        self.selection_message = QLabel(
+            tr(
+                "companion_table_select_subcategory",
+                "Veuillez sélectionner une sous-catégorie de produit pour commencer"
+            )
+        )
+
+        self.selection_message.setAlignment(
+            Qt.AlignmentFlag.AlignCenter
+        )
+
+        self.selection_message.setStyleSheet("""
+            QLabel {
+                color: #9ca3af;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 40px;
+            }
+        """)
+
+        content_layout.addWidget(
+            self.selection_message,
+            1
+        )
+
+        # -------------------------
+        # Tableau prix / rentabilité
+        # -------------------------
+
+        self.price_table = QTableWidget()
+
+        self.price_table.setColumnCount(
+            7
+        )
+
+        self.price_table.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
+
+        self.price_table.setHorizontalHeaderLabels([
+            tr(
+                "table_image",
+                "Image"
+            ),
             tr(
                 "table_product",
                 "Produit"
             ),
             tr(
-                "table_category",
-                "Catégorie"
+                "table_brand",
+                "Marque"
             ),
             tr(
-                "table_market_price",
-                "Prix du marché"
+                "table_price_per_box",
+                "Prix / carton"
             ),
             tr(
-                "table_selling_price",
-                "Prix conseillé"
+                "table_price_per_unit",
+                "Prix unitaire"
             ),
             tr(
-                "table_actions",
-                "Actions"
+                "table_market_price_x195",
+                "Prix du marché ×1,95"
+            ),
+            tr(
+                "table_margin",
+                "Marge"
             ),
         ])
 
-        self.product_table.setAlternatingRowColors(
+        self.price_table.horizontalHeader().setMinimumHeight(
+            60
+        )
+
+        self.price_table.horizontalHeader().setDefaultAlignment(
+            Qt.AlignmentFlag.AlignCenter
+        )
+
+        self.price_table.setAlternatingRowColors(
             True
         )
 
-        self.product_table.setSelectionBehavior(
+        self.price_table.setSelectionBehavior(
             QAbstractItemView.SelectionBehavior.SelectRows
         )
 
-        self.product_table.setEditTriggers(
+        self.price_table.setEditTriggers(
             QAbstractItemView.EditTrigger.NoEditTriggers
         )
 
-        self.product_table.setShowGrid(
+        self.price_table.setShowGrid(
             False
         )
 
-        self.product_table.verticalHeader().setVisible(
+        self.price_table.verticalHeader().setVisible(
             False
         )
 
-        self.product_table.setStyleSheet("""
+        self.price_table.verticalHeader().setDefaultSectionSize(
+            60
+        )
+
+        self.price_table.setStyleSheet("""
+            QTableWidget {
+                background-color: #23272b;
+                alternate-background-color: #292d32;
+                color: #ffffff;
+                border: 1px solid #3c4248;
+                border-radius: 10px;
+                font-size: 14px;
+            }
+
+            QTableWidget::item {
+                padding: 10px;
+                border: none;
+            }
+
+            QTableWidget::item:selected {
+                background-color: #3a3f45;
+            }
+
+            QHeaderView::section {
+                background-color: #292d32;
+                color: #ffffff;
+                border: none;
+                border-bottom: 1px solid #3c4248;
+                padding: 10px;
+                font-weight: 600;
+            }
+        """)
+
+        # -------------------------
+        # Tableau stockage
+        # -------------------------
+
+        self.storage_table = QTableWidget()
+
+        self.storage_table.setColumnCount(
+            7
+        )
+
+        self.storage_table.setHorizontalScrollBarPolicy(
+            Qt.ScrollBarPolicy.ScrollBarAsNeeded
+        )
+
+        self.storage_table.setHorizontalHeaderLabels([
+            tr(
+                "table_image",
+                "Image"
+            ),
+            tr(
+                "table_product",
+                "Produit"
+            ),
+            tr(
+                "table_amount_per_box",
+                "Qté / carton"
+            ),
+            tr(
+                "table_small_shelf_quantity",
+                "Qté / petite étagère"
+            ),
+            tr(
+                "table_small_shelf_ratio",
+                "Ratio carton / petite étagère"
+            ),
+            tr(
+                "table_large_shelf_quantity",
+                "Qté / grande étagère"
+            ),
+            tr(
+                "table_large_shelf_ratio",
+                "Ratio carton / grande étagère"
+            ),
+        ])
+
+        self.storage_table.horizontalHeader().setMinimumHeight(
+            60
+        )
+
+        self.storage_table.horizontalHeader().setDefaultAlignment(
+            Qt.AlignmentFlag.AlignCenter
+        )
+
+        self.storage_table.setAlternatingRowColors(
+            True
+        )
+
+        self.storage_table.setSelectionBehavior(
+            QAbstractItemView.SelectionBehavior.SelectRows
+        )
+
+        self.storage_table.setEditTriggers(
+            QAbstractItemView.EditTrigger.NoEditTriggers
+        )
+
+        self.storage_table.setShowGrid(
+            False
+        )
+
+        self.storage_table.verticalHeader().setVisible(
+            False
+        )
+
+        self.storage_table.verticalHeader().setDefaultSectionSize(
+            60
+        )
+
+        self.storage_table.setStyleSheet("""
             QTableWidget {
                 background-color: #23272b;
                 alternate-background-color: #292d32;
@@ -712,10 +927,21 @@ class CompanionTablePage(QWidget):
             }
         """)
 
+        # -------------------------
+        # Ajout des deux tableaux
+        # -------------------------
+
         content_layout.addWidget(
-            self.product_table,
-            1
+            self.price_table
         )
+
+        content_layout.addWidget(
+            self.storage_table
+        )
+
+        self.price_table.hide()
+
+        self.storage_table.hide()
 
 
     def toggle_category(
@@ -768,7 +994,334 @@ class CompanionTablePage(QWidget):
         )
 
 
+    def parse_price(
+        self,
+        value
+    ):
+
+        if value is None:
+            return None
+
+        text = str(
+            value
+        ).strip()
+
+        if not text:
+            return None
+
+        text = (
+            text
+            .replace("$", "")
+            .replace(",", ".")
+            .strip()
+        )
+
+        try:
+
+            return float(
+                text
+            )
+
+        except ValueError:
+
+            return None
+
+
+    def show_section_products(
+        self,
+        section_key
+    ):
+
+        self.selection_message.hide()
+
+        self.price_table.show()
+
+        self.storage_table.show()
+
+        section = next(
+            (
+                item
+                for category in self.categories
+                for item in category.get(
+                    "sections",
+                    []
+                )
+                if item["id"] == section_key
+            ),
+            None
+        )
+
+        if section is not None:
+
+            self.title_label.setText(
+                tr(
+                    f"subcategory_{section_key}",
+                    section["name"],
+                    source_language="en"
+                )
+            )
+
+            selected_button = (
+                self.category_section_buttons.get(
+                    section_key
+                )
+            )
+
+            for button in self.subcategory_buttons:
+
+                button.setProperty(
+                    "active",
+                    button is selected_button
+                )
+
+                button.style().unpolish(
+                    button
+                )
+
+                button.style().polish(
+                    button
+                )
+
+        section_products = [
+            product
+            for product in self.products
+            if product.get("section_id")
+            == section_key
+        ]
+
+        self.price_table.setRowCount(
+            len(section_products)
+        )
+
+        self.storage_table.setRowCount(
+            len(section_products)
+        )
+
+        for row, product in enumerate(
+            section_products
+        ):
+
+            price_per_box = product.get(
+                "price_per_box",
+                ""
+            )
+
+            price_per_unit = product.get(
+                "price_per_unit",
+                ""
+            )
+
+            unit_price = self.parse_price(
+                price_per_unit
+            )
+
+            market_price = None
+
+            if unit_price is not None:
+
+                market_price = (
+                    unit_price * 1.95
+                )
+
+            margin = None
+
+            if market_price is not None:
+
+                margin = (
+                    market_price
+                    - unit_price
+                )
+
+            market_price_text = (
+                ""
+                if market_price is None
+                else f"${market_price:.2f}"
+            )
+
+            margin_text = (
+                ""
+                if margin is None
+                else f"${margin:.2f}"
+            )
+
+            product_name = product.get(
+                "translations",
+                {}
+            ).get(
+                translation_manager.current_language,
+                product.get(
+                    "name",
+                    ""
+                )
+            )
+
+            brand = product.get(
+                "brand",
+                ""
+            )
+
+            amount_per_box = product.get(
+                "amount_per_box",
+                ""
+            )
+
+            # -------------------------
+            # Tableau prix / rentabilité
+            # -------------------------
+
+            image_item = QTableWidgetItem()
+
+            image_path = product.get(
+                "image_path",
+                ""
+            )
+
+            if image_path:
+
+                pixmap = QPixmap(
+                    image_path
+                )
+
+                if not pixmap.isNull():
+
+                    image_item.setData(
+                        Qt.ItemDataRole.DecorationRole,
+                        pixmap.scaled(
+                            50,
+                            50,
+                            Qt.AspectRatioMode.KeepAspectRatio,
+                            Qt.TransformationMode.SmoothTransformation
+                        )
+                    )
+
+            self.price_table.setItem(
+                row,
+                0,
+                image_item
+            )
+
+            self.price_table.setItem(
+                row,
+                1,
+                QTableWidgetItem(
+                    product_name
+                )
+            )
+
+            self.price_table.setItem(
+                row,
+                2,
+                QTableWidgetItem(
+                    brand
+                )
+            )
+
+            self.price_table.setItem(
+                row,
+                3,
+                QTableWidgetItem(
+                    price_per_box
+                )
+            )
+
+            self.price_table.setItem(
+                row,
+                4,
+                QTableWidgetItem(
+                    price_per_unit
+                )
+            )
+
+            self.price_table.setItem(
+                row,
+                5,
+                QTableWidgetItem(
+                    market_price_text
+                )
+            )
+
+            self.price_table.setItem(
+                row,
+                6,
+                QTableWidgetItem(
+                    margin_text
+                )
+            )
+
+            # -------------------------
+            # Tableau stockage
+            # -------------------------
+
+            storage_image_item = (
+                QTableWidgetItem()
+            )
+
+            image_path = product.get(
+                "image_path",
+                ""
+            )
+
+            if image_path:
+
+                pixmap = QPixmap(
+                    image_path
+                )
+
+                if not pixmap.isNull():
+
+                    storage_image_item.setData(
+                        Qt.ItemDataRole.DecorationRole,
+                        pixmap.scaled(
+                            50,
+                            50,
+                            Qt.AspectRatioMode.KeepAspectRatio,
+                            Qt.TransformationMode.SmoothTransformation
+                        )
+                    )
+
+            self.storage_table.setItem(
+                row,
+                0,
+                storage_image_item
+            )
+
+            self.storage_table.setItem(
+                row,
+                1,
+                QTableWidgetItem(
+                    product_name
+                )
+            )
+
+            self.storage_table.setItem(
+                row,
+                2,
+                QTableWidgetItem(
+                    amount_per_box
+                )
+            )
+
+            for column in range(
+                3,
+                7
+            ):
+
+                self.storage_table.setItem(
+                    row,
+                    column,
+                    QTableWidgetItem(
+                        ""
+                    )
+                )
+
+        self.price_table.resizeColumnsToContents()
+
+        self.storage_table.resizeColumnsToContents()
+
+
     def retranslate_ui(self):
+
+
 
         self.btn_home.setText(
             "⌂  " + tr(
@@ -849,3 +1402,225 @@ class CompanionTablePage(QWidget):
                     source_language="en"
                 )
             )
+
+        self.selection_message.setText(
+            tr(
+                "companion_table_select_subcategory",
+                "Veuillez sélectionner une sous-catégorie de produit pour commencer"
+            )
+        )
+
+        # -------------------------
+        # Traduction du tableau prix
+        # -------------------------
+
+        self.price_table.setHorizontalHeaderLabels([
+            tr(
+                "table_image",
+                "Image"
+            ),
+            tr(
+                "table_product",
+                "Produit"
+            ),
+            tr(
+                "table_brand",
+                "Marque"
+            ),
+            tr(
+                "table_price_per_box",
+                "Prix / carton"
+            ),
+            tr(
+                "table_price_per_unit",
+                "Prix unitaire"
+            ),
+            tr(
+                "table_market_price_x195",
+                "Prix du marché ×1,95"
+            ),
+            tr(
+                "table_margin",
+                "Marge"
+            ),
+        ])
+
+        self.price_table.horizontalHeader().setMinimumHeight(
+            60
+        )
+
+        self.price_table.horizontalHeader().setDefaultAlignment(
+            Qt.AlignmentFlag.AlignCenter
+        )
+
+        # -------------------------
+        # Traduction du tableau stockage
+        # -------------------------
+
+        self.storage_table.setHorizontalHeaderLabels([
+            tr(
+                "table_image",
+                "Image"
+            ),
+            tr(
+                "table_product",
+                "Produit"
+            ),
+            tr(
+                "table_amount_per_box",
+                "Qté / carton"
+            ),
+            tr(
+                "table_small_shelf_quantity",
+                "Qté / petite étagère"
+            ),
+            tr(
+                "table_small_shelf_ratio",
+                "Ratio carton / petite étagère"
+            ),
+            tr(
+                "table_large_shelf_quantity",
+                "Qté / grande étagère"
+            ),
+            tr(
+                "table_large_shelf_ratio",
+                "Ratio carton / grande étagère"
+            ),
+        ])
+
+        self.storage_table.horizontalHeader().setMinimumHeight(
+            60
+        )
+
+        self.storage_table.horizontalHeader().setDefaultAlignment(
+            Qt.AlignmentFlag.AlignCenter
+        )
+
+        self.price_table.setWordWrap(
+            False
+        )
+
+        self.storage_table.setWordWrap(
+            False
+        )
+
+        self.price_table.resizeColumnsToContents()
+
+        self.storage_table.resizeColumnsToContents()
+
+
+    def resize_table_columns_to_content(
+        self
+    ):
+
+        for table in (
+            self.price_table,
+            self.storage_table
+        ):
+
+            header = (
+                table.horizontalHeader()
+            )
+
+            header_font = header.font()
+
+            header_metrics = QFontMetrics(
+                header_font
+            )
+
+            for column in range(
+                table.columnCount()
+            ):
+
+                max_width = 0
+
+                # -------------------------
+                # Texte de l'en-tête
+                # -------------------------
+
+                header_item = (
+                    table.horizontalHeaderItem(
+                        column
+                    )
+                )
+
+                if header_item is not None:
+
+                    header_text = (
+                        header_item.text()
+                    )
+
+                    for line in (
+                        header_text.splitlines()
+                    ):
+
+                        max_width = max(
+                            max_width,
+                            header_metrics.horizontalAdvance(
+                                line
+                            )
+                        )
+
+                # -------------------------
+                # Texte des cellules
+                # -------------------------
+
+                for row in range(
+                    table.rowCount()
+                ):
+
+                    item = table.item(
+                        row,
+                        column
+                    )
+
+                    if item is None:
+                        continue
+
+                    item_text = (
+                        item.text()
+                    )
+
+                    if not item_text:
+                        continue
+
+                    item_metrics = QFontMetrics(
+                        item.font()
+                    )
+
+                    for line in (
+                        item_text.splitlines()
+                    ):
+
+                        max_width = max(
+                            max_width,
+                            item_metrics.horizontalAdvance(
+                                line
+                            )
+                        )
+
+                # -------------------------
+                # Marge totale
+                # -------------------------
+
+                width = (
+                    max_width
+                    + 30
+                )
+
+                # -------------------------
+                # Largeur minimale image
+                # -------------------------
+
+                if column == 0:
+
+                    width = max(
+                        width,
+                        70,
+                        max_width + 30
+                    )
+
+                table.setColumnWidth(
+                    column,
+                    width
+                )

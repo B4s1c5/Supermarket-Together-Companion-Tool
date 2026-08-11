@@ -92,7 +92,9 @@ class DevConsole:
                 str(
                     script_path
                 ),
+                *sys.argv[1:],
             ],
+            
             cwd=str(
                 project_root
             ),
@@ -100,6 +102,7 @@ class DevConsole:
             creationflags=(
                 subprocess.CREATE_NEW_CONSOLE
             ),
+            #creationflags=0,
         )
 
         sys.exit(0)

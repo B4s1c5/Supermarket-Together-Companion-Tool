@@ -363,15 +363,65 @@ def focus_dev_console():
 
 def main():
 
+    sync_mode = "--sync" in sys.argv
+
+    if sync_mode:
+
+        print(
+            "\n[SYNC] Synchronisation demandée...",
+            flush=True
+        )
+
+        wiki_sync.sync_all_products()
+
+        print(
+            "[SYNC] Synchronisation Wiki terminée.",
+            flush=True
+        )
+
+        print(
+            "\n[SYNC] Vérification des traductions...",
+            flush=True
+        )
+
+        translate_script = (
+            Path(__file__).resolve().parent.parent
+            / "tools"
+            / "translate_products.py"
+        )
+
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(translate_script)
+            ],
+            cwd=str(
+                translate_script.parent.parent
+            )
+        )
+
+        if result.returncode != 0:
+
+            raise RuntimeError(
+                "La traduction DeepL a échoué."
+            )
+
+        print(
+            "[SYNC] Traductions DeepL terminées.",
+            flush=True
+        )
+
+        return
+
     dev_console.open(
         __file__
     )
 
-    startup_progress.start()
-
     # -------------------------
     # Qt
     # -------------------------
+
+    startup_progress.start()
 
     app = QApplication(
         sys.argv

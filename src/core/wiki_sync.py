@@ -42,10 +42,19 @@ class WikiSync:
             "https://supermarkettogether.wiki.gg"
         )
 
-        self.data_path = (
-            Path(__file__).resolve().parent.parent
-            / "data"
-        )
+        if getattr(sys, "frozen", False):
+
+            self.data_path = (
+                Path(sys._MEIPASS)
+                / "data"
+            )
+
+        else:
+
+            self.data_path = (
+                Path(__file__).resolve().parent.parent
+                / "data"
+            )
 
         self.request_delay = 1.5
 
@@ -1033,6 +1042,7 @@ class WikiSync:
         # -------------------------
 
         preserved_products = [
+            
             product
             for product in cached_products
             if product.get(
@@ -1131,12 +1141,43 @@ class WikiSync:
             )
 
         # Les nouvelles données remplacent
-        # complètement les anciennes données
-        # des sections synchronisées.
+        # les anciennes données des sections
+        # synchronisées, mais les traductions
+        # existantes sont conservées.
+
+        cached_translations = {
+            product.get(
+                "name"
+            ): product.get(
+                "translations",
+                {}
+            )
+            for product in cached_products
+            if product.get(
+                "name"
+            )
+        }
 
         for section_id, products in (
             new_by_section.items()
         ):
+
+            for product in products:
+
+                product_name = product.get(
+                    "name"
+                )
+
+                translations = (
+                    cached_translations.get(
+                        product_name,
+                        {}
+                    )
+                )
+
+                product["translations"] = (
+                    translations
+                )
 
             products_by_section[
                 section_id
@@ -1376,6 +1417,84 @@ class WikiSync:
             synced_section_ids
         )
 
+    def download_product_image(
+        self,
+        image_url,
+        product_name
+    ):
+
+        if not image_url:
+            return ""
+
+        images_path = (
+            self.data_path.parent.parent
+            / "resources"
+            / "images"
+            / "products"
+        )
+
+        images_path.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        safe_name = (
+            product_name
+            .replace(
+                "/",
+                "_"
+            )
+            .replace(
+                "\\",
+                "_"
+            )
+        )
+
+        image_path = (
+            images_path
+            / f"{safe_name}.png"
+        )
+
+        try:
+
+            response = self.session.get(
+                image_url,
+                timeout=15
+            )
+
+            response.raise_for_status()
+
+            with open(
+                image_path,
+                "wb"
+            ) as file:
+
+                file.write(
+                    response.content
+                )
+
+            print(
+                f"[wiki] Image : "
+                f"{product_name}"
+            )
+
+            return str(
+                image_path
+            )
+
+        except (
+            requests.RequestException,
+            OSError
+        ) as error:
+
+            print(
+                f"[wiki] Image impossible : "
+                f"{product_name} "
+                f"({error})"
+            )
+
+            return ""
+        
     def sync_section_products(
         self,
         wiki_path
@@ -1581,8 +1700,37 @@ class WikiSync:
             if not product_name:
                 continue
 
+            image = row.select_one(
+                "img"
+            )
+
+            image_url = ""
+
+            if image is not None:
+
+                image_src = image.get(
+                    "src",
+                    ""
+                )
+
+                if image_src:
+
+                    image_url = (
+                        self.base_url
+                        + image_src
+                    )
+
+            image_path = (
+                self.download_product_image(
+                    image_url,
+                    product_name
+                )
+            )
+
             product = {
                 "name": product_name,
+                "image_url": image_url,
+                "image_path": image_path,
                 "brand": data.get(
                     "Brand Name",
                     ""
@@ -1786,14 +1934,23 @@ class WikiSync:
 
 
         # -------------------------
-        # Sauvegarde
+        # Fusion et sauvegarde
         # -------------------------
 
-        self.save_products_cache(
-            products
-        )
+        synced_section_ids = {
+            product.get(
+                "section_id"
+            )
+            for product in products
+            if product.get(
+                "section_id"
+            )
+        }
 
-        return products
+        return self.merge_products_cache(
+            products,
+            synced_section_ids
+        )
 
     def inspect_category_anchor(
         self,
