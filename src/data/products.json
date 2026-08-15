@@ -1227,7 +1227,7 @@
         {
             "name": "Green Tea",
             "image_url": "https://supermarkettogether.wiki.gg/images/thumb/230_GreenTea.png/50px-230_GreenTea.png?a7930c",
-            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Green Tea.png",
+            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Green Tea 1.png",
             "brand": "EastZensations",
             "amount_per_box": "40",
             "price_per_box": "$118.00",
@@ -1261,7 +1261,7 @@
         {
             "name": "Lemon Tea",
             "image_url": "https://supermarkettogether.wiki.gg/images/thumb/232_LemonTea.png/50px-232_LemonTea.png?1af09e",
-            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Lemon Tea.png",
+            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Lemon Tea 1.png",
             "brand": "EastZensations",
             "amount_per_box": "60",
             "price_per_box": "$111.00",
@@ -1652,7 +1652,7 @@
         {
             "name": "Toilet Paper",
             "image_url": "https://supermarkettogether.wiki.gg/images/thumb/75_ToiletPaperPetus.png/50px-75_ToiletPaperPetus.png?492d4b",
-            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Toilet Paper.png",
+            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Toilet Paper 1.png",
             "brand": "Petus",
             "amount_per_box": "8",
             "price_per_box": "$ 36.80",
@@ -3029,7 +3029,7 @@
         {
             "name": "Cat Food",
             "image_url": "https://supermarkettogether.wiki.gg/images/thumb/137_CatFoodMiao.png/50px-137_CatFoodMiao.png?47ed90",
-            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Cat Food.png",
+            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Cat Food 1.png",
             "brand": "Purr Purr",
             "amount_per_box": "20",
             "price_per_box": "$   109,80",
@@ -3182,7 +3182,7 @@
         {
             "name": "Green Tea",
             "image_url": "https://supermarkettogether.wiki.gg/images/thumb/140_GreenTea.png/50px-140_GreenTea.png?93fe1b",
-            "image_path": "C:\\Projets\\SupermarketTranslator\\resources\\images\\products\\Green Tea.png",
+            "image_path": "C:/Projets/SupermarketTranslator/resources/images/products/Green Tea.png",
             "brand": "Bio",
             "amount_per_box": "40",
             "price_per_box": "$119.60",

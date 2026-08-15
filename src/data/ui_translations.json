@@ -3,846 +3,459 @@
         "fr": "Votre compagnon pour Supermarket Together",
         "en": "Your companion for Supermarket Together",
         "de": "Ihr Begleiter für „Supermarket Together“",
-        "es": "Tu compañero en Supermarket Together"
+        "es": "Tu compañero en Supermarket Together",
+        "cz": "Váš průvodce po aplikaci Supermarket Together",
+        "ch1": "您在“Supermarket Together”中的伙伴",
+        "ch2": "您在“Supermarket Together”中的伙伴",
+        "hu": "A „Supermarket Together” program társa",
+        "it": "Il tuo compagno di viaggio per Supermarket Together",
+        "jp": "「Supermarket Together」のパートナー",
+        "kr": "'Supermarket Together'의 동반자",
+        "pl": "Twój partner w projekcie „Supermarket Together”",
+        "pt": "O seu companheiro no Supermarket Together",
+        "ru": "Ваш помощник в приложении «Supermarket Together»",
+        "uk": "Ваш супутник у програмі «Supermarket Together»"
     },
     "companion_table_title": {
         "fr": "SMT Companion Table",
         "en": "SMT Companion Table",
         "de": "SMT-Begleittabelle",
-        "es": "Tabla complementaria de SMT"
+        "es": "Tabla complementaria de SMT",
+        "cz": "Doplňková tabulka SMT",
+        "ch1": "SMT 配套表",
+        "ch2": "SMT 配套表",
+        "hu": "SMT kiegészítő táblázat",
+        "it": "Tabella di riferimento SMT",
+        "jp": "SMT コンパニオン・テーブル",
+        "kr": "SMT 보조 표",
+        "pl": "Tabela uzupełniająca do SMT",
+        "pt": "Tabela de referência do SMT",
+        "ru": "Таблица SMT Companion",
+        "uk": "Довідкова таблиця SMT"
     },
     "companion_table_description": {
         "fr": "Consulter et gérer le catalogue complet des produits",
         "en": "View and manage the complete product catalog",
         "de": "Den vollständigen Produktkatalog einsehen und verwalten",
-        "es": "Consultar y gestionar el catálogo completo de productos"
+        "es": "Consultar y gestionar el catálogo completo de productos",
+        "cz": "Prohlížet a spravovat kompletní katalog produktů",
+        "ch1": "查看并管理完整的产品目录",
+        "ch2": "查看并管理完整的产品目录",
+        "hu": "A teljes termékválaszték megtekintése és kezelése",
+        "it": "Consultare e gestire il catalogo completo dei prodotti",
+        "jp": "製品の全カタログを閲覧・管理する",
+        "kr": "전체 제품 카탈로그 확인 및 관리",
+        "pl": "Przeglądaj i zarządzaj pełnym katalogiem produktów",
+        "pt": "Consultar e gerir o catálogo completo de produtos",
+        "ru": "Просмотр и управление полным каталогом продукции",
+        "uk": "Перегляд та управління повним каталогом продукції"
     },
     "price_checker_title": {
         "fr": "Price Checker",
         "en": "Price Checker",
         "de": "Preisvergleich",
-        "es": "Comparador de precios"
+        "es": "Comparador de precios",
+        "cz": "Porovnávač cen",
+        "ch1": "价格查询器",
+        "ch2": "价格查询器",
+        "hu": "Ár-összehasonlító",
+        "it": "Verifica prezzi",
+        "jp": "価格チェッカー",
+        "kr": "가격 비교기",
+        "pl": "Porównywarka cen",
+        "pt": "Comparador de Preços",
+        "ru": "Проверка цен",
+        "uk": "Перевірка цін"
     },
     "price_checker_description": {
         "fr": "Optimiser rapidement le prix de vente possible par rapport au prix du marché",
         "en": "Quickly optimize the potential selling price relative to the market price",
         "de": "Den möglichen Verkaufspreis im Verhältnis zum Marktpreis schnell optimieren",
-        "es": "Optimizar rápidamente el precio de venta posible en relación con el precio de mercado"
+        "es": "Optimizar rápidamente el precio de venta posible en relación con el precio de mercado",
+        "cz": "Rychle optimalizovat možnou prodejní cenu vzhledem k tržní ceně",
+        "ch1": "根据市场价格快速优化可能的销售价格",
+        "ch2": "根据市场价格快速优化可能的销售价格",
+        "hu": "Az eladási ár gyors optimalizálása a piaci árhoz viszonyítva",
+        "it": "Ottimizzare rapidamente il prezzo di vendita possibile rispetto al prezzo di mercato",
+        "jp": "市場価格と比較して、可能な販売価格を迅速に最適化する",
+        "kr": "시장 가격을 기준으로 가능한 판매 가격을 신속하게 최적화하기",
+        "pl": "Szybka optymalizacja możliwej ceny sprzedaży w odniesieniu do ceny rynkowej",
+        "pt": "Otimizar rapidamente o preço de venda possível em relação ao preço de mercado",
+        "ru": "Быстрая оптимизация возможной цены продажи с учетом рыночной цены",
+        "uk": "Швидко оптимізувати можливу ціну продажу з урахуванням ринкової ціни"
     },
     "button_home": {
         "fr": "Accueil",
         "en": "Home",
         "de": "Startseite",
-        "es": "Inicio"
+        "es": "Inicio",
+        "cz": "Úvodní stránka",
+        "ch1": "首页",
+        "ch2": "首页",
+        "hu": "Főoldal",
+        "it": "Home",
+        "jp": "ホーム",
+        "kr": "홈",
+        "pl": "Strona główna",
+        "pt": "Página inicial",
+        "ru": "Главная",
+        "uk": "Головна"
     },
     "companion_table_placeholder": {
         "fr": "Le catalogue produits apparaîtra ici.",
         "en": "The product catalog will appear here.",
         "de": "Der Produktkatalog wird hier angezeigt.",
-        "es": "El catálogo de productos aparecerá aquí."
+        "es": "El catálogo de productos aparecerá aquí.",
+        "cz": "Zde se zobrazí katalog produktů.",
+        "ch1": "产品目录将显示在此处。",
+        "ch2": "产品目录将显示在此处。",
+        "hu": "A termékkatalógus itt fog megjelenni.",
+        "it": "Il catalogo dei prodotti apparirà qui.",
+        "jp": "製品カタログはここに表示されます。",
+        "kr": "제품 카탈로그는 이곳에 표시됩니다.",
+        "pl": "W tym miejscu pojawi się katalog produktów.",
+        "pt": "O catálogo de produtos será apresentado aqui.",
+        "ru": "Здесь будет отображаться каталог продукции.",
+        "uk": "Каталог товарів з'явиться тут."
     },
     "categories_title": {
         "fr": "Catégories",
         "en": "Categories",
         "de": "Kategorien",
-        "es": "Categorías"
+        "es": "Categorías",
+        "cz": "Kategorie",
+        "ch1": "分类",
+        "ch2": "分类",
+        "hu": "Kategóriák",
+        "it": "Categorie",
+        "jp": "カテゴリー",
+        "kr": "카테고리",
+        "pl": "Kategorie",
+        "ru": "Категории",
+        "uk": "Категорії",
+        "pt": "Categorias"
     },
     "table_product": {
         "fr": "Produit",
         "en": "Product",
         "de": "Produkt",
-        "es": "Producto"
+        "es": "Producto",
+        "cz": "Produkt",
+        "ch1": "产品",
+        "ch2": "产品",
+        "hu": "Termék",
+        "it": "Prodotto",
+        "jp": "製品",
+        "kr": "제품",
+        "pl": "Produkt",
+        "pt": "Produto",
+        "ru": "Продукт",
+        "uk": "Товар"
     },
     "table_category": {
         "fr": "Catégorie",
         "en": "Category",
         "de": "Kategorie",
-        "es": "Categoría"
+        "es": "Categoría",
+        "cz": "Kategorie",
+        "ch1": "分类",
+        "ch2": "分类",
+        "hu": "Kategória",
+        "it": "Categoria",
+        "jp": "カテゴリー",
+        "kr": "카테고리",
+        "pl": "Kategoria",
+        "pt": "Categoria",
+        "ru": "Категория",
+        "uk": "Категорія"
     },
     "table_market_price": {
         "fr": "Prix du marché",
         "en": "Market price",
         "de": "Marktpreis",
-        "es": "Precio de mercado"
+        "es": "Precio de mercado",
+        "cz": "Tržní cena",
+        "ch1": "市场价格",
+        "ch2": "市场价格",
+        "hu": "Piaci ár",
+        "it": "Prezzo di mercato",
+        "jp": "市場価格",
+        "kr": "시장 가격",
+        "pl": "Cena rynkowa",
+        "pt": "Preço de mercado",
+        "ru": "Рыночная цена",
+        "uk": "Ринкова ціна"
     },
     "table_selling_price": {
         "fr": "Prix conseillé",
         "en": "Suggested retail price",
         "de": "Unverbindliche Preisempfehlung",
-        "es": "Precio recomendado"
+        "es": "Precio recomendado",
+        "cz": "Doporučená cena",
+        "ch1": "建议零售价",
+        "ch2": "建议零售价",
+        "hu": "Ajánlott ár",
+        "it": "Prezzo consigliato",
+        "jp": "希望小売価格",
+        "kr": "권장 소비자 가격",
+        "pl": "Sugerowana cena",
+        "pt": "Preço recomendado",
+        "ru": "Рекомендуемая цена",
+        "uk": "Рекомендована ціна"
     },
     "table_actions": {
         "fr": "Actions",
         "en": "Actions",
-        "de": "Maßnahmen",
-        "es": "Acciones"
+        "de": "Aktionen",
+        "es": "Acciones",
+        "cz": "Akcie",
+        "ch1": "行动",
+        "ch2": "行动",
+        "hu": "Tevékenységek",
+        "it": "Azioni",
+        "jp": "アクション",
+        "kr": "조치",
+        "pl": "Działania",
+        "pt": "Ações",
+        "ru": "Действия",
+        "uk": "Дії"
     },
     "companion_table_search_placeholder": {
         "fr": "Rechercher un produit...",
         "en": "Search for a product...",
         "de": "Produkt suchen...",
-        "es": "Buscar un producto..."
-    },
-    "category_basic_products": {
-        "en": "Basic Products",
-        "fr": "Produits de base",
-        "de": "Grundprodukte",
-        "es": "Productos básicos"
-    },
-    "category_dairy_products": {
-        "en": "Dairy Products",
-        "fr": "Produits laitiers",
-        "de": "Milchprodukte",
-        "es": "Productos lácteos"
-    },
-    "category_soda_drinks": {
-        "en": "Soda Drinks",
-        "fr": "Boissons gazeuses",
-        "de": "Limonaden",
-        "es": "Refrescos"
-    },
-    "category_frozen_foods": {
-        "en": "Frozen Foods",
-        "fr": "Aliments surgelés",
-        "de": "Tiefkühlkost",
-        "es": "Alimentos congelados"
-    },
-    "category_hygiene": {
-        "en": "Hygiene",
-        "fr": "Hygiène",
-        "de": "Hygiene",
-        "es": "Higiene"
-    },
-    "category_cleaning_products": {
-        "en": "Cleaning Products",
-        "fr": "Produits d'entretien",
-        "de": "Reinigungsmittel",
-        "es": "Productos de limpieza"
-    },
-    "category_sweets_and_snacks": {
-        "en": "Sweets and Snacks",
-        "fr": "Confiseries et friandises",
-        "de": "Süßigkeiten und Snacks",
-        "es": "Dulces y aperitivos"
-    },
-    "category_meat": {
-        "en": "Meat",
-        "fr": "Viande",
-        "de": "Fleisch",
-        "es": "Carne"
-    },
-    "category_preserves": {
-        "en": "Preserves",
-        "fr": "Conserves",
-        "de": "Konserven",
-        "es": "Conservas"
-    },
-    "category_infusions": {
-        "en": "Infusions",
-        "fr": "Infusions",
-        "de": "Aufgüsse",
-        "es": "Infusiones"
-    },
-    "category_seafood": {
-        "en": "Seafood",
-        "fr": "Fruits de mer",
-        "de": "Meeresfrüchte",
-        "es": "Marisco"
-    },
-    "category_books_packs": {
-        "en": "Books Packs",
-        "fr": "Lot de livres",
-        "de": "Buchpakete",
-        "es": "Lotes de libros"
-    },
-    "category_alcoholic_drinks": {
-        "en": "Alcoholic Drinks",
-        "fr": "Boissons alcoolisées",
-        "de": "Alkoholische Getränke",
-        "es": "Bebidas alcohólicas"
-    },
-    "category_pharmacy": {
-        "en": "Pharmacy",
-        "fr": "Pharmacie",
-        "de": "Apotheke",
-        "es": "Farmacia"
-    },
-    "category_produce": {
-        "en": "Produce",
-        "fr": "Fruits et Légumes",
-        "de": "Obst und Gemüse",
-        "es": "Frutas y verduras"
-    },
-    "category_child_care": {
-        "en": "Child Care",
-        "fr": "Soins des Enfants",
-        "de": "Kinderbetreuung",
-        "es": "Cuidado de los niños"
-    },
-    "category_gardening": {
-        "en": "Gardening",
-        "fr": "Jardinage",
-        "de": "Gartenarbeit",
-        "es": "Jardinería"
-    },
-    "category_small_electronics": {
-        "en": "Small Electronics",
-        "fr": "Petits appareils électroniques",
-        "de": "Kleine Elektronikgeräte",
-        "es": "Pequeños aparatos electrónicos"
-    },
-    "category_halloween": {
-        "en": "Halloween",
-        "fr": "Halloween",
-        "de": "Halloween",
-        "es": "Halloween"
-    },
-    "category_christmas": {
-        "en": "Christmas",
-        "fr": "Noël",
-        "de": "Weihnachten",
-        "es": "Navidad"
-    },
-    "subcategory_basic_products_i": {
-        "en": "Basic Products I",
-        "fr": "Produits de base I",
-        "de": "Grundlegende Produkte I",
-        "es": "Productos básicos I"
-    },
-    "subcategory_basic_products_ii": {
-        "en": "Basic Products II",
-        "fr": "Produits de base II",
-        "de": "Grundprodukte II",
-        "es": "Productos básicos II"
-    },
-    "subcategory_basic_products_iii": {
-        "en": "Basic Products III",
-        "fr": "Produits de base III",
-        "de": "Grundprodukte III",
-        "es": "Productos básicos III"
-    },
-    "subcategory_basic_products_iv": {
-        "en": "Basic Products IV",
-        "fr": "Produits de base IV",
-        "de": "Grundprodukte IV",
-        "es": "Productos básicos IV"
-    },
-    "subcategory_basic_products_v": {
-        "en": "Basic Products V",
-        "fr": "Produits de base V",
-        "de": "Grundprodukte V",
-        "es": "Productos básicos V"
-    },
-    "subcategory_basic_products_vi": {
-        "en": "Basic Products VI",
-        "fr": "Produits de base VI",
-        "de": "Grundprodukte VI",
-        "es": "Productos básicos VI"
-    },
-    "subcategory_basic_products_vii": {
-        "en": "Basic Products VII",
-        "fr": "Produits de base VII",
-        "de": "Grundprodukte VII",
-        "es": "Productos básicos VII"
-    },
-    "subcategory_dairy_products_i": {
-        "en": "Dairy Products I",
-        "fr": "Produits laitiers I",
-        "de": "Milchprodukte I",
-        "es": "Productos lácteos I"
-    },
-    "subcategory_dairy_products_ii": {
-        "en": "Dairy Products II",
-        "fr": "Produits laitiers II",
-        "de": "Milchprodukte II",
-        "es": "Productos lácteos II"
-    },
-    "subcategory_soda_drinks_i": {
-        "en": "Soda Drinks I",
-        "fr": "Boissons gazeuses I",
-        "de": "Erfrischungsgetränke I",
-        "es": "Refrescos I"
-    },
-    "subcategory_soda_drinks_ii": {
-        "en": "Soda Drinks II",
-        "fr": "Boissons gazeuses II",
-        "de": "Erfrischungsgetränke II",
-        "es": "Refrescos II"
-    },
-    "subcategory_soda_drinks_iii": {
-        "en": "Soda Drinks III",
-        "fr": "Boissons gazeuses III",
-        "de": "Erfrischungsgetränke III",
-        "es": "Refrescos III"
-    },
-    "subcategory_frozen_foods_i": {
-        "en": "Frozen Foods I",
-        "fr": "Aliments surgelés I",
-        "de": "Tiefkühlkost I",
-        "es": "Alimentos congelados I"
-    },
-    "subcategory_frozen_foods_ii": {
-        "en": "Frozen Foods II",
-        "fr": "Aliments surgelés II",
-        "de": "Tiefkühlkost II",
-        "es": "Alimentos congelados II"
-    },
-    "subcategory_hygiene_i": {
-        "en": "Hygiene I",
-        "fr": "Hygiène I",
-        "de": "Hygiene I",
-        "es": "Higiene I"
-    },
-    "subcategory_hygiene_ii": {
-        "en": "Hygiene II",
-        "fr": "Hygiène II",
-        "de": "Hygiene II",
-        "es": "Higiene II"
-    },
-    "subcategory_hygiene_iii": {
-        "en": "Hygiene III",
-        "fr": "Hygiène III",
-        "de": "Hygiene III",
-        "es": "Higiene III"
-    },
-    "subcategory_cleaning_products_i": {
-        "en": "Cleaning Products I",
-        "fr": "Produits d'entretien I",
-        "de": "Reinigungsmittel I",
-        "es": "Productos de limpieza I"
-    },
-    "subcategory_cleaning_products_ii": {
-        "en": "Cleaning Products II",
-        "fr": "Produits d'entretien II",
-        "de": "Reinigungsmittel II",
-        "es": "Productos de limpieza II"
-    },
-    "subcategory_sweets_and_snacks_i": {
-        "en": "Sweets and Snacks I",
-        "fr": "Confiseries et friandises I",
-        "de": "Süßigkeiten und Snacks I",
-        "es": "Dulces y aperitivos I"
-    },
-    "subcategory_sweets_and_snacks_ii": {
-        "en": "Sweets and Snacks II",
-        "fr": "Confiseries et friandises II",
-        "de": "Süßigkeiten und Snacks II",
-        "es": "Dulces y aperitivos II"
-    },
-    "subcategory_sweets_and_snacks_iii": {
-        "en": "Sweets and Snacks III",
-        "fr": "Confiseries et friandises III",
-        "de": "Süßigkeiten und Snacks III",
-        "es": "Dulces y aperitivos III"
-    },
-    "subcategory_sweets_and_snacks_iv": {
-        "en": "Sweets and Snacks IV",
-        "fr": "Confiseries et friandises IV",
-        "de": "Süßigkeiten und Snacks IV",
-        "es": "Dulces y aperitivos IV"
-    },
-    "subcategory_sweets_and_snacks_v": {
-        "en": "Sweets and Snacks V",
-        "fr": "Confiseries et friandises V",
-        "de": "Süßigkeiten und Snacks V",
-        "es": "Dulces y aperitivos V"
-    },
-    "subcategory_sweets_and_snacks_vi": {
-        "en": "Sweets and Snacks VI",
-        "fr": "Confiseries et friandises VI",
-        "de": "Süßigkeiten und Snacks VI",
-        "es": "Dulces y aperitivos VI"
-    },
-    "subcategory_sweets_and_snacks_vii": {
-        "en": "Sweets and Snacks VII",
-        "fr": "Confiseries et friandises VII",
-        "de": "Süßigkeiten und Snacks VII",
-        "es": "Dulces y aperitivos VII"
-    },
-    "subcategory_meat_i": {
-        "en": "Meat I",
-        "fr": "Viande I",
-        "de": "Fleisch I",
-        "es": "Carne I"
-    },
-    "subcategory_preserves_i": {
-        "en": "Preserves I",
-        "fr": "Conserves I",
-        "de": "Konserven I",
-        "es": "Conservas I"
-    },
-    "subcategory_preserves_ii": {
-        "en": "Preserves II",
-        "fr": "Conserves II",
-        "de": "Konserven II",
-        "es": "Conservas II"
-    },
-    "subcategory_infusions_i": {
-        "en": "Infusions I",
-        "fr": "Infusions I",
-        "de": "Infusionen I",
-        "es": "Infusiones I"
-    },
-    "subcategory_seafood_i": {
-        "en": "Seafood I",
-        "fr": "Fruits de mer I",
-        "de": "Meeresfrüchte I",
-        "es": "Marisco I"
-    },
-    "subcategory_alcoholic_drinks_i": {
-        "en": "Alcoholic Drinks I",
-        "fr": "Boissons alcoolisées I",
-        "de": "Alkoholische Getränke I",
-        "es": "Bebidas alcohólicas I"
-    },
-    "subcategory_alcoholic_drinks_ii": {
-        "en": "Alcoholic Drinks II",
-        "fr": "Boissons alcoolisées II",
-        "de": "Alkoholische Getränke II",
-        "es": "Bebidas alcohólicas II"
-    },
-    "subcategory_alcoholic_drinks_iii": {
-        "en": "Alcoholic Drinks III",
-        "fr": "Boissons alcoolisées III",
-        "de": "Alkoholische Getränke III",
-        "es": "Bebidas alcohólicas III"
-    },
-    "subcategory_pharmacy_i": {
-        "en": "Pharmacy I",
-        "fr": "Pharmacie I",
-        "de": "Pharmazie I",
-        "es": "Farmacia I"
-    },
-    "subcategory_pharmacy_ii": {
-        "en": "Pharmacy II",
-        "fr": "Pharmacie II",
-        "de": "Pharmazie II",
-        "es": "Farmacia II"
-    },
-    "subcategory_produce_i": {
-        "en": "Produce I",
-        "fr": "Fruits et Légumes I",
-        "de": "Obst und Gemüse I",
-        "es": "Frutas y verduras I"
-    },
-    "subcategory_produce_ii": {
-        "en": "Produce II",
-        "fr": "Fruits et Légumes II",
-        "de": "Obst und Gemüse II",
-        "es": "Frutas y verduras II"
-    },
-    "subcategory_produce_iii": {
-        "en": "Produce III",
-        "fr": "Fruits et Légumes III",
-        "de": "Obst und Gemüse III",
-        "es": "Frutas y verduras III"
-    },
-    "subcategory_produce_iv": {
-        "en": "Produce IV",
-        "fr": "Fruits et Légumes IV",
-        "de": "Obst und Gemüse IV",
-        "es": "Frutas y verduras IV"
-    },
-    "subcategory_produce_v": {
-        "en": "Produce V",
-        "fr": "Fruits et Légumes V",
-        "de": "Obst und Gemüse V",
-        "es": "Frutas y verduras V"
-    },
-    "subcategory_child_care_i": {
-        "en": "Child Care I",
-        "fr": "Soins des Enfants I",
-        "de": "Kinderbetreuung I",
-        "es": "Cuidado de los niños I"
-    },
-    "subcategory_child_care_ii": {
-        "en": "Child Care II",
-        "fr": "Soins des Enfants II",
-        "de": "Kinderbetreuung II",
-        "es": "Cuidado de los niños II"
-    },
-    "subcategory_gardening_i": {
-        "en": "Gardening I",
-        "fr": "Jardinage I",
-        "de": "Gartenarbeit I",
-        "es": "Jardinería I"
-    },
-    "subcategory_gardening_ii": {
-        "en": "Gardening II",
-        "fr": "Jardinage II",
-        "de": "Gartenarbeit II",
-        "es": "Jardinería II"
-    },
-    "subcategory_gardening_iii": {
-        "en": "Gardening III",
-        "fr": "Jardinage III",
-        "de": "Gartenarbeit III",
-        "es": "Jardinería III"
-    },
-    "subcategory_gardening_iv": {
-        "en": "Gardening IV",
-        "fr": "Jardinage IV",
-        "de": "Gartenarbeit IV",
-        "es": "Jardinería IV"
-    },
-    "subcategory_small_electronics_i": {
-        "en": "Small Electronics I",
-        "fr": "Petits appareils électroniques I",
-        "de": "Kleine Elektronik I",
-        "es": "Electrónica básica I"
-    },
-    "subcategory_small_electronics_ii": {
-        "en": "Small Electronics II",
-        "fr": "Petits appareils électroniques II",
-        "de": "Kleine Elektronik II",
-        "es": "Pequeños aparatos electrónicos II"
-    },
-    "subcategory_small_electronics_iii": {
-        "en": "Small Electronics III",
-        "fr": "Petits appareils électroniques III",
-        "de": "Kleine Elektronik III",
-        "es": "Pequeños aparatos electrónicos III"
-    },
-    "subcategory_halloween_i": {
-        "en": "Halloween I",
-        "fr": "Halloween I",
-        "de": "Halloween I",
-        "es": "Halloween I"
-    },
-    "subcategory_christmas_i": {
-        "en": "Christmas I",
-        "fr": "Noël I",
-        "de": "Weihnachten I",
-        "es": "Navidad I"
-    },
-    "subcategory_books_pack_i": {
-        "en": "Books Pack I",
-        "fr": "Lot de livres I",
-        "de": "Bücher-Paket I",
-        "es": "Paquete de libros I"
-    },
-    "subcategory_books_pack_ii": {
-        "en": "Books Pack II",
-        "fr": "Lot de livres II",
-        "de": "Bücher-Paket II",
-        "es": "Paquete de libros II"
+        "es": "Buscar un producto...",
+        "cz": "Vyhledat produkt...",
+        "ch1": "搜索产品...",
+        "ch2": "搜索产品...",
+        "hu": "Termék keresése...",
+        "it": "Cerca un prodotto...",
+        "jp": "商品を検索...",
+        "kr": "제품 검색...",
+        "pl": "Wyszukaj produkt...",
+        "pt": "Pesquisar um produto...",
+        "ru": "Поиск товара...",
+        "uk": "Пошук товару..."
     },
     "table_image": {
         "fr": "Image",
         "en": "Image",
         "de": "Bild",
-        "es": "Imagen"
+        "es": "Imagen",
+        "cz": "Obrázek",
+        "ch1": "图片",
+        "ch2": "图片",
+        "hu": "Kép",
+        "it": "Immagine",
+        "jp": "画像",
+        "kr": "이미지",
+        "pl": "Obraz",
+        "pt": "Imagem",
+        "ru": "Изображение",
+        "uk": "Зображення"
     },
     "table_brand": {
         "fr": "Marque",
         "en": "Brand",
         "de": "Marke",
-        "es": "Marca"
+        "es": "Marca",
+        "cz": "Značka",
+        "ch1": "品牌",
+        "ch2": "品牌",
+        "hu": "Márka",
+        "it": "Marchio",
+        "jp": "ブランド",
+        "kr": "브랜드",
+        "pl": "Marka",
+        "pt": "Marca",
+        "ru": "Бренд",
+        "uk": "Бренд"
     },
     "table_price_per_box": {
         "fr": "Prix / carton",
-        "en": "Price per cardboard",
+        "en": "Price per box",
         "de": "Preis pro Karton",
-        "es": "Precio por caja"
+        "es": "Precio por caja",
+        "cz": "Cena za karton",
+        "ch1": "每箱价格",
+        "ch2": "每箱价格",
+        "hu": "Ár / karton",
+        "it": "Prezzo / cartone",
+        "jp": "1箱あたりの価格",
+        "kr": "가격 / 상자당",
+        "pl": "Cena za karton",
+        "pt": "Preço / caixa",
+        "ru": "Цена за коробку",
+        "uk": "Ціна за коробку"
     },
     "table_price_per_unit": {
         "fr": "Prix unitaire",
         "en": "Unit Price",
         "de": "Stückpreis",
-        "es": "Precio unitario"
+        "es": "Precio unitario",
+        "cz": "Jednotková cena",
+        "ch1": "单价",
+        "ch2": "单价",
+        "hu": "Egységár",
+        "it": "Prezzo unitario",
+        "jp": "単価",
+        "kr": "단가",
+        "pl": "Cena jednostkowa",
+        "pt": "Preço unitário",
+        "ru": "Цена за единицу",
+        "uk": "Ціна за одиницю"
     },
-    "table_market_price_x195": {
-        "fr": "Prix du marché ×1,95",
-        "en": "Market price × 1.95",
-        "de": "Marktpreis × 1,95",
-        "es": "Precio de mercado × 1,95"
+    "table_market_price_x1.98": {
+        "fr": "Prix du marché ×1,98",
+        "en": "Market price × 1.98",
+        "de": "Marktpreis × 1,98",
+        "es": "Precio de mercado × 1,98",
+        "cz": "Tržní cena × 1,98",
+        "ch1": "市场价格 ×1.98",
+        "ch2": "市场价格 ×1.98",
+        "hu": "Piaci ár × 1,98",
+        "it": "Prezzo di mercato × 1,98",
+        "jp": "市場価格 ×1.98",
+        "kr": "시장 가격 ×1.98",
+        "pl": "Cena rynkowa × 1,98",
+        "pt": "Preço de mercado × 1,98",
+        "ru": "Рыночная цена × 1,98",
+        "uk": "Ринкова ціна × 1,98"
     },
     "table_margin": {
         "fr": "Marge",
         "en": "Margin",
         "de": "Marge",
-        "es": "Margen"
+        "es": "Margen",
+        "cz": "Marže",
+        "ch1": "利润率",
+        "ch2": "利润率",
+        "hu": "Árrés",
+        "it": "Margine",
+        "jp": "利益率",
+        "kr": "마진",
+        "pl": "Marża",
+        "pt": "Margem",
+        "ru": "Маржа",
+        "uk": "Маржа"
     },
     "table_amount_per_box": {
         "fr": "Qté / carton",
-        "en": "Qty / cardboard",
+        "en": "Qty / box",
         "de": "Stückzahl pro Karton",
-        "es": "Cantidad por caja"
+        "es": "Cantidad por caja",
+        "cz": "Počet kusů v kartonu",
+        "ch1": "每箱数量",
+        "ch2": "每箱数量",
+        "hu": "Mennyiség / karton",
+        "it": "Quantità per cartone",
+        "jp": "1箱あたりの数量",
+        "kr": "상자당 수량",
+        "pl": "Ilość w kartonie",
+        "pt": "Quantidade por caixa",
+        "ru": "Количество в коробке",
+        "uk": "Кількість у коробці"
     },
     "table_small_shelf_quantity": {
         "fr": "Qté / petite étagère",
         "en": "Qty / small shelf",
         "de": "Anzahl / kleines Regal",
-        "es": "Cantidad / estantería pequeña"
+        "es": "Cantidad / estantería pequeña",
+        "cz": "Počet kusů / malá police",
+        "ch1": "数量 / 小型置物架",
+        "ch2": "数量 / 小型置物架",
+        "hu": "Mennyiség / kis polc",
+        "it": "Quantità / piccola mensola",
+        "jp": "数量／小型棚",
+        "kr": "수량 / 소형 선반",
+        "pl": "Ilość / mała półka",
+        "pt": "Quantidade / prateleira pequena",
+        "ru": "Количество / небольшая полка",
+        "uk": "Кількість / невелика полиця"
     },
     "table_small_shelf_ratio": {
         "fr": "Ratio carton / petite étagère",
-        "en": "Cardboard-to-Small Shelf Ratio",
+        "en": "Box-to-Small Shelf Ratio",
         "de": "Verhältnis Karton : kleines Regal",
-        "es": "Proporción entre caja y estantería pequeña"
+        "es": "Proporción entre caja y estantería pequeña",
+        "cz": "Poměr karton / malá police",
+        "ch1": "纸箱与小货架的比例",
+        "ch2": "纸箱与小货架的比例",
+        "hu": "Karton/kis polc arány",
+        "it": "Rapporto cartone / scaffale piccolo",
+        "jp": "段ボール箱と小型棚の比率",
+        "kr": "골판지 상자 대 소형 선반 비율",
+        "pl": "Stosunek kartonu do małej półki",
+        "pt": "Proporção entre caixa de cartão e prateleira pequena",
+        "ru": "Соотношение «коробка : небольшая полка»",
+        "uk": "Співвідношення «картон / невелика полиця»"
     },
     "table_large_shelf_quantity": {
         "fr": "Qté / grande étagère",
         "en": "Qty / large shelf",
         "de": "Anzahl / großes Regal",
-        "es": "Cantidad / estantería grande"
+        "es": "Cantidad / estantería grande",
+        "cz": "Množství / velká police",
+        "ch1": "数量 / 大货架",
+        "ch2": "数量 / 大货架",
+        "hu": "Mennyiség / nagy polc",
+        "it": "Quantità / scaffale grande",
+        "jp": "数量／大型棚",
+        "kr": "수량 / 대형 선반",
+        "pl": "Ilość / duża półka",
+        "pt": "Quantidade / prateleira grande",
+        "ru": "Количество / большая полка",
+        "uk": "Кількість / велика полиця"
     },
     "table_large_shelf_ratio": {
         "fr": "Ratio carton / grande étagère",
-        "en": "Cardboard-to-Large Shelf Ratio",
+        "en": "Box-to-Large Shelf Ratio",
         "de": "Verhältnis Karton / großes Regal",
-        "es": "Proporción entre cajas y estantería grande"
+        "es": "Proporción entre cajas y estantería grande",
+        "cz": "Poměr kartonu k velké polici",
+        "ch1": "纸箱与大型货架的比例",
+        "ch2": "纸箱与大型货架的比例",
+        "hu": "Karton/nagy polc arány",
+        "it": "Rapporto cartone / scaffale grande",
+        "jp": "段ボール箱と大型棚の比率",
+        "kr": "골판지 상자 대 대형 선반 비율",
+        "pl": "Stosunek kartonu do dużej półki",
+        "pt": "Proporção entre caixas e prateleira grande",
+        "ru": "Соотношение «картон / большая полка»",
+        "uk": "Співвідношення картонних коробок до великої полиці"
     },
     "companion_table_select_subcategory": {
         "fr": "Veuillez sélectionner une sous-catégorie de produit pour commencer",
         "en": "Please select a product subcategory to get started",
         "de": "Bitte wählen Sie eine Produktunterkategorie aus, um zu beginnen",
-        "es": "Selecciona una subcategoría de productos para empezar"
+        "es": "Selecciona una subcategoría de productos para empezar",
+        "cz": "Vyberte prosím podkategorii produktu, abyste mohli začít",
+        "ch1": "请选择一个产品子类别以开始",
+        "ch2": "请选择一个产品子类别以开始",
+        "hu": "Kérjük, válasszon ki egy termék-alkategóriát a kezdéshez",
+        "it": "Seleziona una sottocategoria di prodotti per iniziare",
+        "jp": "まず、製品のサブカテゴリを選択してください",
+        "kr": "시작하려면 제품 하위 카테고리를 하나 선택해 주세요",
+        "pl": "Aby rozpocząć, wybierz podkategorię produktu",
+        "pt": "Selecione uma subcategoria de produto para começar",
+        "ru": "Пожалуйста, выберите подкатегорию товара, чтобы начать",
+        "uk": "Будь ласка, виберіть підкатегорію товару, щоб розпочати"
     },
-    "product_Pasta Penne": {
-        "en": "Pasta Penne",
-        "fr": "Pâtes Penne",
-        "de": "Pasta Penne",
-        "es": "Pasta penne"
-    },
-    "product_Water Bottle": {
-        "en": "Water Bottle",
-        "fr": "Bouteille d'eau",
-        "de": "Trinkflasche",
-        "es": "Botella de agua"
-    },
-    "product_Honey Cereals": {
-        "en": "Honey Cereals",
-        "fr": "Céréales au miel",
-        "de": "Honig-Müsli",
-        "es": "Cereales con miel"
-    },
-    "product_Rice": {
-        "en": "Rice",
-        "fr": "Riz",
-        "de": "Reis",
-        "es": "Arroz"
-    },
-    "product_Salt": {
-        "en": "Salt",
-        "fr": "Sel",
-        "de": "Salz",
-        "es": "Sal"
-    },
-    "product_Sugar": {
-        "en": "Sugar",
-        "fr": "Sucre",
-        "de": "Zucker",
-        "es": "Azúcar"
-    },
-    "product_Margarine": {
-        "en": "Margarine",
-        "fr": "Margarine",
-        "de": "Margarine",
-        "es": "Margarina"
-    },
-    "product_Flour": {
-        "en": "Flour",
-        "fr": "Farine",
-        "de": "Mehl",
-        "es": "Harina"
-    },
-    "product_Apple Juice": {
-        "en": "Apple Juice",
-        "fr": "Jus de pomme",
-        "de": "Apfelsaft",
-        "es": "Zumo de manzana"
-    },
-    "product_Olive Oil": {
-        "en": "Olive Oil",
-        "fr": "Huile d'olive",
-        "de": "Olivenöl",
-        "es": "Aceite de oliva"
-    },
-    "product_Ketchup": {
-        "en": "Ketchup",
-        "fr": "Ketchup",
-        "de": "Ketchup",
-        "es": "Kétchup"
-    },
-    "product_Sliced Bread": {
-        "en": "Sliced Bread",
-        "fr": "Du pain tranché",
-        "de": "Geschnittenes Brot",
-        "es": "Pan de molde"
-    },
-    "product_Pepper": {
-        "en": "Pepper",
-        "fr": "Poivre",
-        "de": "Pfeffer",
-        "es": "Pimienta"
-    },
-    "product_Baking Powder": {
-        "en": "Baking Powder",
-        "fr": "Poudre à lever",
-        "de": "Backpulver",
-        "es": "Levadura en polvo"
-    },
-    "product_Baking Soda": {
-        "en": "Baking Soda",
-        "fr": "Bicarbonate de soude",
-        "de": "Backpulver",
-        "es": "Bicarbonato sódico"
-    },
-    "product_Cake Mix": {
-        "en": "Cake Mix",
-        "fr": "Préparation pour gâteau",
-        "de": "Kuchenbackmischung",
-        "es": "Mezcla para pasteles"
-    },
-    "product_Cocoa Powder": {
-        "en": "Cocoa Powder",
-        "fr": "Poudre de cacao",
-        "de": "Kakaopulver",
-        "es": "Cacao en polvo"
-    },
-    "product_Cornstarch": {
-        "en": "Cornstarch",
-        "fr": "Fécule de maïs",
-        "de": "Maisstärke",
-        "es": "Maicena"
-    },
-    "product_Icing Tube": {
-        "en": "Icing Tube",
-        "fr": "Poche à douille",
-        "de": "Spritzbeutel",
-        "es": "Manguera para glaseado"
-    },
-    "product_Candy Sprinkles": {
-        "en": "Candy Sprinkles",
-        "fr": "Paillettes de bonbons",
-        "de": "Zuckerstreusel",
-        "es": "Fideos de caramelo"
-    },
-    "product_Vanilla Extract": {
-        "en": "Vanilla Extract",
-        "fr": "Extrait de vanille",
-        "de": "Vanilleextrakt",
-        "es": "Extracto de vainilla"
-    },
-    "product_Cola Pack": {
-        "en": "Cola Pack",
-        "fr": "Pack Cola",
-        "de": "Cola-Packung",
-        "es": "Paquete de refrescos de cola"
-    },
-    "product_Soda Pack": {
-        "en": "Soda Pack",
-        "fr": "Pack de sodas",
-        "de": "Soda-Packung",
-        "es": "Paquete de refrescos"
-    },
-    "product_Decaf Soda Pack": {
-        "en": "Decaf Soda Pack",
-        "fr": "Pack de sodas décaféinés",
-        "de": "Packung mit koffeinfreien Limonaden",
-        "es": "Pack de refrescos descafeinados"
-    },
-    "product_Soda Bottle": {
-        "en": "Soda Bottle",
-        "fr": "Bouteille de soda",
-        "de": "Limonadenflasche",
-        "es": "Botella de refresco"
-    },
-    "product_Cola Bottle": {
-        "en": "Cola Bottle",
-        "fr": "Bouteille de cola",
-        "de": "Cola-Flasche",
-        "es": "Botella de refresco de cola"
-    },
-    "product_Sugar Free Soda Bottle": {
-        "en": "Sugar Free Soda Bottle",
-        "fr": "Bouteille de soda sans sucre",
-        "de": "Flasche mit zuckerfreier Limonade",
-        "es": "Botella de refresco sin azúcar"
-    },
-    "product_Premium Soda": {
-        "en": "Premium Soda",
-        "fr": "Soda haut de gamme",
-        "de": "Premium-Limonade",
-        "es": "Refresco Premium"
-    },
-    "product_Orange Soda": {
-        "en": "Orange Soda",
-        "fr": "Soda à l'orange",
-        "de": "Orangenlimonade",
-        "es": "Refresco de naranja"
-    },
-    "product_Pineapple Soda": {
-        "en": "Pineapple Soda",
-        "fr": "Soda à l'ananas",
-        "de": "Ananas-Limonade",
-        "es": "Refresco de piña"
-    },
-    "product_Tropical Soda": {
-        "en": "Tropical Soda",
-        "fr": "Soda tropical",
-        "de": "Tropische Limo",
-        "es": "Refresco tropical"
-    },
-    "product_Green Tea": {
-        "en": "Green Tea",
-        "fr": "Thé vert",
-        "de": "Grüner Tee",
-        "es": "Té verde"
-    },
-    "product_Red Tea": {
-        "en": "Red Tea",
-        "fr": "Thé rouge",
-        "de": "Roter Tee",
-        "es": "Té rojo"
-    },
-    "product_Lemon Tea": {
-        "en": "Lemon Tea",
-        "fr": "Thé au citron",
-        "de": "Zitronentee",
-        "es": "Té de limón"
-    },
-    "product_Cold Brew Coffee": {
-        "en": "Cold Brew Coffee",
-        "fr": "Café infusé à froid",
-        "de": "Cold-Brew-Kaffee",
-        "es": "Café cold brew"
-    },
-    "product_Emmental Cheese": {
-        "en": "Emmental Cheese",
-        "fr": "Fromage d'Emmental",
-        "de": "Emmentaler Käse",
-        "es": "Queso Emmental"
-    },
-    "product_Gruyere Cheese": {
-        "en": "Gruyere Cheese",
-        "fr": "Fromage de Gruyère",
-        "de": "Gruyère-Käse",
-        "es": "Queso Gruyère"
-    },
-    "product_Skimmed Cheese": {
-        "en": "Skimmed Cheese",
-        "fr": "Fromage écrémé",
-        "de": "Magermilchkäse",
-        "es": "Queso desnatado"
-    },
-    "product_Fruit Yoghurt": {
-        "en": "Fruit Yoghurt",
-        "fr": "Yaourt aux fruits",
-        "de": "Fruchtjoghurt",
-        "es": "Yogur de frutas"
-    },
-    "product_Vanilla Yoghurt": {
-        "en": "Vanilla Yoghurt",
-        "fr": "Yaourt à la vanille",
-        "de": "Vanillejoghurt",
-        "es": "Yogur de vainilla"
-    },
-    "product_Milk Brick": {
-        "en": "Milk Brick",
-        "fr": "Brique de lait",
-        "de": "Milchziegel",
-        "es": "Ladrillo de leche"
+    "table_market_price_x195": {
+        "fr": "Prix du marché ×1,95",
+        "en": "Market price × 1.95",
+        "de": "Marktpreis × 1,95",
+        "es": "Precio de mercado × 1,95",
+        "cz": "Tržní cena × 1,95",
+        "ch1": "市场价格 × 1.95",
+        "ch2": "市场价格 × 1.95",
+        "hu": "Piaci ár × 1,95",
+        "it": "Prezzo di mercato × 1,95",
+        "jp": "市場価格 ×1.95",
+        "kr": "시장 가격 ×1.95",
+        "pl": "Cena rynkowa × 1,95",
+        "pt": "Preço de mercado × 1,95",
+        "ru": "Рыночная цена × 1,95",
+        "uk": "Ринкова ціна × 1,95"
     }
 }

@@ -926,6 +926,10 @@ class MainWindow(QMainWindow):
             self.home_page
         )
 
+        self.home_page.language_changed.connect(
+            self.on_language_changed
+        )
+
         self.page_stack.addWidget(
             self.companion_table_page
         )
@@ -949,10 +953,6 @@ class MainWindow(QMainWindow):
 
         self.companion_table_page.btn_home.clicked.connect(
             self.show_home
-        )
-
-        self.home_page.language_changed.connect(
-            self.on_language_changed
         )
 
     def show_companion_table(self):

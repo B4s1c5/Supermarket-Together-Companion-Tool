@@ -4,11 +4,13 @@ from pathlib import Path
 
 from .module_card import ModuleCard
 
-from core.settings_manager import settings_manager
-
 from core.translation_manager import (
     tr,
     translation_manager,
+)
+
+from core.game._localization._manager import (
+    game_localization_manager,
 )
 
 from PySide6.QtCore import (
@@ -19,6 +21,7 @@ from PySide6.QtCore import (
 
 from PySide6.QtGui import (
     QPixmap,
+    QAction,
     QIcon,
 )
 
@@ -26,9 +29,9 @@ from PySide6.QtWidgets import (
     QWidget,
     QVBoxLayout,
     QLabel,
-    QPushButton,
     QHBoxLayout,
-    QComboBox,
+    QPushButton,
+    QMenu,
 )
 
 
@@ -60,17 +63,72 @@ class HomePage(QWidget):
         # -------------------------
 
         language_layout = QHBoxLayout()
+
         language_layout.addStretch()
 
-        self.language_combo = QComboBox()
-
-        self.language_combo.setIconSize(
-            QSize(24, 16)
+        self.language_button = QPushButton(
+            "🌐 Français"
         )
 
-        # -------------------------
-        # Drapeaux
-        # -------------------------
+        self.language_button.setFixedWidth(
+            150
+        )
+
+        self.language_button.setStyleSheet("""
+            QPushButton {
+                background-color: #292d32;
+                color: #ffffff;
+                border: 1px solid #3c4248;
+                border-radius: 7px;
+                padding: 7px 10px;
+                font-size: 13px;
+                text-align: left;
+            }
+
+            QPushButton:hover {
+                border: 1px solid #e3262e;
+                background-color: #32373d;
+            }
+        """)
+
+        self.language_menu = QMenu(
+            self.language_button
+        )
+
+        self.language_menu.setStyleSheet("""
+            QMenu {
+                background-color: #292d32;
+                color: #ffffff;
+                border: 1px solid #3c4248;
+                padding: 4px;
+            }
+
+            QMenu::item {
+                padding: 7px 20px;
+            }
+
+            QMenu::item:selected {
+                background-color: #e3262e;
+            }
+        """)
+
+        languages = [
+            ("fr", "Français", "fr.png"),
+            ("en", "English", "gb.png"),
+            ("de", "Deutsch", "de.png"),
+            ("es", "Español", "es.png"),
+            ("cz", "Čeština", "cz.png"),
+            ("ch1", "简体中文", "ch1.png"),
+            ("ch2", "繁體中文", "ch2.png"),
+            ("hu", "Magyar", "hu.png"),
+            ("it", "Italiano", "it.png"),
+            ("jp", "日本語", "jp.png"),
+            ("kr", "한국어", "kr.png"),
+            ("pl", "Polski", "pl.png"),
+            ("pt", "Português", "pt.png"),
+            ("ru", "Русский", "ru.png"),
+            ("uk", "Українська", "uk.png"),
+        ]
 
         if getattr(sys, "frozen", False):
 
@@ -90,75 +148,41 @@ class HomePage(QWidget):
                 / "flags"
             )
 
-            test_icon = QIcon(
-            str(flags_path / "fr.png")
-        )
-            
-        self.language_combo.addItem(
-            QIcon(
-                str(flags_path / "fr.png")
-            ),
-            "Français"
-        )
+        for language_code, language_name, flag_name in languages:
 
-        self.language_combo.addItem(
-            QIcon(
-                str(flags_path / "gb.png")
-            ),
-            "English"
-        )
+            action = QAction(
+                QIcon(
+                    str(flags_path / flag_name)
+                ),
+                language_name,
+                self.language_menu
+            )
 
-        self.language_combo.addItem(
-            QIcon(
-                str(flags_path / "de.png")
-            ),
-            "Deutsch"
-        )
+            action.setData(
+                language_code
+            )
 
-        self.language_combo.addItem(
-            QIcon(
-                str(flags_path / "es.png")
-            ),
-            "Español"
+            action.triggered.connect(
+                lambda checked=False, code=language_code:
+                    self.change_language(code)
+            )
+
+            self.language_menu.addAction(
+                action
+            )
+
+        self.language_button.setMenu(
+            self.language_menu
         )
 
-        self.language_combo.currentIndexChanged.connect(
-            self.change_language
+        language_layout.addWidget(
+            self.language_button
         )
-    
 
-        self.language_combo.setFixedWidth(150)
+        main_layout.addLayout(
+            language_layout
+        )
 
-        self.language_combo.setStyleSheet("""
-            QComboBox {
-                background-color: #292d32;
-                color: #ffffff;
-                border: 1px solid #3c4248;
-                border-radius: 7px;
-                padding: 7px 10px;
-                font-size: 13px;
-            }
-
-            QComboBox:hover {
-                border: 1px solid #e3262e;
-            }
-
-            QComboBox::drop-down {
-                border: none;
-                width: 24px;
-            }
-
-            QComboBox QAbstractItemView {
-                background-color: #292d32;
-                color: #ffffff;
-                selection-background-color: #e3262e;
-                border: 1px solid #3c4248;
-            }
-        """)
-
-        language_layout.addWidget(self.language_combo)
-
-        main_layout.addLayout(language_layout)
 
         # -------------------------
         # Logo / en-tête
@@ -249,35 +273,6 @@ class HomePage(QWidget):
             "par rapport au prix du marché"
         )
 
-        # -------------------------
-        # Restauration de la langue
-        # -------------------------
-
-        saved_language = settings_manager.get(
-            "language",
-            "fr"
-        )
-
-        language_indexes = {
-            "fr": 0,
-            "en": 1,
-            "de": 2,
-            "es": 3,
-        }
-
-        saved_index = language_indexes.get(
-            saved_language,
-            0
-        )
-
-        self.language_combo.setCurrentIndex(
-            saved_index
-        )
-
-        self.change_language(
-            saved_index
-        )
-
         modules_layout.addWidget(
             self.card_companion_table
         )
@@ -295,34 +290,45 @@ class HomePage(QWidget):
 
     def change_language(
         self,
-        index
+        language
     ):
-
-        languages = [
-            "fr",
-            "en",
-            "de",
-            "es"
-        ]
-
-        language = languages[index]
 
         translation_manager.set_language(
             language
         )
 
-        settings_manager.set(
-            "language",
+        game_localization_manager.set_language(
             language
+        )
+
+        language_names = {
+            "fr": "Français",
+            "en": "English",
+            "de": "Deutsch",
+            "es": "Español",
+            "cz": "Čeština",
+            "ch1": "简体中文",
+            "ch2": "繁體中文",
+            "hu": "Magyar",
+            "it": "Italiano",
+            "jp": "日本語",
+            "kr": "한국어",
+            "pl": "Polski",
+            "pt": "Português",
+            "ru": "Русский",
+            "uk": "Українська",
+        }
+
+        self.language_button.setText(
+            "🌐 " + language_names.get(
+                language,
+                language
+            )
         )
 
         self.language_changed.emit(
             language
         )
-
-        # -------------------------
-        # Mise à jour de la Home
-        # -------------------------
 
         self.subtitle_label.setText(
             tr(

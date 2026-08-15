@@ -7,6 +7,7 @@ from pathlib import Path
 import deepl
 
 from dotenv import load_dotenv
+from tree_sitter_javascript import language
 
 load_dotenv()
 
@@ -174,6 +175,17 @@ class TranslationManager:
             "en",
             "de",
             "es",
+            "cz",
+            "ch1",
+            "ch2",
+            "hu",
+            "it",
+            "jp",
+            "kr",
+            "pl",
+            "pt",
+            "ru",
+            "uk",
         )
 
         total = 0
@@ -305,6 +317,17 @@ class TranslationManager:
             "en": "EN-US",
             "de": "DE",
             "es": "ES",
+            "cz": "CS",
+            "ch1": "ZH",
+            "ch2": "ZH",
+            "hu": "HU",
+            "it": "IT",
+            "jp": "JA",
+            "kr": "KO",
+            "pl": "PL",
+            "pt": "PT-PT",
+            "ru": "RU",
+            "uk": "UK",
         }
 
         source_deepl_languages = {
@@ -312,6 +335,17 @@ class TranslationManager:
             "en": "EN",
             "de": "DE",
             "es": "ES",
+            "cz": "CS",
+            "ch1": "ZH",
+            "ch2": "ZH",
+            "hu": "HU",
+            "it": "IT",
+            "jp": "JA",
+            "kr": "KO",
+            "pl": "PL",
+            "pt": "PT",
+            "ru": "RU",
+            "uk": "UK",
         }
 
         modified = False
@@ -374,6 +408,30 @@ class TranslationManager:
         self,
         language
     ):
+
+        language = language.lower()
+
+        supported_languages = {
+            "fr",
+            "en",
+            "de",
+            "es",
+            "cz",
+            "ch1",
+            "ch2",
+            "hu",
+            "it",
+            "jp",
+            "kr",
+            "pl",
+            "pt",
+            "ru",
+            "uk",
+        }
+
+        if language not in supported_languages:
+
+            language = "fr"
 
         self.current_language = language
 

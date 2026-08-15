@@ -3,6 +3,7 @@ import sys
 
 from pathlib import Path
 
+from core.game._localization._manager import game_localization_manager
 from core import translation_manager
 from core.translation_manager import tr
 from core.translation_manager import translation_manager
@@ -244,9 +245,14 @@ class CompanionTablePage(QWidget):
                 "id"
             ]
 
-            category_name = category[
-                "name"
-            ]
+            category_name = (
+                game_localization_manager.get_application_category_name(
+                    category_key
+                )
+                or category[
+                    "name"
+                ]
+            )
 
             sections = category.get(
                 "sections",
@@ -279,11 +285,7 @@ class CompanionTablePage(QWidget):
             # -------------------------
 
             button = QPushButton(
-                "›  " + tr(
-                    f"category_{category_key}",
-                    category_name,
-                    source_language="en"
-                )
+                "›  " + category_name
             )
 
             # -------------------------
@@ -395,25 +397,16 @@ class CompanionTablePage(QWidget):
                     "id"
                 ]
 
-                section_name = section[
-                    "name"
-                ]
+                section_name = (
+                    game_localization_manager.get_application_section_name(
+                        section_key
+                    )
+                    or section[
+                        "name"
+                    ]
+                )
 
                 section_button = QPushButton(
-                    tr(
-                        f"subcategory_{section_key}",
-                        section_name,
-                        source_language="en"
-                    )
-                )
-
-                section_button.setProperty(
-                    "translation_key",
-                    f"subcategory_{section_key}"
-                )
-
-                section_button.setProperty(
-                    "source_text",
                     section_name
                 )
 
@@ -975,10 +968,13 @@ class CompanionTablePage(QWidget):
         if category is None:
             return
 
-        category_name = tr(
-            f"category_{category_key}",
-            category["name"],
-            source_language="en"
+        category_name = (
+            game_localization_manager.get_application_category_name(
+                category_key
+            )
+            or category[
+                "name"
+            ]
         )
 
         arrow = (
@@ -1053,12 +1049,17 @@ class CompanionTablePage(QWidget):
 
         if section is not None:
 
-            self.title_label.setText(
-                tr(
-                    f"subcategory_{section_key}",
-                    section["name"],
-                    source_language="en"
+            section_name = (
+                game_localization_manager.get_application_section_name(
+                    section_key
                 )
+                or section[
+                    "name"
+                ]
+            )
+
+            self.title_label.setText(
+                section_name
             )
 
             selected_button = (
@@ -1144,12 +1145,12 @@ class CompanionTablePage(QWidget):
                 else f"${margin:.2f}"
             )
 
-            product_name = product.get(
-                "translations",
-                {}
-            ).get(
-                translation_manager.current_language,
-                product.get(
+            product_name = (
+                game_localization_manager.get_application_product_name(
+                    section_key,
+                    row
+            )
+                or product.get(
                     "name",
                     ""
                 )
@@ -1352,8 +1353,12 @@ class CompanionTablePage(QWidget):
         )
 
         # -------------------------
-        # Traduction des catégories wiki
+        # Localisation des catégories du jeu
         # -------------------------
+
+        game_localization_manager.set_language(
+            translation_manager.current_language
+        )
 
         for category in self.categories:
 
@@ -1361,54 +1366,56 @@ class CompanionTablePage(QWidget):
                 "id"
             ]
 
-            category_name = category[
-                "name"
-            ]
+            category_name = (
+                game_localization_manager.get_application_category_name(
+                    category_key
+                )
+                or category[
+                    "name"
+                ]
+            )
 
             self.category_buttons[
                 category_key
             ].setText(
-                tr(
-                    f"category_{category_key}",
-                    category_name,
-                    source_language="en"
-                )
+                category_name
             )
 
         # -------------------------
-        # Traduction des sous-catégories wiki
+        # Localisation des sous-catégories du jeu
         # -------------------------
 
-        for button in self.subcategory_buttons:
+        for category in self.categories:
 
-            translation_key = button.property(
-                "translation_key"
-            )
-
-            source_text = button.property(
-                "source_text"
-            )
-
-            if (
-                not translation_key
-                or not source_text
+            for section in category.get(
+                "sections",
+                []
             ):
-                continue
 
-            button.setText(
-                tr(
-                    translation_key,
-                    source_text,
-                    source_language="en"
+                section_key = section[
+                    "id"
+                ]
+
+                section_name = (
+                    game_localization_manager.get_application_section_name(
+                        section_key
+                    )
+                    or section[
+                        "name"
+                    ]
                 )
-            )
 
-        self.selection_message.setText(
-            tr(
-                "companion_table_select_subcategory",
-                "Veuillez sélectionner une sous-catégorie de produit pour commencer"
-            )
-        )
+                button = (
+                    self.category_section_buttons.get(
+                        section_key
+                    )
+                )
+
+                if button is not None:
+
+                    button.setText(
+                        section_name
+                    )
 
         # -------------------------
         # Traduction du tableau prix

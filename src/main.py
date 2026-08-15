@@ -558,7 +558,7 @@ def main():
 
     def finish_startup():
 
-        hide_dev_console()
+        # hide_dev_console()
 
         window.show()
         window.raise_()
