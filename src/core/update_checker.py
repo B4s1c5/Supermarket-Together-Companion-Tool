@@ -23,7 +23,10 @@ def check_for_update():
         download_url = None
 
         for asset in release.get("assets", []):
-            if asset["name"].endswith("-Windows.zip"):
+            if (
+                asset["name"].startswith("SupermarketTogetherCompanion-")
+                and asset["name"].endswith(".zip")
+            ):
                 download_url = asset["browser_download_url"]
                 break
 
