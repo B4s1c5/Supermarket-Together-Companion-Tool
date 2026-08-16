@@ -9,6 +9,8 @@ from PySide6.QtCore import (
 
 import os
 import time
+import glob
+from pathlib import Path
 
 from ui.home_page import HomePage
 
@@ -96,6 +98,18 @@ class MainWindow(QMainWindow):
         self.details_total = 0
         self.details_timer = QTimer(self)
         self.details_timer.timeout.connect(self.show_next_detail)
+
+        # Démarrer un observateur périodique (polling) pour détecter
+        # les modifications des fichiers de sauvegarde StoreFile*.es3.
+        # Quand une modification est détectée, le module Price Checker sera déverrouillé.
+        try:
+            # Chemin par défaut basé sur le dossier utilisateur courant (portable entre machines)
+            default_folder = Path.home() / "AppData" / "LocalLow" / "DDTNL" / "Supermarket Together"
+            # Convertir en chaîne et démarrer la surveillance (même si le dossier n'existe pas encore)
+            self.start_save_watcher(str(default_folder))
+        except Exception:
+            # Ne pas faire planter l'application si la surveillance échoue
+            pass
 
 
     def show_next_detail(self):
@@ -779,6 +793,17 @@ class MainWindow(QMainWindow):
 
             self.btn_convert.setEnabled(False)
 
+            # S'assurer que le module Price Checker reste verrouillé
+            try:
+                self.home_page.card_price_checker.setEnabled(False)
+                self.home_page.card_price_checker.title_label.setText(
+                    "💲   Price Checker   🔒"
+                )
+                self.home_page.card_price_checker.setCursor(Qt.CursorShape.ArrowCursor)
+                self.home_page.card_price_checker.setToolTip("Module verrouillé")
+            except Exception:
+                pass
+
             self.details_box.append(
                 f"❌ Aucun produit détecté "
                 f"({elapsed_time:.2f} s)"
@@ -813,6 +838,17 @@ class MainWindow(QMainWindow):
             )
 
             self.btn_convert.setEnabled(True)
+
+            # Déverrouiller le module Price Checker suite à la validation du PDF
+            try:
+                self.home_page.card_price_checker.setEnabled(True)
+                self.home_page.card_price_checker.title_label.setText(
+                    "💲   Price Checker"
+                )
+                self.home_page.card_price_checker.setCursor(Qt.CursorShape.PointingHandCursor)
+                self.home_page.card_price_checker.setToolTip("")
+            except Exception:
+                pass
 
             self.btn_convert.setStyleSheet("""
                 QPushButton {
@@ -976,6 +1012,69 @@ class MainWindow(QMainWindow):
 
         self.companion_table_page.retranslate_ui()
 
+
+    def start_save_watcher(self, folder_path: str):
+        """Lancer un timer qui scrute toutes les 500 ms les fichiers
+        StoreFile*.es3 dans folder_path. Lorsque l'un d'eux est modifié,
+        déverrouiller le module Price Checker.
+        """
+        self.save_watch_folder = folder_path
+        self._storefile_mtimes = {}
+        self.save_watcher_timer = QTimer(self)
+        self.save_watcher_timer.setInterval(500)
+        self.save_watcher_timer.timeout.connect(self._check_storefiles)
+        self.save_watcher_timer.start()
+
+    def _check_storefiles(self):
+        try:
+            pattern = os.path.join(self.save_watch_folder, "StoreFile*.es3")
+            matches = glob.glob(pattern)
+            if not matches:
+                return
+            for fp in matches:
+                try:
+                    m = os.path.getmtime(fp)
+                except OSError:
+                    continue
+                prev = self._storefile_mtimes.get(fp)
+                if prev is None:
+                    # première observation : mémoriser le timestamp
+                    self._storefile_mtimes[fp] = m
+                    continue
+                if m > prev:
+                    # modification détectée
+                    self._on_storefile_modified(fp)
+                    return
+        except Exception:
+            # Ignorer les erreurs de lecture pendant la surveillance
+            return
+
+    def _on_storefile_modified(self, file_path: str):
+        # Arrêter la surveillance (détection une seule fois)
+        try:
+            self.save_watcher_timer.stop()
+        except Exception:
+            pass
+
+        base = os.path.basename(file_path)
+        try:
+            self.status_bar.showMessage(f"Sauvegarde détectée : {base}")
+        except Exception:
+            pass
+
+        # Déverrouiller le module Price Checker
+        try:
+            self.home_page.card_price_checker.setEnabled(True)
+            # Retirer l'icône cadenas si présente
+            current = self.home_page.card_price_checker.title_label.text()
+            new = current.replace("🔒", "")
+            # Nettoyer les espaces multiples
+            new = " ".join(new.split())
+            self.home_page.card_price_checker.title_label.setText(new)
+            self.home_page.card_price_checker.setCursor(Qt.CursorShape.PointingHandCursor)
+            self.home_page.card_price_checker.setToolTip("")
+        except Exception:
+            pass
 
     def set_progress(self, value):
 

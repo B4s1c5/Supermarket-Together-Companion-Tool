@@ -273,6 +273,21 @@ class HomePage(QWidget):
             "par rapport au prix du marché"
         )
 
+        # Verrouiller le module Price Checker : désactiver l'interaction
+        # afficher un tooltip et ajouter une icône cadenas dans le titre.
+        self.card_price_checker.setEnabled(False)
+        self.card_price_checker.title_label.setText(
+            "💲   " + tr("price_checker_title", "Price Checker") + "   🔒"
+        )
+        self.card_price_checker.setToolTip(
+            tr(
+                "price_checker_locked_tooltip",
+                "Module verrouillé"
+            )
+        )
+        # Forcer le curseur par défaut (ne pas afficher la main cliquable)
+        self.card_price_checker.setCursor(Qt.CursorShape.ArrowCursor)
+
         modules_layout.addWidget(
             self.card_companion_table
         )
