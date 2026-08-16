@@ -714,8 +714,9 @@ class CompanionTablePage(QWidget):
 
         self.price_table = QTableWidget()
 
+        # Colonnes : Image, Produit, Marque, Prix / carton, Prix unitaire
         self.price_table.setColumnCount(
-            7
+            5
         )
 
         self.price_table.setHorizontalScrollBarPolicy(
@@ -742,14 +743,6 @@ class CompanionTablePage(QWidget):
             tr(
                 "table_price_per_unit",
                 "Prix unitaire"
-            ),
-            tr(
-                "table_market_price_x195",
-                "Prix du marché ×1,95"
-            ),
-            tr(
-                "table_margin",
-                "Marge"
             ),
         ])
 
@@ -1233,22 +1226,6 @@ class CompanionTablePage(QWidget):
                 )
             )
 
-            self.price_table.setItem(
-                row,
-                5,
-                QTableWidgetItem(
-                    market_price_text
-                )
-            )
-
-            self.price_table.setItem(
-                row,
-                6,
-                QTableWidgetItem(
-                    margin_text
-                )
-            )
-
             # -------------------------
             # Tableau stockage
             # -------------------------
@@ -1441,14 +1418,6 @@ class CompanionTablePage(QWidget):
             tr(
                 "table_price_per_unit",
                 "Prix unitaire"
-            ),
-            tr(
-                "table_market_price_x195",
-                "Prix du marché ×1,95"
-            ),
-            tr(
-                "table_margin",
-                "Marge"
             ),
         ])
 

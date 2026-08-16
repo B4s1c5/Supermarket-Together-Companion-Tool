@@ -457,5 +457,22 @@
         "pt": "Preço de mercado × 1,95",
         "ru": "Рыночная цена × 1,95",
         "uk": "Ринкова ціна × 1,95"
+    },
+    "price_checker_locked_tooltip": {
+        "fr": "Module verrouillé",
+        "en": "Module Locked",
+        "de": "Modul gesperrt",
+        "es": "Módulo bloqueado",
+        "cz": "Modul je uzamčen",
+        "ch1": "模块已锁定",
+        "ch2": "模块已锁定",
+        "hu": "A modul zárolva van",
+        "it": "Modulo bloccato",
+        "jp": "モジュールがロックされています",
+        "kr": "모듈이 잠겨 있습니다",
+        "pl": "Moduł zablokowany",
+        "pt": "Módulo bloqueado",
+        "ru": "Модуль заблокирован",
+        "uk": "Модуль заблоковано"
     }
 }
